@@ -406,6 +406,7 @@
 				);
 				INFOPLIST_FILE = EveryoneGetsToDJ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SweetPea.EveryoneGetsToDJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EveryoneGetsToDJ-Bridging-Header.h";
@@ -426,6 +427,7 @@
 				);
 				INFOPLIST_FILE = EveryoneGetsToDJ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SweetPea.EveryoneGetsToDJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EveryoneGetsToDJ-Bridging-Header.h";

@@ -17,50 +17,58 @@ class LoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setup()
         NotificationCenter.default.addObserver(self, selector: #selector(updateAfterFirstLogin), name: Notification.Name(rawValue: "loginSuccessfull"), object: nil)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
     func setup() {
         SPTAuth.defaultInstance().clientID = clientID
-        SPTAuth.defaultInstance().redirectURL = URL(string: clientSecret)
+        SPTAuth.defaultInstance().redirectURL = URL(string: redirectURI)
         SPTAuth.defaultInstance().requestedScopes = [SPTAuthStreamingScope, SPTAuthPlaylistReadPrivateScope, SPTAuthPlaylistModifyPrivateScope, SPTAuthPlaylistModifyPrivateScope]
         loginUrl = SPTAuth.defaultInstance().spotifyWebAuthenticationURL()
-        
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
-        if UIApplication.shared.openURL(loginUrl!) {
-            if auth.canHandle(auth.redirectURL) {
-                // TODO: error handling
+        print("login tapped")
+        UIApplication.shared.open(loginUrl!, options: [:]) { (success) in
+            if success {
+                if self.auth.canHandle(self.auth.redirectURL) {
+                    // TODO: error handling
+                }
             }
         }
     }
     
-    func updateAfterFirstLogin () {
-        if let sessionObj: AnyObject = UserDefaults.standard.object(forKey: "SpotifySession") as AnyObject{
-            let sessionDataObj = sessionObj as! Data
-            let firstTimeSession = NSKeyedUnarchiver.unarchiveObject(with: sessionDataObj) as! SPTSession
-            self.session = firstTimeSession
-            initializePlayer(authSession: session)
-        }
-    }
-    
-        func initializePlayer(authSession:SPTSession){
-            if self.player == nil {
-                self.player = SPTAudioStreamingController.sharedInstance()
-                self.player!.playbackDelegate = self
-                self.player!.delegate = self
-                try! player!.start(withClientId: auth.clientID)
-                self.player!.login(withAccessToken: authSession.accessToken)
-            }
-        }
+    func updateAfterFirstLogin() {
+        print("updating fter first login")
+        let sessionObj: AnyObject = UserDefaults.standard.object(forKey: "SpotifySession") as AnyObject
+        let sessionDataObj = sessionObj as! Data
+        let firstTimeSession = NSKeyedUnarchiver.unarchiveObject(with: sessionDataObj) as! SPTSession
+        self.session = firstTimeSession
+        initializePlayer(authSession: session)
         
+    }
+    
+    func initializePlayer(authSession:SPTSession){
+        print("player initialized")
+        if self.player == nil {
+            self.player = SPTAudioStreamingController.sharedInstance()
+            self.player!.playbackDelegate = self
+            self.player!.delegate = self
+            try! player!.start(withClientId: auth.clientID)
+            self.player!.login(withAccessToken: authSession.accessToken)
+            audioStreamingDidLogin(self.player)
+        }
+    }
+    
+    func audioStreamingDidLogin(_ audioStreaming: SPTAudioStreamingController!) {
+        // after a user authenticates a session, the SPTAudioStreamingController is then initialized and this method called
+        print("audio streaming")
+        self.player?.playSpotifyURI("spotify:track:58s6EuEYJdlb0kO7awm3Vp", startingWith: 0, startingWithPosition: 0, callback: { (error) in
+            if (error != nil) {
+                print("playing!")
+            }
+        })
+    }
+    
 }
