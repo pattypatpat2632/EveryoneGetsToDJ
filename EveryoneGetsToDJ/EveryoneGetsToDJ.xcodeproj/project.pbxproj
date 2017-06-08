@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		EC9D6D4C1EE8ABC60021370D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */; };
-		EC9D6D4E1EE8ABC60021370D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D4D1EE8ABC60021370D /* RootViewController.swift */; };
-		EC9D6D501EE8ABC60021370D /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D4F1EE8ABC60021370D /* DataViewController.swift */; };
-		EC9D6D521EE8ABC60021370D /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D511EE8ABC60021370D /* ModelController.swift */; };
 		EC9D6D551EE8ABC60021370D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9D6D531EE8ABC60021370D /* Main.storyboard */; };
 		EC9D6D571EE8ABC60021370D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9D6D561EE8ABC60021370D /* Assets.xcassets */; };
 		EC9D6D5A1EE8ABC60021370D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9D6D581EE8ABC60021370D /* LaunchScreen.storyboard */; };
 		EC9D6D651EE8ABC60021370D /* EveryoneGetsToDJTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D641EE8ABC60021370D /* EveryoneGetsToDJTests.swift */; };
+		EC9D6D711EE8B2120021370D /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D701EE8B2120021370D /* Secret.swift */; };
+		EC9D6D761EE8B3F80021370D /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9D6D731EE8B3F80021370D /* SpotifyAudioPlayback.framework */; };
+		EC9D6D771EE8B3F80021370D /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9D6D741EE8B3F80021370D /* SpotifyAuthentication.framework */; };
+		EC9D6D781EE8B3F80021370D /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9D6D751EE8B3F80021370D /* SpotifyMetadata.framework */; };
+		EC9D6D7D1EE8B4BF0021370D /* BridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D7C1EE8B4BF0021370D /* BridgeViewController.m */; };
+		EC9D6D7F1EE8B67A0021370D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D7E1EE8B67A0021370D /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,10 +32,7 @@
 
 /* Begin PBXFileReference section */
 		EC9D6D481EE8ABC60021370D /* EveryoneGetsToDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryoneGetsToDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC9D6D4D1EE8ABC60021370D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		EC9D6D4F1EE8ABC60021370D /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		EC9D6D511EE8ABC60021370D /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = EveryoneGetsToDJ/AppDelegate.swift; sourceTree = "<group>"; };
 		EC9D6D541EE8ABC60021370D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC9D6D561EE8ABC60021370D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC9D6D591EE8ABC60021370D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +40,14 @@
 		EC9D6D601EE8ABC60021370D /* EveryoneGetsToDJTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EveryoneGetsToDJTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9D6D641EE8ABC60021370D /* EveryoneGetsToDJTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveryoneGetsToDJTests.swift; sourceTree = "<group>"; };
 		EC9D6D661EE8ABC60021370D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC9D6D701EE8B2120021370D /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		EC9D6D731EE8B3F80021370D /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
+		EC9D6D741EE8B3F80021370D /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
+		EC9D6D751EE8B3F80021370D /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = "<group>"; };
+		EC9D6D7A1EE8B4BE0021370D /* EveryoneGetsToDJ-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EveryoneGetsToDJ-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC9D6D7B1EE8B4BF0021370D /* BridgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeViewController.h; sourceTree = "<group>"; };
+		EC9D6D7C1EE8B4BF0021370D /* BridgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgeViewController.m; sourceTree = "<group>"; };
+		EC9D6D7E1EE8B67A0021370D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = EveryoneGetsToDJ/LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC9D6D761EE8B3F80021370D /* SpotifyAudioPlayback.framework in Frameworks */,
+				EC9D6D781EE8B3F80021370D /* SpotifyMetadata.framework in Frameworks */,
+				EC9D6D771EE8B3F80021370D /* SpotifyAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +74,10 @@
 		EC9D6D3F1EE8ABC60021370D = {
 			isa = PBXGroup;
 			children = (
+				EC9D6D801EE8B6860021370D /* Controllers */,
+				EC9D6D791EE8B4150021370D /* Bridging */,
+				EC9D6D721EE8B3DE0021370D /* Frameworks */,
+				EC9D6D6F1EE8B19F0021370D /* Utility */,
 				EC9D6D4A1EE8ABC60021370D /* EveryoneGetsToDJ */,
 				EC9D6D631EE8ABC60021370D /* EveryoneGetsToDJTests */,
 				EC9D6D491EE8ABC60021370D /* Products */,
@@ -81,10 +96,6 @@
 		EC9D6D4A1EE8ABC60021370D /* EveryoneGetsToDJ */ = {
 			isa = PBXGroup;
 			children = (
-				EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */,
-				EC9D6D4D1EE8ABC60021370D /* RootViewController.swift */,
-				EC9D6D4F1EE8ABC60021370D /* DataViewController.swift */,
-				EC9D6D511EE8ABC60021370D /* ModelController.swift */,
 				EC9D6D531EE8ABC60021370D /* Main.storyboard */,
 				EC9D6D561EE8ABC60021370D /* Assets.xcassets */,
 				EC9D6D581EE8ABC60021370D /* LaunchScreen.storyboard */,
@@ -100,6 +111,43 @@
 				EC9D6D661EE8ABC60021370D /* Info.plist */,
 			);
 			path = EveryoneGetsToDJTests;
+			sourceTree = "<group>";
+		};
+		EC9D6D6F1EE8B19F0021370D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				EC9D6D701EE8B2120021370D /* Secret.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		EC9D6D721EE8B3DE0021370D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC9D6D731EE8B3F80021370D /* SpotifyAudioPlayback.framework */,
+				EC9D6D741EE8B3F80021370D /* SpotifyAuthentication.framework */,
+				EC9D6D751EE8B3F80021370D /* SpotifyMetadata.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC9D6D791EE8B4150021370D /* Bridging */ = {
+			isa = PBXGroup;
+			children = (
+				EC9D6D7B1EE8B4BF0021370D /* BridgeViewController.h */,
+				EC9D6D7C1EE8B4BF0021370D /* BridgeViewController.m */,
+				EC9D6D7A1EE8B4BE0021370D /* EveryoneGetsToDJ-Bridging-Header.h */,
+			);
+			name = Bridging;
+			sourceTree = "<group>";
+		};
+		EC9D6D801EE8B6860021370D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC9D6D7E1EE8B67A0021370D /* LoginViewController.swift */,
+				EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +201,7 @@
 					EC9D6D471EE8ABC60021370D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 992D98C4QP;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					EC9D6D5F1EE8ABC60021370D = {
@@ -207,10 +256,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC9D6D4E1EE8ABC60021370D /* RootViewController.swift in Sources */,
-				EC9D6D521EE8ABC60021370D /* ModelController.swift in Sources */,
-				EC9D6D501EE8ABC60021370D /* DataViewController.swift in Sources */,
+				EC9D6D7F1EE8B67A0021370D /* LoginViewController.swift in Sources */,
+				EC9D6D7D1EE8B4BF0021370D /* BridgeViewController.m in Sources */,
 				EC9D6D4C1EE8ABC60021370D /* AppDelegate.swift in Sources */,
+				EC9D6D711EE8B2120021370D /* Secret.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,11 +398,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 992D98C4QP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EveryoneGetsToDJ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = SweetPea.EveryoneGetsToDJ;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SweetPea.EveryoneGetsToDJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EveryoneGetsToDJ-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -362,11 +418,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 992D98C4QP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EveryoneGetsToDJ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = SweetPea.EveryoneGetsToDJ;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SweetPea.EveryoneGetsToDJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EveryoneGetsToDJ-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
