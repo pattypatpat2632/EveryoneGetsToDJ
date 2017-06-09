@@ -19,6 +19,7 @@ class LoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, 
         super.viewDidLoad()
         setup()
         NotificationCenter.default.addObserver(self, selector: #selector(updateAfterFirstLogin), name: Notification.Name(rawValue: "loginSuccessfull"), object: nil)
+        
     }
     
     func setup() {
@@ -38,9 +39,15 @@ class LoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, 
             }
         }
     }
+    @IBAction func getTokenTapped(_ sender: UIButton) {
+        ApiClient.sharedInstance.getToken{token in
+            print(token)
+        }
+    }
     
     func updateAfterFirstLogin() {
         print("updating fter first login")
+        
         let sessionObj: AnyObject = UserDefaults.standard.object(forKey: "SpotifySession") as AnyObject
         let sessionDataObj = sessionObj as! Data
         let firstTimeSession = NSKeyedUnarchiver.unarchiveObject(with: sessionDataObj) as! SPTSession
@@ -64,7 +71,7 @@ class LoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, 
     func audioStreamingDidLogin(_ audioStreaming: SPTAudioStreamingController!) {
         // after a user authenticates a session, the SPTAudioStreamingController is then initialized and this method called
         print("audio streaming")
-        self.player?.playSpotifyURI("spotify:track:58s6EuEYJdlb0kO7awm3Vp", startingWith: 0, startingWithPosition: 0, callback: { (error) in
+        self.player?.playSpotifyURI("spotify:track:6L89mwZXSOwYl76YXfX13s", startingWith: 0, startingWithPosition: 0, callback: { (error) in
             if (error != nil) {
                 print("playing!")
             }

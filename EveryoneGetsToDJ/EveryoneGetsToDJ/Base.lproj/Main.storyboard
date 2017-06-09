@@ -29,6 +29,14 @@
                                     <action selector="loginTapped:" destination="Hyr-b9-YP5" eventType="touchUpInside" id="YNb-tR-nka"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wY-01-8ce">
+                                <rect key="frame" x="152" y="386" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Get Token"/>
+                                <connections>
+                                    <action selector="getTokenTapped:" destination="Hyr-b9-YP5" eventType="touchUpInside" id="P0E-MX-aFV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.71764705880000002" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
