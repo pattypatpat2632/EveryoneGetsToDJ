@@ -1,0 +1,6 @@
+framework module Pods_EveryoneGetsToDJTests {
+  umbrella header "Pods-EveryoneGetsToDJTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

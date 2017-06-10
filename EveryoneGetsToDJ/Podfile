@@ -1,0 +1,16 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'EveryoneGetsToDJ' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for EveryoneGetsToDJ
+pod "PromiseKit", "~> 4.0"
+
+  target 'EveryoneGetsToDJTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

@@ -14,6 +14,7 @@ class LoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, 
     var session:SPTSession!
     var player: SPTAudioStreamingController?
     var loginUrl: URL?
+    let apiClient = ApiClient.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +40,10 @@ class LoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, 
             }
         }
     }
+    
     @IBAction func getTokenTapped(_ sender: UIButton) {
-        ApiClient.sharedInstance.getToken{token in
-            print(token)
+        apiClient.getToken().then { token in
+            self.apiClient.query(artist: "Green day", with: token)
         }
     }
     

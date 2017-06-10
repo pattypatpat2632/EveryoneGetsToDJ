@@ -1,0 +1,6 @@
+framework module Pods_EveryoneGetsToDJ {
+  umbrella header "Pods-EveryoneGetsToDJ-umbrella.h"
+
+  export *
+  module * { export * }
+}
