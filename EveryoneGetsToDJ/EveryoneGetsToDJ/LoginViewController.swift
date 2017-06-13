@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PromiseKit
 
 class LoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDelegate {
     
@@ -42,8 +43,11 @@ class LoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, 
     }
     
     @IBAction func getTokenTapped(_ sender: UIButton) {
-        apiClient.getToken().then { token in
-            self.apiClient.query(artist: "Green day", with: token)
+        apiClient.getToken().then { (token) -> String in
+            self.apiClient.query(input: "Green Day", with: token)
+            return "Super cool"
+        }.catch { (error) in
+            print(error.localizedDescription)
         }
     }
     

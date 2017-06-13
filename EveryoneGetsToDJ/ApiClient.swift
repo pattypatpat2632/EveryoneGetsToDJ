@@ -42,31 +42,38 @@ final class ApiClient {
         }
     }
     
-    func query(artist: String, with token: String) -> Promise<Artist> {
-        print("query with token: \(token)")
+    func query(input: String, with token: String) -> Promise<([Artist], [Album], [Track])> {
         return Promise { fulfill, reject in
-            let formattedArtist = sanitize(artist)
-            let endpoint = "https://api.spotify.com/v1/search?q=\(formattedArtist)&type=artist"
-            guard let url = URL(string: endpoint) else {
-                reject(ApiError.invalidURL("Invalid URL for getting token"))
-                return
-            }
-            var request = URLRequest(url: url)
+            let artistsResource = artistSearchResource(from: input)!
+            let tracksResource = trackSearchResource(from: input)!
+            let albumsResource = albumSearchResource(from: input)!
+            
+            when(resolved: [fetch(resource: artistsResource, with: input), fetch(resource: tracksResource, with: input), fetch(resource: albumsResource, with: input)]).then(execute: { (results) -> String in
+                for result in results {
+                    print(result)
+                }
+                return "HEY COOL"
+            }).catch(execute: { (error) in
+                print(error.localizedDescription)
+            })
+            
+        }
+    }
+    
+    
+    
+    func fetch<T>(resource: Resource<T>, with token: String) -> Promise<Any> {
+        return Promise { fulfill, reject in
+            var request = URLRequest(url: resource.url)
             request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.addValue("application/json", forHTTPHeaderField: "Accept")
             request.httpMethod = "GET"
-            let session = URLSession(configuration: URLSessionConfiguration.default)
-            let task = session.dataTask(with: request) { (data, response, error) in
-                if let data = data {
-                    do {
-                        let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any] //TODO: refactor
-                        print(json)
-                    } catch {
-                        reject(ApiError.unexpected("Could not serialize json from data response"))
-                    }
-                }
-            }
+            let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, _, _) in
+                let json = resource.parse(data!)//TODO: refactor
+                print(json)
+                fulfill(json)
+            })
             task.resume()
         }
     }
@@ -83,4 +90,74 @@ final class ApiClient {
     }
     
     
+}
+//MARK: resources
+extension ApiClient {
+    func artistSearchResource(from artist: String) -> Resource<[Artist]>? {
+        let formattedArtist = sanitize(artist)
+        let endpoint = "https://api.spotify.com/v1/search?q=\(formattedArtist)&type=artist"
+        guard let url = URL(string: endpoint) else {return nil}
+        let artistsResource = Resource<[Artist]>(url: url, parse: { data in
+            var artists = [Artist]()
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] ?? [:]
+                let artistsArray = json["artists"] as? [[String: Any]] ?? []
+                for artistDict in artistsArray{
+                    let name = artistDict["name"] as? String ?? ""
+                    let artist = Artist(name: name, albumIDs: [], trackIDs: [])
+                    artists.append(artist)
+                }
+            } catch {
+                
+            }
+            return artists
+        })
+        return artistsResource
+    }
+    
+    func albumSearchResource(from album: String) -> Resource<[Album]>? {
+        let formattedAlbum = sanitize(album)
+        let endpoint = "https://api.spotify.com/v1/search?q=\(formattedAlbum)&type=album"
+        guard let url = URL(string: endpoint) else {return nil}
+        let albumsResource = Resource<[Album]>(url: url) { data in
+            var albums = [Album]()
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] ?? [:]
+                let albumsArray = json["albums"] as? [[String: Any]] ?? []
+                for albumDict in albumsArray {
+                    let name = albumDict["name"] as? String ?? ""
+                    
+                    let album = Album(name: name, trackIDs: [], image: nil)
+                    albums.append(album)
+                }
+            } catch {
+                
+            }
+            return albums
+        }
+        return albumsResource
+    }
+    
+    func trackSearchResource(from track: String) -> Resource<[Track]>? {
+        let formattedTrack = sanitize(track)
+        let endpoint = "https://api.spotify.com/v1/search?q=\(formattedTrack)&type=album"
+        guard let url = URL(string: endpoint) else {return nil}
+        let tracksResource = Resource<[Track]>(url: url) { data in
+            var tracks = [Track]()
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] ?? [:]
+                let tracksArray = json["tracks"] as? [[String: Any]] ?? []
+                for trackDict in tracksArray {
+                    let name = trackDict["name"] as? String ?? ""
+                    let uri = trackDict["uri"] as? String ?? ""
+                    let track = Track(name: name, albumID: "blah", artistID: "blah", image: nil, uri: uri)
+                    tracks.append(track)
+                }
+            } catch {
+                
+            }
+            return tracks
+        }
+        return tracksResource
+    }
 }

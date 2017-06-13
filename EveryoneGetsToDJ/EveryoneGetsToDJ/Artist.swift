@@ -10,6 +10,6 @@ import Foundation
 
 struct Artist {
     let name: String
-    let albums: [Album]
-    let tracks: [Track]
+    let albumIDs: [String]
+    let trackIDs: [String]
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1269095ADD81C72C59963E65 /* Pods_EveryoneGetsToDJTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DA0DAC2DB435D378229EF5 /* Pods_EveryoneGetsToDJTests.framework */; };
 		CED1AB962730DB2FC70D5867 /* Pods_EveryoneGetsToDJ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256E0914CCCD808BF0ACF6E5 /* Pods_EveryoneGetsToDJ.framework */; };
+		EC291B301EF047D800953483 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC291B2F1EF047D800953483 /* Resource.swift */; };
 		EC9D6D4C1EE8ABC60021370D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */; };
 		EC9D6D551EE8ABC60021370D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9D6D531EE8ABC60021370D /* Main.storyboard */; };
 		EC9D6D571EE8ABC60021370D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9D6D561EE8ABC60021370D /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		2F7C1E912541D3C6A35A9564 /* Pods-EveryoneGetsToDJTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryoneGetsToDJTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EveryoneGetsToDJTests/Pods-EveryoneGetsToDJTests.debug.xcconfig"; sourceTree = "<group>"; };
 		845186C2A0070BBFC2F67AF6 /* Pods-EveryoneGetsToDJ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryoneGetsToDJ.release.xcconfig"; path = "Pods/Target Support Files/Pods-EveryoneGetsToDJ/Pods-EveryoneGetsToDJ.release.xcconfig"; sourceTree = "<group>"; };
 		EA392A81027572AB107929C1 /* Pods-EveryoneGetsToDJTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryoneGetsToDJTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EveryoneGetsToDJTests/Pods-EveryoneGetsToDJTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC291B2F1EF047D800953483 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		EC9D6D481EE8ABC60021370D /* EveryoneGetsToDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryoneGetsToDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = EveryoneGetsToDJ/AppDelegate.swift; sourceTree = "<group>"; };
 		EC9D6D541EE8ABC60021370D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				EC9D6D821EE9BE9A0021370D /* ApiClient.swift */,
 				EC9D6D861EEB46C20021370D /* ApiResponse.swift */,
 				ECFDFBF41EEB70EF00480F8F /* ApiError.swift */,
+				EC291B2F1EF047D800953483 /* Resource.swift */,
 			);
 			name = Utility;
 			path = ..;
@@ -428,6 +431,7 @@
 				EC9D6D7F1EE8B67A0021370D /* LoginViewController.swift in Sources */,
 				EC9D6D7D1EE8B4BF0021370D /* BridgeViewController.m in Sources */,
 				EC9D6D4C1EE8ABC60021370D /* AppDelegate.swift in Sources */,
+				EC291B301EF047D800953483 /* Resource.swift in Sources */,
 				ECFDFBF51EEB70EF00480F8F /* ApiError.swift in Sources */,
 				EC9D6D8B1EEB4BE50021370D /* Track.swift in Sources */,
 				EC9D6D871EEB46C20021370D /* ApiResponse.swift in Sources */,

@@ -10,6 +10,6 @@ import Foundation
 
 struct Album {
     let name: String
-    let tracks: [Track]
+    let trackIDs: [String]
     var image: UIImage?
 }
