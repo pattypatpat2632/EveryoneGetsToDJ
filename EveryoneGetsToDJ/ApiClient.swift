@@ -50,7 +50,12 @@ final class ApiClient {
             
             when(resolved: [fetch(resource: artistsResource, with: input), fetch(resource: tracksResource, with: input), fetch(resource: albumsResource, with: input)]).then(execute: { (results) -> String in
                 for result in results {
-                    print(result)
+                    switch result {
+                    case .fulfilled(let value):
+                        print(result)
+                    case .rejected(let error):
+                        print(error.localizedDescription)
+                    }
                 }
                 return "HEY COOL"
             }).catch(execute: { (error) in
@@ -71,7 +76,7 @@ final class ApiClient {
             request.httpMethod = "GET"
             let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, _, _) in
                 let json = resource.parse(data!)//TODO: refactor
-                print(json)
+                print("JSON: \(json)")
                 fulfill(json)
             })
             task.resume()
