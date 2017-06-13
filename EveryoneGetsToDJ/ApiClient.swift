@@ -48,7 +48,7 @@ final class ApiClient {
             let tracksResource = trackSearchResource(from: input)!
             let albumsResource = albumSearchResource(from: input)!
             
-            when(fulfilled: fetch(resource: artistsResource, with: input), fetch(resource: tracksResource, with: input), fetch(resource: albumsResource, with: input)).then(execute: { (response) -> Void in
+            when(fulfilled: fetch(resource: artistsResource, with: token), fetch(resource: tracksResource, with: token), fetch(resource: albumsResource, with: token)).then(execute: { (response) -> Void in
                 fulfill(response)
             }).catch(execute: { (error) in
                 reject(error)
@@ -97,8 +97,9 @@ extension ApiClient {
             var artists = [Artist]()
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] ?? [:]
-                let artistsArray = json["artists"] as? [[String: Any]] ?? []
-                for artistDict in artistsArray{
+                let artistsArray = json["artists"] as? [String: Any] ?? [:]
+                let items = artistsArray["items"] as? [[String: Any]] ?? []
+                for artistDict in items{
                     let name = artistDict["name"] as? String ?? ""
                     let artist = Artist(name: name, albumIDs: [], trackIDs: [])
                     artists.append(artist)
@@ -119,8 +120,9 @@ extension ApiClient {
             var albums = [Album]()
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] ?? [:]
-                let albumsArray = json["albums"] as? [[String: Any]] ?? []
-                for albumDict in albumsArray {
+                let albumsArray = json["albums"] as? [String: Any] ?? [:]
+                let items = albumsArray["items"] as? [[String: Any]] ?? []
+                for albumDict in items {
                     let name = albumDict["name"] as? String ?? ""
                     
                     let album = Album(name: name, trackIDs: [], image: nil)
@@ -142,8 +144,9 @@ extension ApiClient {
             var tracks = [Track]()
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] ?? [:]
-                let tracksArray = json["tracks"] as? [[String: Any]] ?? []
-                for trackDict in tracksArray {
+                let tracksArray = json["tracks"] as? [String: Any] ?? [:]
+                let items = tracksArray["items"] as? [[String: Any]] ?? []
+                for trackDict in items {
                     let name = trackDict["name"] as? String ?? ""
                     let uri = trackDict["uri"] as? String ?? ""
                     let track = Track(name: name, albumID: "blah", artistID: "blah", image: nil, uri: uri)
