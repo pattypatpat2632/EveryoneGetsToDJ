@@ -43,12 +43,14 @@ class LoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, 
     }
     
     @IBAction func getTokenTapped(_ sender: UIButton) {
-        apiClient.getToken().then { (token) -> String in
-            self.apiClient.query(input: "Green Day", with: token)
-            return "Super cool"
-        }.catch { (error) in
-            print(error.localizedDescription)
+        apiClient.getToken().then { token in
+            return self.apiClient.query(input: "Green Day", with: token)
+        }.then(on: DispatchQueue.main) { (response) -> () in
+                print("Response to VC: \(response)")
+        }.catch {error in
+              print(error.localizedDescription)
         }
+        
     }
     
     func updateAfterFirstLogin() {

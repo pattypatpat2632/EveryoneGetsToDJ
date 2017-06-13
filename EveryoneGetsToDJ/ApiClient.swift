@@ -42,32 +42,23 @@ final class ApiClient {
         }
     }
     
-    func query(input: String, with token: String) -> Promise<([Artist], [Album], [Track])> {
+    func query(input: String, with token: String) -> Promise<([Artist], [Track], [Album])> {
         return Promise { fulfill, reject in
             let artistsResource = artistSearchResource(from: input)!
             let tracksResource = trackSearchResource(from: input)!
             let albumsResource = albumSearchResource(from: input)!
             
-            when(resolved: [fetch(resource: artistsResource, with: input), fetch(resource: tracksResource, with: input), fetch(resource: albumsResource, with: input)]).then(execute: { (results) -> String in
-                for result in results {
-                    switch result {
-                    case .fulfilled(let value):
-                        print(result)
-                    case .rejected(let error):
-                        print(error.localizedDescription)
-                    }
-                }
-                return "HEY COOL"
+            when(fulfilled: fetch(resource: artistsResource, with: input), fetch(resource: tracksResource, with: input), fetch(resource: albumsResource, with: input)).then(execute: { (response) -> Void in
+                fulfill(response)
             }).catch(execute: { (error) in
-                print(error.localizedDescription)
+                reject(error)
             })
-            
         }
     }
     
     
     
-    func fetch<T>(resource: Resource<T>, with token: String) -> Promise<Any> {
+    func fetch<T>(resource: Resource<T>, with token: String) -> Promise<T> {
         return Promise { fulfill, reject in
             var request = URLRequest(url: resource.url)
             request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
@@ -75,9 +66,9 @@ final class ApiClient {
             request.addValue("application/json", forHTTPHeaderField: "Accept")
             request.httpMethod = "GET"
             let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, _, _) in
-                let json = resource.parse(data!)//TODO: refactor
-                print("JSON: \(json)")
-                fulfill(json)
+                let response = resource.parse(data!)//TODO: refactor
+                print("RESPONSE: \(response)")
+                fulfill(response)
             })
             task.resume()
         }
