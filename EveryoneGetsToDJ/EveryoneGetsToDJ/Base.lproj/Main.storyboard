@@ -45,5 +45,59 @@
             </objects>
             <point key="canvasLocation" x="-2526" y="-4209"/>
         </scene>
+        <!--Selection View Controller-->
+        <scene sceneID="Lku-4v-2Xr">
+            <objects>
+                <viewController id="EoE-Qd-SxF" customClass="SelectionViewController" customModule="EveryoneGetsToDJ" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E4F-Fi-Yg4"/>
+                        <viewControllerLayoutGuide type="bottom" id="H8q-oh-nsn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VRa-PC-XXJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifM-DZ-hP9">
+                                <rect key="frame" x="166" y="261" width="72" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ad2-8v-IJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1626.4000000000001" y="-3697.6011994003002"/>
+        </scene>
+        <!--Playback View Controller-->
+        <scene sceneID="5nQ-Xo-vwv">
+            <objects>
+                <viewController id="zDd-Am-9Tg" customClass="PlaybackViewController" customModule="EveryoneGetsToDJ" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I2y-u1-cUl"/>
+                        <viewControllerLayoutGuide type="bottom" id="NHb-DM-jQ6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mXB-k2-lU9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Playback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNs-62-yUG">
+                                <rect key="frame" x="148" y="208" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vbu-zM-gvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1618.4000000000001" y="-4428.0359820089961"/>
+        </scene>
     </scenes>
 </document>
