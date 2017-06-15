@@ -10,6 +10,7 @@
 		1269095ADD81C72C59963E65 /* Pods_EveryoneGetsToDJTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DA0DAC2DB435D378229EF5 /* Pods_EveryoneGetsToDJTests.framework */; };
 		CED1AB962730DB2FC70D5867 /* Pods_EveryoneGetsToDJ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256E0914CCCD808BF0ACF6E5 /* Pods_EveryoneGetsToDJ.framework */; };
 		EC291B301EF047D800953483 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC291B2F1EF047D800953483 /* Resource.swift */; };
+		EC5AB8F01EF2E2F200483E13 /* DJTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */; };
 		EC5CC81A1EF1F45000F83E13 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC8191EF1F45000F83E13 /* LoginManager.swift */; };
 		EC5CC81C1EF1F6CC00F83E13 /* PlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC81B1EF1F6CC00F83E13 /* PlaybackViewController.swift */; };
 		EC5CC81E1EF1F70300F83E13 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC81D1EF1F70300F83E13 /* SelectionViewController.swift */; };
@@ -50,6 +51,7 @@
 		845186C2A0070BBFC2F67AF6 /* Pods-EveryoneGetsToDJ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryoneGetsToDJ.release.xcconfig"; path = "Pods/Target Support Files/Pods-EveryoneGetsToDJ/Pods-EveryoneGetsToDJ.release.xcconfig"; sourceTree = "<group>"; };
 		EA392A81027572AB107929C1 /* Pods-EveryoneGetsToDJTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryoneGetsToDJTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EveryoneGetsToDJTests/Pods-EveryoneGetsToDJTests.release.xcconfig"; sourceTree = "<group>"; };
 		EC291B2F1EF047D800953483 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJTabBarController.swift; sourceTree = "<group>"; };
 		EC5CC8191EF1F45000F83E13 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		EC5CC81B1EF1F6CC00F83E13 /* PlaybackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackViewController.swift; sourceTree = "<group>"; };
 		EC5CC81D1EF1F70300F83E13 /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */,
 				EC5CC81B1EF1F6CC00F83E13 /* PlaybackViewController.swift */,
 				EC5CC81D1EF1F70300F83E13 /* SelectionViewController.swift */,
+				EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -443,6 +446,7 @@
 				EC291B301EF047D800953483 /* Resource.swift in Sources */,
 				ECFDFBF51EEB70EF00480F8F /* ApiError.swift in Sources */,
 				EC5CC81C1EF1F6CC00F83E13 /* PlaybackViewController.swift in Sources */,
+				EC5AB8F01EF2E2F200483E13 /* DJTabBarController.swift in Sources */,
 				EC5CC81A1EF1F45000F83E13 /* LoginManager.swift in Sources */,
 				EC9D6D8B1EEB4BE50021370D /* Track.swift in Sources */,
 				EC9D6D871EEB46C20021370D /* ApiResponse.swift in Sources */,

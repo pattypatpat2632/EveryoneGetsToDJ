@@ -12,22 +12,26 @@ import PromiseKit
 class LoginViewController: UIViewController {
     
     let apiClient = ApiClient.sharedInstance
+    let loginManager = LoginManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(updateAfterFirstLogin), name: Notification.Name(rawValue: "loginSuccessfull"), object: nil)
-        
+        loginManager.setup()
+    }
+    
+    @IBAction func loginTapped(_ sender: UIButton) {
+        loginManager.login()
     }
     
     func updateAfterFirstLogin() {
-        LoginManager.sharedInstance.updateAfterFirstLogin()
-    }
-    
-    
-    
-    @IBAction func loginTapped(_ sender: UIButton) {
-        print("login tapped")
-        
+        loginManager.updateAfterFirstLogin()
+        let djTabBarController = DJTabBarController()
+        let playbackVC = PlaybackViewController()
+        let selectionVC = SelectionViewController()
+        djTabBarController.setViewControllers([playbackVC, selectionVC], animated: true)
+        djTabBarController.selectedIndex = 0
+        present(djTabBarController, animated: true, completion: nil)
     }
     
     @IBAction func getTokenTapped(_ sender: UIButton) {
