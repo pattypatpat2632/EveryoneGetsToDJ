@@ -26,12 +26,7 @@ class LoginViewController: UIViewController {
     
     func updateAfterFirstLogin() {
         loginManager.updateAfterFirstLogin()
-        let djTabBarController = DJTabBarController()
-        let playbackVC = PlaybackViewController()
-        let selectionVC = SelectionViewController()
-        djTabBarController.setViewControllers([playbackVC, selectionVC], animated: true)
-        djTabBarController.selectedIndex = 0
-        present(djTabBarController, animated: true, completion: nil)
+        performSegue(withIdentifier: "loginSegue", sender: nil)
     }
     
     @IBAction func getTokenTapped(_ sender: UIButton) {

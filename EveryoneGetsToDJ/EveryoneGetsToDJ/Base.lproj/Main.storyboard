@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNp-iW-dwZ">
-                                <rect key="frame" x="121" y="282" width="132" height="30"/>
+                                <rect key="frame" x="121" y="282" width="132" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign in with Spotify"/>
                                 <connections>
@@ -40,12 +40,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.71764705880000002" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <segue destination="Zf9-w9-9k0" kind="show" identifier="loginSegue" id="3kN-YD-daH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Als-FS-Rzk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2484" y="-4428"/>
+            <point key="canvasLocation" x="-2484" y="-4428.0359820089961"/>
         </scene>
-        <!--Selection View Controller-->
+        <!--Jukebox-->
         <scene sceneID="Lku-4v-2Xr">
             <objects>
                 <viewController id="EoE-Qd-SxF" customClass="SelectionViewController" customModule="EveryoneGetsToDJ" customModuleProvider="target" sceneMemberID="viewController">
@@ -67,12 +70,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Jukebox" id="O02-cU-liA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad2-8v-IJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="-4428.0359820089961"/>
+            <point key="canvasLocation" x="-1618" y="-3624"/>
         </scene>
-        <!--Item-->
+        <!--Playback-->
         <scene sceneID="5nQ-Xo-vwv">
             <objects>
                 <viewController id="zDd-Am-9Tg" customClass="PlaybackViewController" customModule="EveryoneGetsToDJ" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,9 +96,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.28252414711770313" green="1" blue="0.19639116146461422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="k8b-oJ-RvC"/>
+                    <tabBarItem key="tabBarItem" title="Playback" id="k8b-oJ-RvC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbu-zM-gvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,6 +115,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="zDd-Am-9Tg" kind="relationship" relationship="viewControllers" id="1a0-op-SOj"/>
+                        <segue destination="EoE-Qd-SxF" kind="relationship" relationship="viewControllers" id="xZW-bC-vP0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iko-71-qbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
