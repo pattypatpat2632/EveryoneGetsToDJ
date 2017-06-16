@@ -137,7 +137,7 @@ extension ApiClient {
     
     func trackSearchResource(from track: String) -> Resource<[Track]>? {
         let formattedTrack = sanitize(track)
-        let endpoint = "https://api.spotify.com/v1/search?q=\(formattedTrack)&type=album"
+        let endpoint = "https://api.spotify.com/v1/search?q=\(formattedTrack)&type=track"
         guard let url = URL(string: endpoint) else {return nil}
         let tracksResource = Resource<[Track]>(url: url) { data in
             var tracks = [Track]()
