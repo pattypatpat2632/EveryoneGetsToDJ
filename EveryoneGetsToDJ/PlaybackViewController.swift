@@ -15,29 +15,28 @@ class PlaybackViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializePlayer(authSession: loginManager.session)
+        //initializePlayer(authSession: loginManager.session)
     }
 
 }
 
 extension PlaybackViewController: SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDelegate {
     
-    func initializePlayer(authSession:SPTSession){
-        if self.player == nil {
-            self.player = SPTAudioStreamingController.sharedInstance()
-            self.player!.playbackDelegate = self
-            self.player!.delegate = self
-            try! player!.start(withClientId: loginManager.auth.clientID)
-            self.player!.login(withAccessToken: authSession.accessToken)
-            audioStreamingDidLogin(self.player)
-        }
-    }
-    
-    func audioStreamingDidLogin(_ audioStreaming: SPTAudioStreamingController!) {
-        self.player?.playSpotifyURI("spotify:track:6L89mwZXSOwYl76YXfX13s", startingWith: 0, startingWithPosition: 0, callback: { (error) in
-            if (error != nil) {
-                print("playing!")
-            }
-        })
-    }
+//    func initializePlayer(authSession:SPTSession){
+//        if self.player == nil {
+//            self.player = SPTAudioStreamingController.sharedInstance()
+//            self.player!.playbackDelegate = self
+//            self.player!.delegate = self
+//            try! player!.start(withClientId: loginManager.auth.clientID)
+//            self.player!.login(withAccessToken: authSession.accessToken)
+//        }
+//    }
+//    
+//    func audioStreamingDidLogin(_ audioStreaming: SPTAudioStreamingController!) {
+//        self.player?.playSpotifyURI("spotify:track:6L89mwZXSOwYl76YXfX13s", startingWith: 0, startingWithPosition: 0, callback: { (error) in
+//            if (error != nil) {
+//                print("playing!")
+//            }
+//        })
+//    }
 }

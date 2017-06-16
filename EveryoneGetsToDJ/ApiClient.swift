@@ -67,7 +67,6 @@ final class ApiClient {
             request.httpMethod = "GET"
             let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, _, _) in
                 let response = resource.parse(data!)//TODO: refactor
-                print("RESPONSE: \(response)")
                 fulfill(response)
             })
             task.resume()

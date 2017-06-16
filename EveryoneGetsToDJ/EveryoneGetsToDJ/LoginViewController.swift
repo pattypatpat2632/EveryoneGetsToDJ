@@ -29,15 +29,5 @@ class LoginViewController: UIViewController {
         performSegue(withIdentifier: "loginSegue", sender: nil)
     }
     
-    @IBAction func getTokenTapped(_ sender: UIButton) {
-        apiClient.getToken().then { token in
-            return self.apiClient.query(input: "Green Day", with: token)
-        }.then(on: DispatchQueue.main) { (response) -> () in
-                print("Response to VC: \(response)")
-        }.catch {error in
-              print(error.localizedDescription)
-        }
-        
-    }
     
 }
