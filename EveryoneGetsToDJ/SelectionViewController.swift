@@ -29,20 +29,13 @@ class SelectionViewController: UIViewController {
     }
     
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var artistTableView: UITableView!
+    @IBOutlet weak var trackTableView: UITableView!
+    @IBOutlet weak var albumTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
-    }
-    
-    func getToken() {
-        apiClient.getToken().then { token in
-            return self.apiClient.query(input: "Green Day", with: token)
-            }.then(on: DispatchQueue.main) { (response) -> () in
-                print("Response to VC: \(response)")
-            }.catch {error in
-                print(error.localizedDescription)
-        }
     }
 }
 
@@ -81,19 +74,44 @@ extension SelectionViewController: UISearchBarDelegate {
             }
         }
     }
-}
-
-extension SelectionViewController {
-    func search(text: String) {
+    
+    private func search(text: String) {
         apiClient.getToken().then { token in
             return self.apiClient.query(input: text, with: token)
-        }.then { (response) -> String in
-            self.artists = response.0
-            self.tracks = response.1
-            self.albums = response.2
-            return ("test string")
-        }.catch{ error in
-            print(error.localizedDescription)
+            }.then { (response) -> String in
+                self.artists = response.0
+                self.tracks = response.1
+                self.albums = response.2
+                return ("test string")
+            }.catch{ error in
+                print(error.localizedDescription)
         }
     }
+}
+
+extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch tableView {
+        case artistTableView:
+            return artists.count
+        case trackTableView:
+            return tracks.count
+        case albumTableView:
+            return albums.count
+        default:
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        return cell
+    }
+    
+    
 }

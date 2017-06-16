@@ -105,7 +105,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Jukebox" id="O02-cU-liA"/>
                     <connections>
+                        <outlet property="albumTableView" destination="8d5-g3-hd2" id="j0Z-R9-RgL"/>
+                        <outlet property="artistTableView" destination="tdj-fG-9NR" id="fD5-ch-mj2"/>
                         <outlet property="searchBar" destination="Tak-Ge-9eh" id="nGh-9R-HQH"/>
+                        <outlet property="trackTableView" destination="ToB-MR-Qak" id="kEg-3q-K1n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad2-8v-IJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
