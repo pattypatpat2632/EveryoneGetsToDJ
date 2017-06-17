@@ -15,16 +15,26 @@ class SelectionViewController: UIViewController {
     var artists = [Artist]() {
         didSet {
             artists.forEach{print("ARTIST: \($0.name)")}
+            DispatchQueue.main.async {
+                 self.artistTableView.reloadData()
+            }
         }
     }
     var tracks = [Track]() {
         didSet {
             tracks.forEach{print("TRACK: \($0.name)")}
+            DispatchQueue.main.async {
+                print("RELOADING TRACK DATA************")
+                self.trackTableView.reloadData()
+            }
         }
     }
     var albums = [Album]() {
         didSet {
             albums.forEach{print("ALBUM:\($0.name)")}
+            DispatchQueue.main.async {
+                self.albumTableView.reloadData()
+            }
         }
     }
     
@@ -96,21 +106,32 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch tableView {
-        case artistTableView:
+        if tableView == artistTableView {
+            print("Artists: \(artists.count)")
             return artists.count
-        case trackTableView:
+        } else if tableView == trackTableView {
+            print("Tracks: \(tracks.count)")
             return tracks.count
-        case albumTableView:
+        } else {
+            print("Albums: \(albums.count)")
             return albums.count
-        default:
-            return 0
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        return cell
+        if tableView == artistTableView {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "artistCell", for: indexPath)
+            cell.backgroundColor = UIColor.red
+            return cell
+        } else if tableView == trackTableView {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "trackCell", for: indexPath)
+            cell.backgroundColor = UIColor.green
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath)
+            cell.backgroundColor = UIColor.blue
+            return cell
+        }
     }
     
     
