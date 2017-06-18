@@ -33,5 +33,4 @@ class LoginViewController: UIViewController {
         performSegue(withIdentifier: "hostSegue", sender: nil)
     }
     
-    
 }

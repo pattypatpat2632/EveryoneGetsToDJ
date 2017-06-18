@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="-3676" y="-4428"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Jukebox View Controller-->
         <scene sceneID="Hlg-Mz-qPa">
             <objects>
-                <viewController id="Aj9-lG-t6f" sceneMemberID="viewController">
+                <viewController id="Aj9-lG-t6f" customClass="CreateJukeboxViewController" customModule="EveryoneGetsToDJ" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5vV-nu-k47"/>
                         <viewControllerLayoutGuide type="bottom" id="5lp-e3-LiD"/>
@@ -76,9 +76,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-BU-Hbb">
-                                <rect key="frame" x="164" y="236" width="46" height="30"/>
+                                <rect key="frame" x="134" y="236" width="107" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Create Jukebox"/>
+                                <connections>
+                                    <action selector="createJukeboxTapped:" destination="Aj9-lG-t6f" eventType="touchUpInside" id="qQ3-f6-pfI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name your jukebox:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWP-v4-605">
                                 <rect key="frame" x="112" y="169" width="152" height="21"/>
@@ -90,6 +93,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="T9n-tf-OSU" id="rtN-KT-zGx"/>
+                        <segue destination="Zf9-w9-9k0" kind="show" identifier="hostJukeboxSegue" id="aaQ-Cj-ofU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MG3-ex-zU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,6 +155,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="Zf9-w9-9k0" kind="show" identifier="joinJukeboxSegue" id="yFO-Ig-jrK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bED-q2-rrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -318,4 +328,7 @@
             <point key="canvasLocation" x="-1618" y="-4633"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="aaQ-Cj-ofU"/>
+    </inferredMetricsTieBreakers>
 </document>

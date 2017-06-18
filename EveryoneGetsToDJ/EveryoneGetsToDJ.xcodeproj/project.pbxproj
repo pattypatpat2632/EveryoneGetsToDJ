@@ -12,6 +12,7 @@
 		EC2018351EF70C9900ECB4ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC2018341EF70C9900ECB4ED /* GoogleService-Info.plist */; };
 		EC291B301EF047D800953483 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC291B2F1EF047D800953483 /* Resource.swift */; };
 		EC56CE531EF7119C0023DDCE /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56CE521EF7119C0023DDCE /* FirebaseManager.swift */; };
+		EC56CE551EF71C920023DDCE /* CreateJukeboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56CE541EF71C920023DDCE /* CreateJukeboxViewController.swift */; };
 		EC5AB8F01EF2E2F200483E13 /* DJTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */; };
 		EC5CC81A1EF1F45000F83E13 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC8191EF1F45000F83E13 /* LoginManager.swift */; };
 		EC5CC81C1EF1F6CC00F83E13 /* PlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC81B1EF1F6CC00F83E13 /* PlaybackViewController.swift */; };
@@ -55,6 +56,7 @@
 		EC2018341EF70C9900ECB4ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC291B2F1EF047D800953483 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		EC56CE521EF7119C0023DDCE /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		EC56CE541EF71C920023DDCE /* CreateJukeboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateJukeboxViewController.swift; sourceTree = "<group>"; };
 		EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJTabBarController.swift; sourceTree = "<group>"; };
 		EC5CC8191EF1F45000F83E13 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		EC5CC81B1EF1F6CC00F83E13 /* PlaybackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				EC5CC81B1EF1F6CC00F83E13 /* PlaybackViewController.swift */,
 				EC5CC81D1EF1F70300F83E13 /* SelectionViewController.swift */,
 				EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */,
+				EC56CE541EF71C920023DDCE /* CreateJukeboxViewController.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -454,6 +457,7 @@
 				ECFDFBF51EEB70EF00480F8F /* ApiError.swift in Sources */,
 				EC5CC81C1EF1F6CC00F83E13 /* PlaybackViewController.swift in Sources */,
 				EC5AB8F01EF2E2F200483E13 /* DJTabBarController.swift in Sources */,
+				EC56CE551EF71C920023DDCE /* CreateJukeboxViewController.swift in Sources */,
 				EC5CC81A1EF1F45000F83E13 /* LoginManager.swift in Sources */,
 				EC9D6D8B1EEB4BE50021370D /* Track.swift in Sources */,
 				EC9D6D871EEB46C20021370D /* ApiResponse.swift in Sources */,
