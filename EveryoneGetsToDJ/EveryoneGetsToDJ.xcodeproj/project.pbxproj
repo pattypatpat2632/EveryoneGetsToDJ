@@ -11,6 +11,7 @@
 		CED1AB962730DB2FC70D5867 /* Pods_EveryoneGetsToDJ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256E0914CCCD808BF0ACF6E5 /* Pods_EveryoneGetsToDJ.framework */; };
 		EC2018351EF70C9900ECB4ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC2018341EF70C9900ECB4ED /* GoogleService-Info.plist */; };
 		EC291B301EF047D800953483 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC291B2F1EF047D800953483 /* Resource.swift */; };
+		EC56CE531EF7119C0023DDCE /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56CE521EF7119C0023DDCE /* FirebaseManager.swift */; };
 		EC5AB8F01EF2E2F200483E13 /* DJTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */; };
 		EC5CC81A1EF1F45000F83E13 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC8191EF1F45000F83E13 /* LoginManager.swift */; };
 		EC5CC81C1EF1F6CC00F83E13 /* PlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC81B1EF1F6CC00F83E13 /* PlaybackViewController.swift */; };
@@ -53,6 +54,7 @@
 		EA392A81027572AB107929C1 /* Pods-EveryoneGetsToDJTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryoneGetsToDJTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EveryoneGetsToDJTests/Pods-EveryoneGetsToDJTests.release.xcconfig"; sourceTree = "<group>"; };
 		EC2018341EF70C9900ECB4ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC291B2F1EF047D800953483 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		EC56CE521EF7119C0023DDCE /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJTabBarController.swift; sourceTree = "<group>"; };
 		EC5CC8191EF1F45000F83E13 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		EC5CC81B1EF1F6CC00F83E13 /* PlaybackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				ECFDFBF41EEB70EF00480F8F /* ApiError.swift */,
 				EC291B2F1EF047D800953483 /* Resource.swift */,
 				EC5CC8191EF1F45000F83E13 /* LoginManager.swift */,
+				EC56CE521EF7119C0023DDCE /* FirebaseManager.swift */,
 			);
 			name = Utility;
 			path = ..;
@@ -456,6 +459,7 @@
 				EC9D6D871EEB46C20021370D /* ApiResponse.swift in Sources */,
 				EC9D6D8D1EEB4BF70021370D /* Album.swift in Sources */,
 				EC9D6D711EE8B2120021370D /* Secret.swift in Sources */,
+				EC56CE531EF7119C0023DDCE /* FirebaseManager.swift in Sources */,
 				EC9D6D831EE9BE9A0021370D /* ApiClient.swift in Sources */,
 				EC9D6D891EEB4BD30021370D /* Artist.swift in Sources */,
 				EC5CC81E1EF1F70300F83E13 /* SelectionViewController.swift in Sources */,
@@ -606,7 +610,37 @@
 				);
 				INFOPLIST_FILE = EveryoneGetsToDJ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseNanoPB\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"PromiseKit\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SweetPea.EveryoneGetsToDJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EveryoneGetsToDJ-Bridging-Header.h";
@@ -628,7 +662,37 @@
 				);
 				INFOPLIST_FILE = EveryoneGetsToDJ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseNanoPB\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"PromiseKit\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SweetPea.EveryoneGetsToDJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EveryoneGetsToDJ-Bridging-Header.h";

@@ -146,9 +146,7 @@ extension ApiClient {
                 let tracksArray = json["tracks"] as? [String: Any] ?? [:]
                 let items = tracksArray["items"] as? [[String: Any]] ?? []
                 for trackDict in items {
-                    let name = trackDict["name"] as? String ?? ""
-                    let uri = trackDict["uri"] as? String ?? ""
-                    let track = Track(name: name, albumID: "blah", artistID: "blah", image: nil, uri: uri)
+                    let track = Track(trackDict)
                     tracks.append(track)
                 }
             } catch {
