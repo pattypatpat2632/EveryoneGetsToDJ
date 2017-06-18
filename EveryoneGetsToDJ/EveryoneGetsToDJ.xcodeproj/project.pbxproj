@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1269095ADD81C72C59963E65 /* Pods_EveryoneGetsToDJTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DA0DAC2DB435D378229EF5 /* Pods_EveryoneGetsToDJTests.framework */; };
 		CED1AB962730DB2FC70D5867 /* Pods_EveryoneGetsToDJ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256E0914CCCD808BF0ACF6E5 /* Pods_EveryoneGetsToDJ.framework */; };
+		EC2018351EF70C9900ECB4ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC2018341EF70C9900ECB4ED /* GoogleService-Info.plist */; };
 		EC291B301EF047D800953483 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC291B2F1EF047D800953483 /* Resource.swift */; };
 		EC5AB8F01EF2E2F200483E13 /* DJTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */; };
 		EC5CC81A1EF1F45000F83E13 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC8191EF1F45000F83E13 /* LoginManager.swift */; };
@@ -50,6 +51,7 @@
 		2F7C1E912541D3C6A35A9564 /* Pods-EveryoneGetsToDJTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryoneGetsToDJTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EveryoneGetsToDJTests/Pods-EveryoneGetsToDJTests.debug.xcconfig"; sourceTree = "<group>"; };
 		845186C2A0070BBFC2F67AF6 /* Pods-EveryoneGetsToDJ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryoneGetsToDJ.release.xcconfig"; path = "Pods/Target Support Files/Pods-EveryoneGetsToDJ/Pods-EveryoneGetsToDJ.release.xcconfig"; sourceTree = "<group>"; };
 		EA392A81027572AB107929C1 /* Pods-EveryoneGetsToDJTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryoneGetsToDJTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EveryoneGetsToDJTests/Pods-EveryoneGetsToDJTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC2018341EF70C9900ECB4ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC291B2F1EF047D800953483 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJTabBarController.swift; sourceTree = "<group>"; };
 		EC5CC8191EF1F45000F83E13 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		EC9D6D721EE8B3DE0021370D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC2018341EF70C9900ECB4ED /* GoogleService-Info.plist */,
 				EC9D6D731EE8B3F80021370D /* SpotifyAudioPlayback.framework */,
 				EC9D6D741EE8B3F80021370D /* SpotifyAuthentication.framework */,
 				EC9D6D751EE8B3F80021370D /* SpotifyMetadata.framework */,
@@ -328,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC9D6D5A1EE8ABC60021370D /* LaunchScreen.storyboard in Resources */,
+				EC2018351EF70C9900ECB4ED /* GoogleService-Info.plist in Resources */,
 				EC9D6D571EE8ABC60021370D /* Assets.xcassets in Resources */,
 				EC9D6D551EE8ABC60021370D /* Main.storyboard in Resources */,
 			);

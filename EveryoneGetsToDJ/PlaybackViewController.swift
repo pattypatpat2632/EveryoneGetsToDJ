@@ -12,6 +12,7 @@ class PlaybackViewController: UIViewController {
     
     var player: SPTAudioStreamingController?
     let loginManager = LoginManager.sharedInstance
+    var playbackEnables = false
 
     override func viewDidLoad() {
         super.viewDidLoad()

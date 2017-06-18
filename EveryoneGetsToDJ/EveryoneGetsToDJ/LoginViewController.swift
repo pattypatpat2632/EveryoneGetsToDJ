@@ -24,9 +24,13 @@ class LoginViewController: UIViewController {
         loginManager.login()
     }
     
+    @IBAction func joinButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "joinSegue", sender: nil)
+    }
+    
     func updateAfterFirstLogin() {
         loginManager.updateAfterFirstLogin()
-        performSegue(withIdentifier: "loginSegue", sender: nil)
+        performSegue(withIdentifier: "hostSegue", sender: nil)
     }
     
     
