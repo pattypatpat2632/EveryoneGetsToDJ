@@ -9,6 +9,7 @@ target 'EveryoneGetsToDJ' do
 pod "PromiseKit", "~> 4.0"
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
+pod 'Firebase/Database'
 
   target 'EveryoneGetsToDJTests' do
     inherit! :search_paths

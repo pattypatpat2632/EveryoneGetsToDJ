@@ -10,7 +10,8 @@ import UIKit
 
 class CreateJukeboxViewController: UIViewController {
     
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textField: DJTextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +28,11 @@ class CreateJukeboxViewController: UIViewController {
     }
     
     @IBAction func createJukeboxTapped(_ sender: Any) {
+        guard textField.isNotEmpty() else {return} //TODO: indicate to user that textfield is empty
         performSegue(withIdentifier: "hostJukeboxSegue", sender: nil)
     }
     
+    @IBAction func cancelTapped(_ sender: Any) {
+    }
 
 }

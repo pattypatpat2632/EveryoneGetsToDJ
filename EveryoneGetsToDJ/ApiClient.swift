@@ -44,7 +44,7 @@ final class ApiClient {
     
     func query(input: String, with token: String) -> Promise<([Artist], [Track], [Album])> {
         return Promise { fulfill, reject in
-            let artistsResource = artistSearchResource(from: input)!
+            let artistsResource = artistSearchResource(from: input)! //TODO: refactor
             let tracksResource = trackSearchResource(from: input)!
             let albumsResource = albumSearchResource(from: input)!
             

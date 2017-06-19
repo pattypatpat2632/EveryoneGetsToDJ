@@ -12,6 +12,7 @@ import Firebase
 final class FirebaseManager {
     
     static let sharedInstance = FirebaseManager()
+    var ref = Database.database().reference()
     
     private init() {}
     

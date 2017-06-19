@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -68,33 +69,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T9n-tf-OSU">
-                                <rect key="frame" x="16" y="198" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T9n-tf-OSU" customClass="DJTextField" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="47" y="198" width="281" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-BU-Hbb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-BU-Hbb">
                                 <rect key="frame" x="134" y="236" width="107" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create Jukebox"/>
                                 <connections>
                                     <action selector="createJukeboxTapped:" destination="Aj9-lG-t6f" eventType="touchUpInside" id="qQ3-f6-pfI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name your jukebox:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWP-v4-605">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name your jukebox:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWP-v4-605">
                                 <rect key="frame" x="112" y="169" width="152" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0s-cy-MkS">
+                                <rect key="frame" x="163" y="349" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="Aj9-lG-t6f" eventType="touchUpInside" id="M7L-LO-bMI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tWP-v4-605" firstAttribute="top" secondItem="5vV-nu-k47" secondAttribute="bottom" constant="149" id="3HU-If-Jzr"/>
+                            <constraint firstItem="T9n-tf-OSU" firstAttribute="width" secondItem="pWc-ZD-jvE" secondAttribute="width" multiplier="0.75" id="BPm-9Y-odz"/>
+                            <constraint firstItem="T9n-tf-OSU" firstAttribute="centerX" secondItem="pWc-ZD-jvE" secondAttribute="centerX" id="FgO-Eu-LYw"/>
+                            <constraint firstItem="tWP-v4-605" firstAttribute="centerX" secondItem="pWc-ZD-jvE" secondAttribute="centerX" id="SdF-3B-EbB"/>
+                            <constraint firstItem="T9n-tf-OSU" firstAttribute="top" secondItem="tWP-v4-605" secondAttribute="bottom" constant="8" id="dcn-D6-KY7"/>
+                            <constraint firstItem="ibm-BU-Hbb" firstAttribute="top" secondItem="T9n-tf-OSU" secondAttribute="bottom" constant="8" id="eh3-Ar-cG2"/>
+                            <constraint firstItem="ibm-BU-Hbb" firstAttribute="centerX" secondItem="pWc-ZD-jvE" secondAttribute="centerX" id="euo-ny-Hxb"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="textField" destination="T9n-tf-OSU" id="rtN-KT-zGx"/>
+                        <outlet property="textField" destination="T9n-tf-OSU" id="GWR-k6-mal"/>
                         <segue destination="Zf9-w9-9k0" kind="show" identifier="hostJukeboxSegue" id="aaQ-Cj-ofU"/>
                     </connections>
                 </viewController>
