@@ -16,9 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var auth = SPTAuth()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        
+        FirebaseApp.configure()
         auth.redirectURL = URL(string: redirectURI)
             auth.sessionUserDefaultsKey = "current session"
-        FirebaseApp.configure()
+        
         return true
     }
 

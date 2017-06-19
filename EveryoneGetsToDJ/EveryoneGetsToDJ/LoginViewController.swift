@@ -30,7 +30,9 @@ class LoginViewController: UIViewController {
     
     func updateAfterFirstLogin() {
         loginManager.updateAfterFirstLogin()
-        performSegue(withIdentifier: "hostSegue", sender: nil)
+        
+        self.performSegue(withIdentifier: "hostSegue", sender: nil)
+        
     }
     
 }

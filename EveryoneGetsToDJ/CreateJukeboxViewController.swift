@@ -10,13 +10,16 @@ import UIKit
 
 class CreateJukeboxViewController: UIViewController {
     
+    let firManager = FirebaseManager.sharedInstance
+    
     @IBOutlet weak var textField: DJTextField!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        FirebaseManager.sharedInstance.login().catch{error in
+            print(error.localizedDescription)
+        }
     }
     
     // MARK: - Navigation
@@ -29,7 +32,13 @@ class CreateJukeboxViewController: UIViewController {
     
     @IBAction func createJukeboxTapped(_ sender: Any) {
         guard textField.isNotEmpty() else {return} //TODO: indicate to user that textfield is empty
-        performSegue(withIdentifier: "hostJukeboxSegue", sender: nil)
+        firManager.createJukebox(named: textField.text!).then { jukeboxID in //TODO: refactor force unwrap
+            return self.firManager.observe(jukebox: jukeboxID)
+        }.then(on: DispatchQueue.main) {_ in
+                self.performSegue(withIdentifier: "hostJukeboxSegue", sender: nil)
+        }.catch{ error in
+                print(error.localizedDescription)
+        }
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
