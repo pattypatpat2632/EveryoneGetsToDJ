@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1269095ADD81C72C59963E65 /* Pods_EveryoneGetsToDJTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DA0DAC2DB435D378229EF5 /* Pods_EveryoneGetsToDJTests.framework */; };
 		CED1AB962730DB2FC70D5867 /* Pods_EveryoneGetsToDJ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256E0914CCCD808BF0ACF6E5 /* Pods_EveryoneGetsToDJ.framework */; };
+		EC13AA7A1EF97E4F00BD48C9 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC13AA791EF97E4F00BD48C9 /* ColorScheme.swift */; };
 		EC2018351EF70C9900ECB4ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC2018341EF70C9900ECB4ED /* GoogleService-Info.plist */; };
 		EC291B301EF047D800953483 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC291B2F1EF047D800953483 /* Resource.swift */; };
 		EC2BC4581EF83730007A783C /* DJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC4571EF83730007A783C /* DJTextField.swift */; };
@@ -60,6 +61,7 @@
 		2F7C1E912541D3C6A35A9564 /* Pods-EveryoneGetsToDJTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryoneGetsToDJTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EveryoneGetsToDJTests/Pods-EveryoneGetsToDJTests.debug.xcconfig"; sourceTree = "<group>"; };
 		845186C2A0070BBFC2F67AF6 /* Pods-EveryoneGetsToDJ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryoneGetsToDJ.release.xcconfig"; path = "Pods/Target Support Files/Pods-EveryoneGetsToDJ/Pods-EveryoneGetsToDJ.release.xcconfig"; sourceTree = "<group>"; };
 		EA392A81027572AB107929C1 /* Pods-EveryoneGetsToDJTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryoneGetsToDJTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EveryoneGetsToDJTests/Pods-EveryoneGetsToDJTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC13AA791EF97E4F00BD48C9 /* ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		EC2018341EF70C9900ECB4ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC291B2F1EF047D800953483 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = ../Resource.swift; sourceTree = "<group>"; };
 		EC2BC4571EF83730007A783C /* DJTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJTextField.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				EC2BC4591EF8634E007A783C /* Jukebox.swift */,
 				EC2BC45E1EF8887A007A783C /* MultipeerResource.swift */,
 				EC291B2F1EF047D800953483 /* Resource.swift */,
+				EC13AA791EF97E4F00BD48C9 /* ColorScheme.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				EC2BC4621EF89282007A783C /* Serializing.swift in Sources */,
 				EC2BC4661EF89CA7007A783C /* JukeboxCell.swift in Sources */,
 				EC2BC45F1EF8887A007A783C /* MultipeerResource.swift in Sources */,
+				EC13AA7A1EF97E4F00BD48C9 /* ColorScheme.swift in Sources */,
 				EC291B301EF047D800953483 /* Resource.swift in Sources */,
 				ECFDFBF51EEB70EF00480F8F /* ApiError.swift in Sources */,
 				EC2BC45A1EF8634E007A783C /* Jukebox.swift in Sources */,

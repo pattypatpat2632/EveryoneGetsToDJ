@@ -44,16 +44,16 @@ final class MultipeerManager: NSObject {
         serviceBrowser?.stopBrowsingForPeers()
     }
     
-    func startBroadcasting() {
-        
+    func startBrowsing() {
         serviceBrowser = MCNearbyServiceBrowser(peer: myPeerID, serviceType: service)
         serviceBrowser?.delegate = self
         serviceBrowser?.startBrowsingForPeers()
-        
+    }
+    
+    func startAdvertising() {
         serviceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerID, discoveryInfo: nil, serviceType: service)
         serviceAdvertiser?.delegate = self
         serviceAdvertiser?.startAdvertisingPeer()
-        
     }
     
     func stopBroadcasting(completion: () -> Void){
@@ -93,7 +93,7 @@ extension MultipeerManager {
     }
     
     fileprivate func remove(jukebox: Jukebox) {
-        self.availableJukeboxes = availableJukeboxes.filter{$0.name != jukebox.name}
+        self.availableJukeboxes = availableJukeboxes.filter{$0.id != jukebox.id}
     }
     
     fileprivate func add(jukebox: Jukebox) {

@@ -17,14 +17,15 @@ class PlaybackViewController: UIViewController {
     var playbackEnabled = false {
         didSet {
             if self.playbackEnabled {
+                print("PLAYBACK ENABLED")
                 self.initializePlayer(authSession: loginManager.session)
+                multipeerManager.startBrowsing()
             }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        multipeerManager.startBroadcasting()
     }
 }
 

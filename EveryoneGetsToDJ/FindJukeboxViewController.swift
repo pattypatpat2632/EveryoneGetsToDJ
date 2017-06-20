@@ -11,12 +11,31 @@ import UIKit
 class FindJukeboxViewController: UIViewController {
 
     let multipeerManager = MultipeerManager.sharedInstance
+    let firManager = FirebaseManager.sharedInstance
+    var selectedJukebox: Jukebox?
+    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textField: DJTextField!
     
     override func viewDidLoad() {
         multipeerManager.delegate = self
+        self.multipeerManager.startAdvertising()
     }
     
+    @IBAction func joinButtonTapped(_ sender: Any) {
+        guard let selectedJukebox = selectedJukebox else {return} //TODO: user indicators
+        guard textField.isNotEmpty() else {return}
+        firManager.observe(jukebox: selectedJukebox.id).then {_ in 
+            self.performSegue(withIdentifier: "joinJukeboxSegue", sender: nil)
+        }.catch{_ in
+            
+        }
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }
 
@@ -39,5 +58,9 @@ extension FindJukeboxViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: "jukeboxCell", for: indexPath) as! JukeboxCell
         cell.jukebox = multipeerManager.availableJukeboxes[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedJukebox = multipeerManager.availableJukeboxes[indexPath.row]
     }
 }

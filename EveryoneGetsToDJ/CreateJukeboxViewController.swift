@@ -11,10 +11,11 @@ import UIKit
 class CreateJukeboxViewController: UIViewController {
     
     let firManager = FirebaseManager.sharedInstance
+    let multipeerManager = MultipeerManager.sharedInstance
     
     @IBOutlet weak var textField: DJTextField!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         FirebaseManager.sharedInstance.login().catch{error in
@@ -23,11 +24,12 @@ class CreateJukeboxViewController: UIViewController {
     }
     
     // MARK: - Navigation
-
-
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! DJTabBarController
-        
+        let playbackViewCotnroller = dest.viewControllers?[0] as! PlaybackViewController
+        playbackViewCotnroller.playbackEnabled = true
     }
     
     @IBAction func createJukeboxTapped(_ sender: Any) {
@@ -35,7 +37,7 @@ class CreateJukeboxViewController: UIViewController {
         firManager.createJukebox(named: textField.text!).then { jukeboxID in //TODO: refactor force unwrap
             return self.firManager.observe(jukebox: jukeboxID)
         }.then(on: DispatchQueue.main) {_ in
-                self.performSegue(withIdentifier: "hostJukeboxSegue", sender: nil)
+            self.performSegue(withIdentifier: "hostJukeboxSegue", sender: nil)
         }.catch{ error in
                 print(error.localizedDescription)
         }
@@ -43,5 +45,5 @@ class CreateJukeboxViewController: UIViewController {
     
     @IBAction func cancelTapped(_ sender: Any) {
     }
-
+    
 }
