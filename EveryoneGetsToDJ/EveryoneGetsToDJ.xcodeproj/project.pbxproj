@@ -41,6 +41,7 @@
 		EC9D6D891EEB4BD30021370D /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D881EEB4BD30021370D /* Artist.swift */; };
 		EC9D6D8B1EEB4BE50021370D /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D8A1EEB4BE50021370D /* Track.swift */; };
 		EC9D6D8D1EEB4BF70021370D /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D8C1EEB4BF70021370D /* Album.swift */; };
+		ECF108841EF98175006365AB /* DJView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF108831EF98175006365AB /* DJView.swift */; };
 		ECFDFBF51EEB70EF00480F8F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFDFBF41EEB70EF00480F8F /* ApiError.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		EC9D6D881EEB4BD30021370D /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		EC9D6D8A1EEB4BE50021370D /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		EC9D6D8C1EEB4BF70021370D /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		ECF108831EF98175006365AB /* DJView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJView.swift; sourceTree = "<group>"; };
 		ECFDFBF41EEB70EF00480F8F /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				EC2BC4611EF89282007A783C /* Serializing.swift */,
+				ECF108831EF98175006365AB /* DJView.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				EC2BC45D1EF87DA5007A783C /* MultipeerManager.swift in Sources */,
 				EC5CC81C1EF1F6CC00F83E13 /* PlaybackViewController.swift in Sources */,
 				EC5AB8F01EF2E2F200483E13 /* DJTabBarController.swift in Sources */,
+				ECF108841EF98175006365AB /* DJView.swift in Sources */,
 				EC56CE551EF71C920023DDCE /* CreateJukeboxViewController.swift in Sources */,
 				EC5CC81A1EF1F45000F83E13 /* LoginManager.swift in Sources */,
 				EC9D6D8B1EEB4BE50021370D /* Track.swift in Sources */,

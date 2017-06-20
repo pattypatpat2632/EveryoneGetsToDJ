@@ -80,7 +80,7 @@ final class ApiClient {
             } else {
                 return String(character)
             }
-            }.joined().lowercased()
+        }.joined().lowercased()
         return sanitized
     }
     

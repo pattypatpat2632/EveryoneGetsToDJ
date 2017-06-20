@@ -8,7 +8,25 @@
 
 import UIKit
 
-class DJTextField: UITextField {
+class DJTextField: UITextField, DJView {
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    func commonInit() {
+        layer.borderWidth = 5
+        layer.cornerRadius = 2
+        layer.borderColor = colorScheme.model.foregroundColor.cgColor
+        backgroundColor = colorScheme.model.backgroundColor
+        textColor = colorScheme.model.foregroundColor
+    }
 
     func isEmpty() -> Bool {
         return text == nil || text == ""
