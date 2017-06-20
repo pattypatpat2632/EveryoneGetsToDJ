@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="-2700" y="-4633.1334332833585"/>
         </scene>
-        <!--View Controller-->
+        <!--Find Jukebox View Controller-->
         <scene sceneID="f2x-2w-bj0">
             <objects>
-                <viewController id="yDi-gN-ULk" sceneMemberID="viewController">
+                <viewController id="yDi-gN-ULk" customClass="FindJukeboxViewController" customModule="EveryoneGetsToDJ" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GsR-eO-KSc"/>
                         <viewControllerLayoutGuide type="bottom" id="aff-6S-MLW"/>
@@ -140,15 +140,35 @@
                                 <rect key="frame" x="67" y="324" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="jukeboxCell" id="Xhy-Ti-7dl" customClass="JukeboxCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xhy-Ti-7dl" id="yB9-Du-M5q">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jukebox Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyR-G8-fxh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dyR-G8-fxh" firstAttribute="width" secondItem="yB9-Du-M5q" secondAttribute="width" id="NdY-Yw-VWM"/>
+                                                <constraint firstItem="dyR-G8-fxh" firstAttribute="height" secondItem="yB9-Du-M5q" secondAttribute="height" id="Zix-Nl-DI6"/>
+                                                <constraint firstItem="dyR-G8-fxh" firstAttribute="centerX" secondItem="yB9-Du-M5q" secondAttribute="centerX" id="dAv-Qx-aTf"/>
+                                                <constraint firstItem="dyR-G8-fxh" firstAttribute="centerY" secondItem="yB9-Du-M5q" secondAttribute="centerY" id="ukb-Dh-Dex"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="dyR-G8-fxh" id="NyM-Fg-nJQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XL2-OE-ClT">
-                                <rect key="frame" x="76" y="141" width="198" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qoi-f9-YLZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qoi-f9-YLZ">
                                 <rect key="frame" x="16" y="189" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -163,14 +183,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRs-ze-eum">
-                                <rect key="frame" x="164" y="502" width="46" height="30"/>
+                                <rect key="frame" x="172" y="502" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Join"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCD-8x-hUJ">
+                                <rect key="frame" x="171" y="588" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="gcK-4W-8al" id="xHZ-mU-zjh"/>
                         <segue destination="Zf9-w9-9k0" kind="show" identifier="joinJukeboxSegue" id="yFO-Ig-jrK"/>
                     </connections>
                 </viewController>
@@ -344,6 +370,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aaQ-Cj-ofU"/>
+        <segue reference="yFO-Ig-jrK"/>
     </inferredMetricsTieBreakers>
 </document>

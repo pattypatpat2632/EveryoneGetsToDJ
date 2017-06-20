@@ -11,7 +11,9 @@ import UIKit
 class PlaybackViewController: UIViewController {
     
     var player: SPTAudioStreamingController?
+    
     let loginManager = LoginManager.sharedInstance
+    let multipeerManager = MultipeerManager.sharedInstance
     var playbackEnabled = false {
         didSet {
             if self.playbackEnabled {
@@ -22,7 +24,7 @@ class PlaybackViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        multipeerManager.startBroadcasting()
     }
 }
 

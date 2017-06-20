@@ -13,6 +13,11 @@
 		EC291B301EF047D800953483 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC291B2F1EF047D800953483 /* Resource.swift */; };
 		EC2BC4581EF83730007A783C /* DJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC4571EF83730007A783C /* DJTextField.swift */; };
 		EC2BC45A1EF8634E007A783C /* Jukebox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC4591EF8634E007A783C /* Jukebox.swift */; };
+		EC2BC45D1EF87DA5007A783C /* MultipeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC45C1EF87DA5007A783C /* MultipeerManager.swift */; };
+		EC2BC45F1EF8887A007A783C /* MultipeerResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC45E1EF8887A007A783C /* MultipeerResource.swift */; };
+		EC2BC4621EF89282007A783C /* Serializing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC4611EF89282007A783C /* Serializing.swift */; };
+		EC2BC4641EF8991D007A783C /* FindJukeboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC4631EF8991D007A783C /* FindJukeboxViewController.swift */; };
+		EC2BC4661EF89CA7007A783C /* JukeboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC4651EF89CA7007A783C /* JukeboxCell.swift */; };
 		EC56CE531EF7119C0023DDCE /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56CE521EF7119C0023DDCE /* FirebaseManager.swift */; };
 		EC56CE551EF71C920023DDCE /* CreateJukeboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56CE541EF71C920023DDCE /* CreateJukeboxViewController.swift */; };
 		EC5AB8F01EF2E2F200483E13 /* DJTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */; };
@@ -56,9 +61,14 @@
 		845186C2A0070BBFC2F67AF6 /* Pods-EveryoneGetsToDJ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryoneGetsToDJ.release.xcconfig"; path = "Pods/Target Support Files/Pods-EveryoneGetsToDJ/Pods-EveryoneGetsToDJ.release.xcconfig"; sourceTree = "<group>"; };
 		EA392A81027572AB107929C1 /* Pods-EveryoneGetsToDJTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryoneGetsToDJTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EveryoneGetsToDJTests/Pods-EveryoneGetsToDJTests.release.xcconfig"; sourceTree = "<group>"; };
 		EC2018341EF70C9900ECB4ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		EC291B2F1EF047D800953483 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		EC291B2F1EF047D800953483 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = ../Resource.swift; sourceTree = "<group>"; };
 		EC2BC4571EF83730007A783C /* DJTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJTextField.swift; sourceTree = "<group>"; };
 		EC2BC4591EF8634E007A783C /* Jukebox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jukebox.swift; sourceTree = "<group>"; };
+		EC2BC45C1EF87DA5007A783C /* MultipeerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerManager.swift; sourceTree = "<group>"; };
+		EC2BC45E1EF8887A007A783C /* MultipeerResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerResource.swift; sourceTree = "<group>"; };
+		EC2BC4611EF89282007A783C /* Serializing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializing.swift; sourceTree = "<group>"; };
+		EC2BC4631EF8991D007A783C /* FindJukeboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindJukeboxViewController.swift; sourceTree = "<group>"; };
+		EC2BC4651EF89CA7007A783C /* JukeboxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JukeboxCell.swift; sourceTree = "<group>"; };
 		EC56CE521EF7119C0023DDCE /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		EC56CE541EF71C920023DDCE /* CreateJukeboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateJukeboxViewController.swift; sourceTree = "<group>"; };
 		EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJTabBarController.swift; sourceTree = "<group>"; };
@@ -142,6 +152,14 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
+		EC2BC4601EF89265007A783C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EC2BC4611EF89282007A783C /* Serializing.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		EC9D6D3F1EE8ABC60021370D = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +183,7 @@
 		EC9D6D4A1EE8ABC60021370D /* EveryoneGetsToDJ */ = {
 			isa = PBXGroup;
 			children = (
+				EC2BC4601EF89265007A783C /* Protocols */,
 				EC2BC45B1EF87D2D007A783C /* Storyboards */,
 				EC9D6D851EEB468F0021370D /* Views */,
 				EC9D6D841EEB46880021370D /* Models */,
@@ -194,9 +213,9 @@
 				EC9D6D821EE9BE9A0021370D /* ApiClient.swift */,
 				EC9D6D861EEB46C20021370D /* ApiResponse.swift */,
 				ECFDFBF41EEB70EF00480F8F /* ApiError.swift */,
-				EC291B2F1EF047D800953483 /* Resource.swift */,
 				EC5CC8191EF1F45000F83E13 /* LoginManager.swift */,
 				EC56CE521EF7119C0023DDCE /* FirebaseManager.swift */,
+				EC2BC45C1EF87DA5007A783C /* MultipeerManager.swift */,
 			);
 			name = Utility;
 			path = ..;
@@ -234,6 +253,7 @@
 				EC5CC81D1EF1F70300F83E13 /* SelectionViewController.swift */,
 				EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */,
 				EC56CE541EF71C920023DDCE /* CreateJukeboxViewController.swift */,
+				EC2BC4631EF8991D007A783C /* FindJukeboxViewController.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -246,6 +266,8 @@
 				EC9D6D8A1EEB4BE50021370D /* Track.swift */,
 				EC9D6D8C1EEB4BF70021370D /* Album.swift */,
 				EC2BC4591EF8634E007A783C /* Jukebox.swift */,
+				EC2BC45E1EF8887A007A783C /* MultipeerResource.swift */,
+				EC291B2F1EF047D800953483 /* Resource.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -254,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				EC2BC4571EF83730007A783C /* DJTextField.swift */,
+				EC2BC4651EF89CA7007A783C /* JukeboxCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -467,10 +490,14 @@
 				EC9D6D7F1EE8B67A0021370D /* LoginViewController.swift in Sources */,
 				EC9D6D7D1EE8B4BF0021370D /* BridgeViewController.m in Sources */,
 				EC9D6D4C1EE8ABC60021370D /* AppDelegate.swift in Sources */,
+				EC2BC4621EF89282007A783C /* Serializing.swift in Sources */,
+				EC2BC4661EF89CA7007A783C /* JukeboxCell.swift in Sources */,
+				EC2BC45F1EF8887A007A783C /* MultipeerResource.swift in Sources */,
 				EC291B301EF047D800953483 /* Resource.swift in Sources */,
 				ECFDFBF51EEB70EF00480F8F /* ApiError.swift in Sources */,
 				EC2BC45A1EF8634E007A783C /* Jukebox.swift in Sources */,
 				EC2BC4581EF83730007A783C /* DJTextField.swift in Sources */,
+				EC2BC45D1EF87DA5007A783C /* MultipeerManager.swift in Sources */,
 				EC5CC81C1EF1F6CC00F83E13 /* PlaybackViewController.swift in Sources */,
 				EC5AB8F01EF2E2F200483E13 /* DJTabBarController.swift in Sources */,
 				EC56CE551EF71C920023DDCE /* CreateJukeboxViewController.swift in Sources */,
@@ -479,6 +506,7 @@
 				EC9D6D871EEB46C20021370D /* ApiResponse.swift in Sources */,
 				EC9D6D8D1EEB4BF70021370D /* Album.swift in Sources */,
 				EC9D6D711EE8B2120021370D /* Secret.swift in Sources */,
+				EC2BC4641EF8991D007A783C /* FindJukeboxViewController.swift in Sources */,
 				EC56CE531EF7119C0023DDCE /* FirebaseManager.swift in Sources */,
 				EC9D6D831EE9BE9A0021370D /* ApiClient.swift in Sources */,
 				EC9D6D891EEB4BD30021370D /* Artist.swift in Sources */,

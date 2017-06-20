@@ -29,15 +29,14 @@ extension Jukebox {
     }
 }
 
-extension Jukebox {
+extension Jukebox: Serializing {
     
     func asDictionary() -> [String: Any]{
-        
             let dictionary: [String: Any] = [
                 "creatorID": FirebaseManager.sharedInstance.uid,
-                "name": self.name
+                "name": self.name,
+                "id": self.id
             ]
             return dictionary
-        
     }
 }
