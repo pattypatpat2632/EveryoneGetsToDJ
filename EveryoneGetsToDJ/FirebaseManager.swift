@@ -65,8 +65,10 @@ final class FirebaseManager {
         jukeRef.child(jukeboxID).child("tracks").child(track.uri).updateChildValues(values)
     }
     
-    func remove(track: Track, fromJukebox jukeboxID: JukeboxID) {
-        jukeRef.child(jukeboxID).child("tracks").child(track.uri).removeValue()
+    func remove(track: Track, fromJukebox jukebox: Jukebox) {
+        
+        jukeRef.child(jukebox.id).child("tracks").child(track.uri).removeValue()
+        
     }
     
     func observe(jukebox jukeboxID: JukeboxID) -> Promise<Jukebox> {

@@ -34,7 +34,7 @@ extension PlaybackEngine: SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDe
     
     func play(track: Track) {
         player?.playSpotifyURI(track.uri, startingWith: 0, startingWithPosition: 0, callback: { (error) in
-          
+            
         })
     }
     
@@ -61,8 +61,12 @@ extension PlaybackEngine: SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDe
     }
     
     func audioStreaming(_ audioStreaming: SPTAudioStreamingController!, didStopPlayingTrack trackUri: String!) {
-        
+        guard let jukebox = firManager.jukebox else {return}
+        firManager.remove(track: tracks[0], fromJukebox: jukebox)
     }
+    
+    
+    
 }
 
 extension PlaybackEngine: FirebaseManagerDelegate {
