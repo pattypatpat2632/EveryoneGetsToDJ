@@ -15,7 +15,6 @@ class SelectionViewController: UIViewController {
     var searchActive = false
     var artists = [Artist]() {
         didSet {
-            artists.forEach{print("ARTIST: \($0.name)")}
             DispatchQueue.main.async {
                  self.artistTableView.reloadData()
             }
@@ -23,16 +22,13 @@ class SelectionViewController: UIViewController {
     }
     var tracks = [Track]() {
         didSet {
-            tracks.forEach{print("TRACK: \($0.name)")}
             DispatchQueue.main.async {
-                print("RELOADING TRACK DATA************")
                 self.trackTableView.reloadData()
             }
         }
     }
     var albums = [Album]() {
         didSet {
-            albums.forEach{print("ALBUM:\($0.name)")}
             DispatchQueue.main.async {
                 self.albumTableView.reloadData()
             }
