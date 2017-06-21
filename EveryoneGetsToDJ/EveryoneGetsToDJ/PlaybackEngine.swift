@@ -68,6 +68,7 @@ extension PlaybackEngine: SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDe
 extension PlaybackEngine: FirebaseManagerDelegate {
     
     func tracksUpdated() {
+        print("TRACKS UPDATED************")
         if let tracks = firManager.jukebox?.tracks{
             let sortedTracks = tracks.sorted(by: { (track0, track1) -> Bool in
                 if let date0 = track0.selectedDate, let date1 = track1.selectedDate {
@@ -79,7 +80,11 @@ extension PlaybackEngine: FirebaseManagerDelegate {
             
             if sortedTracks.count > self.tracks.count { //If tracks were added to jukebox in firebase, add them to the spotify queue
                 for i in self.tracks.count..<sortedTracks.count {
-                    queue(track: sortedTracks[i])
+                    if sortedTracks.count == 1 {
+                        play(track: sortedTracks[i])
+                    } else {
+                        queue(track: sortedTracks[i])
+                    }
                 }
             }
             self.tracks = sortedTracks
