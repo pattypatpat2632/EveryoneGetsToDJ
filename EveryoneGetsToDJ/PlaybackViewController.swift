@@ -14,6 +14,10 @@ class PlaybackViewController: UIViewController {
     
     let loginManager = LoginManager.sharedInstance
     let multipeerManager = MultipeerManager.sharedInstance
+    let firManager = FirebaseManager.sharedInstance
+    var tracks = [Track]()
+    @IBOutlet weak var tracksTableVIew: UITableView!
+    
     var playbackEnabled = false {
         didSet {
             if self.playbackEnabled {
@@ -26,6 +30,7 @@ class PlaybackViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        firManager.delegate = self
     }
 }
 
@@ -49,4 +54,35 @@ extension PlaybackViewController: SPTAudioStreamingPlaybackDelegate, SPTAudioStr
                 }
             })
         }
+}
+
+extension PlaybackViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tracks.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "playbackCell", for: indexPath)
+        return cell
+    }
+}
+
+extension PlaybackViewController: FirebaseManagerDelegate {
+    func tracksUpdated() {
+        if let tracks = firManager.jukebox?.tracks{
+            let sortedTracks = tracks.sorted(by: { (track0, track1) -> Bool in
+                if let date0 = track0.selectedDate, let date1 = track1.selectedDate {
+                    return date0 < date1
+                } else {
+                    return true
+                }
+            })
+            self.tracks = sortedTracks
+            tracksTableVIew.reloadData()
+        }
+    }
 }

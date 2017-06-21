@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -69,47 +70,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T9n-tf-OSU" customClass="DJTextField" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name Your Jukebox" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T9n-tf-OSU" customClass="DJTextField" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                 <rect key="frame" x="47" y="198" width="281" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-BU-Hbb">
-                                <rect key="frame" x="134" y="236" width="107" height="30"/>
-                                <state key="normal" title="Create Jukebox"/>
-                                <connections>
-                                    <action selector="createJukeboxTapped:" destination="Aj9-lG-t6f" eventType="touchUpInside" id="qQ3-f6-pfI"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name your jukebox:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWP-v4-605">
-                                <rect key="frame" x="112" y="169" width="152" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0s-cy-MkS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0s-cy-MkS">
                                 <rect key="frame" x="163" y="349" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancelTapped:" destination="Aj9-lG-t6f" eventType="touchUpInside" id="M7L-LO-bMI"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c4P-Uz-cAS" customClass="DJTextField" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="47" y="254" width="281" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-BU-Hbb">
+                                <rect key="frame" x="134" y="301" width="107" height="30"/>
+                                <state key="normal" title="Create Jukebox"/>
+                                <connections>
+                                    <action selector="createJukeboxTapped:" destination="Aj9-lG-t6f" eventType="touchUpInside" id="qQ3-f6-pfI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tWP-v4-605" firstAttribute="top" secondItem="5vV-nu-k47" secondAttribute="bottom" constant="149" id="3HU-If-Jzr"/>
+                            <constraint firstItem="k0s-cy-MkS" firstAttribute="centerX" secondItem="pWc-ZD-jvE" secondAttribute="centerX" id="1qX-nj-GUQ"/>
+                            <constraint firstItem="c4P-Uz-cAS" firstAttribute="top" secondItem="T9n-tf-OSU" secondAttribute="bottom" constant="26" id="6M2-eK-SV9"/>
                             <constraint firstItem="T9n-tf-OSU" firstAttribute="width" secondItem="pWc-ZD-jvE" secondAttribute="width" multiplier="0.75" id="BPm-9Y-odz"/>
                             <constraint firstItem="T9n-tf-OSU" firstAttribute="centerX" secondItem="pWc-ZD-jvE" secondAttribute="centerX" id="FgO-Eu-LYw"/>
-                            <constraint firstItem="tWP-v4-605" firstAttribute="centerX" secondItem="pWc-ZD-jvE" secondAttribute="centerX" id="SdF-3B-EbB"/>
-                            <constraint firstItem="T9n-tf-OSU" firstAttribute="top" secondItem="tWP-v4-605" secondAttribute="bottom" constant="8" id="dcn-D6-KY7"/>
-                            <constraint firstItem="ibm-BU-Hbb" firstAttribute="top" secondItem="T9n-tf-OSU" secondAttribute="bottom" constant="8" id="eh3-Ar-cG2"/>
+                            <constraint firstItem="ibm-BU-Hbb" firstAttribute="top" secondItem="c4P-Uz-cAS" secondAttribute="bottom" constant="17" id="QC9-iF-boh"/>
+                            <constraint firstItem="c4P-Uz-cAS" firstAttribute="leading" secondItem="T9n-tf-OSU" secondAttribute="trailing" constant="-281" id="SaH-Dp-mdd"/>
+                            <constraint firstItem="c4P-Uz-cAS" firstAttribute="width" secondItem="T9n-tf-OSU" secondAttribute="width" id="VKj-Yd-vQ7"/>
                             <constraint firstItem="ibm-BU-Hbb" firstAttribute="centerX" secondItem="pWc-ZD-jvE" secondAttribute="centerX" id="euo-ny-Hxb"/>
+                            <constraint firstItem="T9n-tf-OSU" firstAttribute="top" secondItem="5vV-nu-k47" secondAttribute="bottom" constant="178" id="hMn-8M-afM"/>
+                            <constraint firstItem="k0s-cy-MkS" firstAttribute="top" secondItem="ibm-BU-Hbb" secondAttribute="bottom" constant="18" id="mxk-cZ-bYv"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="textField" destination="T9n-tf-OSU" id="GWR-k6-mal"/>
+                        <outlet property="userTextField" destination="c4P-Uz-cAS" id="GYP-eR-5HN"/>
                         <segue destination="Zf9-w9-9k0" kind="show" identifier="hostJukeboxSegue" id="aaQ-Cj-ofU"/>
                     </connections>
                 </viewController>
@@ -145,7 +149,7 @@
                                         <rect key="frame" x="0.0" y="28" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xhy-Ti-7dl" id="yB9-Du-M5q">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jukebox Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyR-G8-fxh">
@@ -233,13 +237,41 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackCell" id="JW6-XM-mU8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackCell" id="JW6-XM-mU8" customClass="TrackCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JW6-XM-mU8" id="UbN-QQ-IgV">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF0-Rl-J63" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="29"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nh6-Rk-z6O" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="29" width="232" height="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tF0-Rl-J63" firstAttribute="top" secondItem="UbN-QQ-IgV" secondAttribute="topMargin" constant="-8" id="21R-hq-NTL"/>
+                                                <constraint firstItem="nh6-Rk-z6O" firstAttribute="bottom" secondItem="UbN-QQ-IgV" secondAttribute="bottomMargin" constant="7.5" id="97G-gY-O8P"/>
+                                                <constraint firstItem="tF0-Rl-J63" firstAttribute="trailing" secondItem="UbN-QQ-IgV" secondAttribute="trailingMargin" constant="8" id="DZ2-8d-kU2"/>
+                                                <constraint firstItem="tF0-Rl-J63" firstAttribute="leading" secondItem="UbN-QQ-IgV" secondAttribute="leadingMargin" constant="-8" id="Lya-Fd-cYi"/>
+                                                <constraint firstItem="tF0-Rl-J63" firstAttribute="height" secondItem="UbN-QQ-IgV" secondAttribute="height" multiplier="0.6666" id="OkT-zb-pNE"/>
+                                                <constraint firstItem="nh6-Rk-z6O" firstAttribute="trailing" secondItem="UbN-QQ-IgV" secondAttribute="trailingMargin" id="WaZ-EK-CnN"/>
+                                                <constraint firstItem="nh6-Rk-z6O" firstAttribute="top" secondItem="tF0-Rl-J63" secondAttribute="bottom" id="sGk-67-lym"/>
+                                                <constraint firstItem="nh6-Rk-z6O" firstAttribute="leading" secondItem="UbN-QQ-IgV" secondAttribute="leadingMargin" constant="-8" id="uWf-3o-mpd"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistNameLabel" destination="nh6-Rk-z6O" id="FWh-t3-g93"/>
+                                            <outlet property="trackNameLabel" destination="tF0-Rl-J63" id="aQx-0e-7w2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -256,7 +288,7 @@
                                         <rect key="frame" x="0.0" y="28" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oRW-uq-k4W" id="82w-zX-Z74">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -275,7 +307,7 @@
                                         <rect key="frame" x="0.0" y="28" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NhS-vc-cbf" id="Zzm-vC-RAo">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -340,22 +372,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Playback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNs-62-yUG">
-                                <rect key="frame" x="148" y="208" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gx-pb-dDi">
                                 <rect key="frame" x="167" y="20" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Exit"/>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ztq-L5-9cb">
+                                <rect key="frame" x="16" y="96" width="343" height="476"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="playbackCell" rowHeight="130" id="bmc-C2-ITn" customClass="PlaybackCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bmc-C2-ITn" id="unY-pP-2CP">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="129.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj2-O1-IcL" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="0.0" width="171.5" height="86.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4R-aY-Oe4" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="108" width="171.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contributer Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dd-ft-aj1" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                                    <rect key="frame" x="163.5" y="0.0" width="171.5" height="129.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sj2-O1-IcL" firstAttribute="leading" secondItem="unY-pP-2CP" secondAttribute="leadingMargin" id="1SS-mK-KVc"/>
+                                                <constraint firstItem="v4R-aY-Oe4" firstAttribute="leading" secondItem="sj2-O1-IcL" secondAttribute="leading" id="AgE-93-15d"/>
+                                                <constraint firstItem="sj2-O1-IcL" firstAttribute="width" secondItem="unY-pP-2CP" secondAttribute="width" multiplier="0.5" id="IUi-XH-sWe"/>
+                                                <constraint firstItem="3dd-ft-aj1" firstAttribute="trailing" secondItem="unY-pP-2CP" secondAttribute="trailingMargin" id="Pex-ho-uyY"/>
+                                                <constraint firstItem="3dd-ft-aj1" firstAttribute="width" secondItem="unY-pP-2CP" secondAttribute="width" multiplier="0.5" id="U0O-ng-VjP"/>
+                                                <constraint firstItem="v4R-aY-Oe4" firstAttribute="top" secondItem="sj2-O1-IcL" secondAttribute="bottom" constant="21.5" id="dkm-m8-Bb0"/>
+                                                <constraint firstItem="v4R-aY-Oe4" firstAttribute="bottom" secondItem="unY-pP-2CP" secondAttribute="bottomMargin" constant="7.5" id="fSG-tr-e3A"/>
+                                                <constraint firstItem="sj2-O1-IcL" firstAttribute="height" secondItem="unY-pP-2CP" secondAttribute="height" multiplier="0.6666" id="fxw-uK-UDs"/>
+                                                <constraint firstItem="sj2-O1-IcL" firstAttribute="top" secondItem="unY-pP-2CP" secondAttribute="topMargin" constant="-8" id="jiT-xy-NNh"/>
+                                                <constraint firstItem="3dd-ft-aj1" firstAttribute="top" secondItem="unY-pP-2CP" secondAttribute="topMargin" constant="-8" id="kAn-Yn-w9O"/>
+                                                <constraint firstItem="3dd-ft-aj1" firstAttribute="height" secondItem="unY-pP-2CP" secondAttribute="height" id="rFF-Ag-J59"/>
+                                                <constraint firstItem="v4R-aY-Oe4" firstAttribute="width" secondItem="sj2-O1-IcL" secondAttribute="width" id="yAo-e4-cNn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistLabel" destination="v4R-aY-Oe4" id="Gv4-xQ-YgJ"/>
+                                            <outlet property="titleLabel" destination="sj2-O1-IcL" id="P9J-j9-yMV"/>
+                                            <outlet property="userLabel" destination="3dd-ft-aj1" id="GEA-wo-Dg1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zDd-Am-9Tg" id="ZZo-TX-Qvz"/>
+                                    <outlet property="delegate" destination="zDd-Am-9Tg" id="6Hi-1e-oTH"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Playback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNs-62-yUG">
+                                <rect key="frame" x="67" y="67" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.28252414711770313" green="1" blue="0.19639116146461422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Playback" id="k8b-oJ-RvC"/>
+                    <connections>
+                        <outlet property="tracksTableVIew" destination="ztq-L5-9cb" id="Xnu-Bn-eAI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbu-zM-gvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -382,6 +475,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yFO-Ig-jrK"/>
+        <segue reference="aaQ-Cj-ofU"/>
     </inferredMetricsTieBreakers>
 </document>

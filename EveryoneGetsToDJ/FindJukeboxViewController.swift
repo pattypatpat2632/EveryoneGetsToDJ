@@ -25,6 +25,7 @@ class FindJukeboxViewController: UIViewController {
     @IBAction func joinButtonTapped(_ sender: Any) {
         guard let selectedJukebox = selectedJukebox else {return} //TODO: user indicators
         guard textField.isNotEmpty() else {return}
+        firManager.set(username: textField.text)
         firManager.observe(jukebox: selectedJukebox.id).then {_ in 
             self.performSegue(withIdentifier: "joinJukeboxSegue", sender: nil)
         }.catch{_ in

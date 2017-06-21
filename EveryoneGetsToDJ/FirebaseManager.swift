@@ -17,6 +17,9 @@ final class FirebaseManager {
     let ref = Database.database().reference()
     let jukeRef = Database.database().reference().child("jukeboxes")
     typealias JukeboxID = String
+    var username: String?
+    
+    weak var delegate: FirebaseManagerDelegate?
     
     var jukebox: Jukebox?
     
@@ -42,6 +45,10 @@ final class FirebaseManager {
         }
     }
     
+    func set(username: String?) {
+        self.username = username
+    }
+    
     func createJukebox(named name: String) -> Promise<JukeboxID>  {
         return Promise{fulfill, reject in
             
@@ -55,7 +62,11 @@ final class FirebaseManager {
     func add(track: Track, toJukebox jukeboxID: JukeboxID) {
         var trackCopy = track
         let values = trackCopy.asDictionary()
-        jukeRef.child("tracks").childByAutoId().updateChildValues(values)
+        jukeRef.child(jukeboxID).child("tracks").child(track.uri).updateChildValues(values)
+    }
+    
+    func remove(track: Track, fromJukebox jukeboxID: JukeboxID) {
+        jukeRef.child(jukeboxID).child("tracks").child(track.uri).removeValue()
     }
     
     func observe(jukebox jukeboxID: JukeboxID) -> Promise<Jukebox> {
@@ -65,10 +76,15 @@ final class FirebaseManager {
                     let newJukebox = Jukebox(id: jukeboxID, dictionary: snapshotValue)
                     self.jukebox = newJukebox
                     fulfill(newJukebox)
+                    self.delegate?.tracksUpdated()
                 } else {
                     reject(ApiError.unexpected("Could not get jukebox from firebase"))
                 }
             })
         }
     }
+}
+
+protocol FirebaseManagerDelegate: class {
+    func tracksUpdated()
 }

@@ -11,6 +11,7 @@ import UIKit
 class SelectionViewController: UIViewController {
     
     let apiClient = ApiClient.sharedInstance
+    let firManager = FirebaseManager.sharedInstance
     var searchActive = false
     var artists = [Artist]() {
         didSet {
@@ -124,8 +125,8 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
             cell.backgroundColor = UIColor.red
             return cell
         } else if tableView == trackTableView {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "trackCell", for: indexPath)
-            cell.backgroundColor = UIColor.green
+            let cell = tableView.dequeueReusableCell(withIdentifier: "trackCell", for: indexPath) as! TrackCell
+            cell.track = tracks[indexPath.row]
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath)
@@ -134,5 +135,10 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == trackTableView {
+            guard let jukeboxID = firManager.jukebox?.id else {return}
+            firManager.add(track: tracks[indexPath.row], toJukebox: jukeboxID)
+        }
+    }
 }

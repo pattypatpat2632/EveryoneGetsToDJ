@@ -41,6 +41,12 @@
 		EC9D6D891EEB4BD30021370D /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D881EEB4BD30021370D /* Artist.swift */; };
 		EC9D6D8B1EEB4BE50021370D /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D8A1EEB4BE50021370D /* Track.swift */; };
 		EC9D6D8D1EEB4BF70021370D /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D8C1EEB4BF70021370D /* Album.swift */; };
+		ECCC80681EFAB70000D1A294 /* Urban Jungle.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECCC80671EFAB70000D1A294 /* Urban Jungle.ttf */; };
+		ECCC806A1EFAB73400D1A294 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC80691EFAB73400D1A294 /* TrackCell.swift */; };
+		ECCC806C1EFAB7F300D1A294 /* Electricity Personal Use.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECCC806B1EFAB7F300D1A294 /* Electricity Personal Use.ttf */; };
+		ECCC806E1EFAB91000D1A294 /* Neons_demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECCC806D1EFAB91000D1A294 /* Neons_demo.otf */; };
+		ECCC80701EFAB9DC00D1A294 /* DJLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC806F1EFAB9DC00D1A294 /* DJLabel.swift */; };
+		ECCC80721EFAD84300D1A294 /* PlaybackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC80711EFAD84300D1A294 /* PlaybackCell.swift */; };
 		ECF108841EF98175006365AB /* DJView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF108831EF98175006365AB /* DJView.swift */; };
 		ECFDFBF51EEB70EF00480F8F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFDFBF41EEB70EF00480F8F /* ApiError.swift */; };
 /* End PBXBuildFile section */
@@ -100,6 +106,12 @@
 		EC9D6D881EEB4BD30021370D /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		EC9D6D8A1EEB4BE50021370D /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		EC9D6D8C1EEB4BF70021370D /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		ECCC80671EFAB70000D1A294 /* Urban Jungle.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urban Jungle.ttf"; sourceTree = "<group>"; };
+		ECCC80691EFAB73400D1A294 /* TrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		ECCC806B1EFAB7F300D1A294 /* Electricity Personal Use.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Electricity Personal Use.ttf"; sourceTree = "<group>"; };
+		ECCC806D1EFAB91000D1A294 /* Neons_demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Neons_demo.otf; sourceTree = "<group>"; };
+		ECCC806F1EFAB9DC00D1A294 /* DJLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJLabel.swift; sourceTree = "<group>"; };
+		ECCC80711EFAD84300D1A294 /* PlaybackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackCell.swift; sourceTree = "<group>"; };
 		ECF108831EF98175006365AB /* DJView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJView.swift; sourceTree = "<group>"; };
 		ECFDFBF41EEB70EF00480F8F /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,6 +200,7 @@
 		EC9D6D4A1EE8ABC60021370D /* EveryoneGetsToDJ */ = {
 			isa = PBXGroup;
 			children = (
+				ECCC80661EFAB6E200D1A294 /* Resources */,
 				EC2BC4601EF89265007A783C /* Protocols */,
 				EC2BC45B1EF87D2D007A783C /* Storyboards */,
 				EC9D6D851EEB468F0021370D /* Views */,
@@ -283,8 +296,21 @@
 			children = (
 				EC2BC4571EF83730007A783C /* DJTextField.swift */,
 				EC2BC4651EF89CA7007A783C /* JukeboxCell.swift */,
+				ECCC80691EFAB73400D1A294 /* TrackCell.swift */,
+				ECCC806F1EFAB9DC00D1A294 /* DJLabel.swift */,
+				ECCC80711EFAD84300D1A294 /* PlaybackCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		ECCC80661EFAB6E200D1A294 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ECCC806B1EFAB7F300D1A294 /* Electricity Personal Use.ttf */,
+				ECCC806D1EFAB91000D1A294 /* Neons_demo.otf */,
+				ECCC80671EFAB70000D1A294 /* Urban Jungle.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,10 +405,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECCC806C1EFAB7F300D1A294 /* Electricity Personal Use.ttf in Resources */,
 				EC9D6D5A1EE8ABC60021370D /* LaunchScreen.storyboard in Resources */,
 				EC2018351EF70C9900ECB4ED /* GoogleService-Info.plist in Resources */,
 				EC9D6D571EE8ABC60021370D /* Assets.xcassets in Resources */,
+				ECCC806E1EFAB91000D1A294 /* Neons_demo.otf in Resources */,
 				EC9D6D551EE8ABC60021370D /* Main.storyboard in Resources */,
+				ECCC80681EFAB70000D1A294 /* Urban Jungle.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,11 +528,13 @@
 				EC2BC4621EF89282007A783C /* Serializing.swift in Sources */,
 				EC2BC4661EF89CA7007A783C /* JukeboxCell.swift in Sources */,
 				EC2BC45F1EF8887A007A783C /* MultipeerResource.swift in Sources */,
+				ECCC80721EFAD84300D1A294 /* PlaybackCell.swift in Sources */,
 				EC13AA7A1EF97E4F00BD48C9 /* ColorScheme.swift in Sources */,
 				EC291B301EF047D800953483 /* Resource.swift in Sources */,
 				ECFDFBF51EEB70EF00480F8F /* ApiError.swift in Sources */,
 				EC2BC45A1EF8634E007A783C /* Jukebox.swift in Sources */,
 				EC2BC4581EF83730007A783C /* DJTextField.swift in Sources */,
+				ECCC806A1EFAB73400D1A294 /* TrackCell.swift in Sources */,
 				EC2BC45D1EF87DA5007A783C /* MultipeerManager.swift in Sources */,
 				EC5CC81C1EF1F6CC00F83E13 /* PlaybackViewController.swift in Sources */,
 				EC5AB8F01EF2E2F200483E13 /* DJTabBarController.swift in Sources */,
@@ -518,6 +549,7 @@
 				EC56CE531EF7119C0023DDCE /* FirebaseManager.swift in Sources */,
 				EC9D6D831EE9BE9A0021370D /* ApiClient.swift in Sources */,
 				EC9D6D891EEB4BD30021370D /* Artist.swift in Sources */,
+				ECCC80701EFAB9DC00D1A294 /* DJLabel.swift in Sources */,
 				EC5CC81E1EF1F70300F83E13 /* SelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

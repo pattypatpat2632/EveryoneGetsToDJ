@@ -14,6 +14,7 @@ class CreateJukeboxViewController: UIViewController {
     let multipeerManager = MultipeerManager.sharedInstance
     
     @IBOutlet weak var textField: DJTextField!
+    @IBOutlet weak var userTextField: DJTextField!
     
     
     override func viewDidLoad() {
@@ -33,7 +34,9 @@ class CreateJukeboxViewController: UIViewController {
     }
     
     @IBAction func createJukeboxTapped(_ sender: Any) {
-        guard textField.isNotEmpty() else {return} //TODO: indicate to user that textfield is empty
+        guard textField.isNotEmpty() else {return} //TODO: indicate to user that textfields are empty
+        guard userTextField.isNotEmpty() else {return}//TODO: indicate to user that textfields are empty
+        firManager.set(username: userTextField.text)
         firManager.createJukebox(named: textField.text!).then { jukeboxID in //TODO: refactor force unwrap
             return self.firManager.observe(jukebox: jukeboxID)
         }.then(on: DispatchQueue.main) {_ in
