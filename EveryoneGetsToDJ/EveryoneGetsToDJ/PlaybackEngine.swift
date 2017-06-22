@@ -32,7 +32,11 @@ extension PlaybackEngine: SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDe
             self.player = SPTAudioStreamingController.sharedInstance()
             self.player!.playbackDelegate = self //TODO: refactor !
             self.player!.delegate = self
-            try! player!.start(withClientId: loginManager.auth.clientID)
+            do {
+                try player!.start(withClientId: loginManager.auth.clientID)
+            } catch {
+                print("player already initialized")
+            }
             self.player!.login(withAccessToken: authSession.accessToken)
         }
     }
