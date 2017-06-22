@@ -21,7 +21,7 @@ class PlaybackEngine: NSObject {
     
     override init() {
         super.init()
-        firManager.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(tracksUpdated), name: .tracksUpdated, object: nil)
     }
 }
 
@@ -74,7 +74,7 @@ extension PlaybackEngine: SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDe
     
 }
 
-extension PlaybackEngine: FirebaseManagerDelegate {
+extension PlaybackEngine {
     
     func tracksUpdated() {
        

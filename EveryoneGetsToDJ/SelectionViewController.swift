@@ -10,16 +10,20 @@ import UIKit
 
 class SelectionViewController: UIViewController {
     
+    @IBOutlet weak var selectionLabel: UILabel!
     let apiClient = ApiClient.sharedInstance
     let firManager = FirebaseManager.sharedInstance
     var searchActive = false
+    var selectionsLeft: Int = 5
+    
     var artists = [Artist]() {
         didSet {
             DispatchQueue.main.async {
-                 self.artistTableView.reloadData()
+                self.artistTableView.reloadData()
             }
         }
     }
+    
     var tracks = [Track]() {
         didSet {
             DispatchQueue.main.async {
@@ -43,6 +47,14 @@ class SelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(updateSelectionCount), name: .tracksUpdated, object: nil)
+    }
+    
+    func updateSelectionCount() {
+        if let tracks = firManager.jukebox?.tracks {
+            selectionsLeft = 5 - tracks.filter{$0.selectorID == firManager.uid}.count
+            selectionLabel.text = "Selections left: \(selectionsLeft)"
+        }
     }
 }
 
@@ -89,7 +101,7 @@ extension SelectionViewController: UISearchBarDelegate {
                 self.artists = response.0
                 self.tracks = response.1
                 self.albums = response.2
-                return ("test string")
+                return ("test")
             }.catch{ error in
                 print(error.localizedDescription)
         }
@@ -104,13 +116,10 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == artistTableView {
-            print("Artists: \(artists.count)")
             return artists.count
         } else if tableView == trackTableView {
-            print("Tracks: \(tracks.count)")
             return tracks.count
         } else {
-            print("Albums: \(albums.count)")
             return albums.count
         }
     }
@@ -132,6 +141,7 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard selectionsLeft > 0 else {return} //TODO: indicate no selections left
         if tableView == trackTableView {
             guard let jukeboxID = firManager.jukebox?.id else {return}
             firManager.add(track: tracks[indexPath.row], toJukebox: jukeboxID)

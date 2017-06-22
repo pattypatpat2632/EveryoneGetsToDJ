@@ -331,8 +331,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selections Remaining:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAn-ET-fmw">
-                                <rect key="frame" x="16" y="72" width="169" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selections left: 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAn-ET-fmw">
+                                <rect key="frame" x="16" y="72" width="262" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -353,6 +353,7 @@
                         <outlet property="albumTableView" destination="8d5-g3-hd2" id="j0Z-R9-RgL"/>
                         <outlet property="artistTableView" destination="tdj-fG-9NR" id="fD5-ch-mj2"/>
                         <outlet property="searchBar" destination="Tak-Ge-9eh" id="nGh-9R-HQH"/>
+                        <outlet property="selectionLabel" destination="tAn-ET-fmw" id="CqB-Zr-s9W"/>
                         <outlet property="trackTableView" destination="ToB-MR-Qak" id="kEg-3q-K1n"/>
                     </connections>
                 </viewController>

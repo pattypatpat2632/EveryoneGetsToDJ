@@ -19,8 +19,6 @@ final class FirebaseManager {
     typealias JukeboxID = String
     var username: String?
     
-    weak var delegate: FirebaseManagerDelegate?
-    
     var jukebox: Jukebox?
     
     var uid: String {
@@ -78,7 +76,7 @@ final class FirebaseManager {
                     let newJukebox = Jukebox(id: jukeboxID, dictionary: snapshotValue)
                     self.jukebox = newJukebox
                     fulfill(newJukebox)
-                    self.delegate?.tracksUpdated()
+                    NotificationCenter.default.post(name: .tracksUpdated, object: nil)
                 } else {
                     reject(ApiError.unexpected("Could not get jukebox from firebase"))
                 }
@@ -87,6 +85,3 @@ final class FirebaseManager {
     }
 }
 
-protocol FirebaseManagerDelegate: class {
-    func tracksUpdated()
-}

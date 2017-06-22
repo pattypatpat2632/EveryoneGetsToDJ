@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 struct Track {
     let name: String
@@ -18,6 +19,7 @@ struct Track {
     var image: UIImage?
     let uri: String
     var selectorName = "none"
+    var selectorID = "none"
     var selectedDate: Date?
 }
 //MARK: initializers
@@ -35,6 +37,7 @@ extension Track {
         self.albumName = albumDict["name"] ?? "No name"
         self.albumID = albumDict["id"] ?? "No ID"
         
+        self.selectorID = dictionary["selectorID"] as? String ?? "none"
         if let selectorName = dictionary["selectorName"] as? String{
             self.selectorName = selectorName
         }
@@ -49,6 +52,7 @@ extension Track {
         if let username = FirebaseManager.sharedInstance.username {
             self.selectorName = username
         }
+        selectorID = FirebaseManager.sharedInstance.uid
         selectedDate = Date()
     }
     
@@ -62,7 +66,8 @@ extension Track {
                        "artistName": artistName],
             "uri": uri,
             "selectorName": selectorName,
-            "selectedDate": selectedDate?.timeIntervalSince1970 ?? Date().timeIntervalSince1970
+            "selectedDate": selectedDate?.timeIntervalSince1970 ?? Date().timeIntervalSince1970,
+            "selectorID": selectorID
         ]
         return dictionary
     }

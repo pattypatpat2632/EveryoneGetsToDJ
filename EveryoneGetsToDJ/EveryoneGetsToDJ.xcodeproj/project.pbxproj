@@ -25,6 +25,7 @@
 		EC5CC81A1EF1F45000F83E13 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC8191EF1F45000F83E13 /* LoginManager.swift */; };
 		EC5CC81C1EF1F6CC00F83E13 /* PlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC81B1EF1F6CC00F83E13 /* PlaybackViewController.swift */; };
 		EC5CC81E1EF1F70300F83E13 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC81D1EF1F70300F83E13 /* SelectionViewController.swift */; };
+		EC5F83601EFC080500EB4C4D /* NotificationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5F835F1EFC080500EB4C4D /* NotificationExt.swift */; };
 		EC9D6D4C1EE8ABC60021370D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */; };
 		EC9D6D551EE8ABC60021370D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9D6D531EE8ABC60021370D /* Main.storyboard */; };
 		EC9D6D571EE8ABC60021370D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9D6D561EE8ABC60021370D /* Assets.xcassets */; };
@@ -85,6 +86,7 @@
 		EC5CC8191EF1F45000F83E13 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		EC5CC81B1EF1F6CC00F83E13 /* PlaybackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackViewController.swift; sourceTree = "<group>"; };
 		EC5CC81D1EF1F70300F83E13 /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		EC5F835F1EFC080500EB4C4D /* NotificationExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationExt.swift; sourceTree = "<group>"; };
 		EC9D6D481EE8ABC60021370D /* EveryoneGetsToDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryoneGetsToDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = EveryoneGetsToDJ/AppDelegate.swift; sourceTree = "<group>"; };
 		EC9D6D541EE8ABC60021370D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -179,6 +181,14 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
+		EC5F835E1EFC07F100EB4C4D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EC5F835F1EFC080500EB4C4D /* NotificationExt.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		EC9D6D3F1EE8ABC60021370D = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +212,7 @@
 		EC9D6D4A1EE8ABC60021370D /* EveryoneGetsToDJ */ = {
 			isa = PBXGroup;
 			children = (
+				EC5F835E1EFC07F100EB4C4D /* Extensions */,
 				ECCC80661EFAB6E200D1A294 /* Resources */,
 				EC2BC4601EF89265007A783C /* Protocols */,
 				EC2BC45B1EF87D2D007A783C /* Storyboards */,
@@ -552,6 +563,7 @@
 				EC56CE531EF7119C0023DDCE /* FirebaseManager.swift in Sources */,
 				EC9D6D831EE9BE9A0021370D /* ApiClient.swift in Sources */,
 				ECCC80741EFB060300D1A294 /* PlaybackEngine.swift in Sources */,
+				EC5F83601EFC080500EB4C4D /* NotificationExt.swift in Sources */,
 				EC9D6D891EEB4BD30021370D /* Artist.swift in Sources */,
 				ECCC80701EFAB9DC00D1A294 /* DJLabel.swift in Sources */,
 				EC5CC81E1EF1F70300F83E13 /* SelectionViewController.swift in Sources */,
