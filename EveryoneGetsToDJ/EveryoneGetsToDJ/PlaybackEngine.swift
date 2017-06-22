@@ -12,7 +12,12 @@ class PlaybackEngine: NSObject {
     var player: SPTAudioStreamingController?
     let loginManager = LoginManager.sharedInstance
     let firManager = FirebaseManager.sharedInstance
-    var tracks = [Track]()
+    var delegate: PlaybackEngineDelegate?
+    var tracks = [Track]() {
+        didSet {
+            delegate?.updatedTracks()
+        }
+    }
     
     override init() {
         super.init()
@@ -72,7 +77,7 @@ extension PlaybackEngine: SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDe
 extension PlaybackEngine: FirebaseManagerDelegate {
     
     func tracksUpdated() {
-        print("TRACKS UPDATED************")
+       
         if let tracks = firManager.jukebox?.tracks{
             let sortedTracks = tracks.sorted(by: { (track0, track1) -> Bool in
                 if let date0 = track0.selectedDate, let date1 = track1.selectedDate {
@@ -82,7 +87,7 @@ extension PlaybackEngine: FirebaseManagerDelegate {
                 }
             })
             
-            if sortedTracks.count > self.tracks.count { //If tracks were added to jukebox in firebase, add them to the spotify queue
+            if sortedTracks.count > self.tracks.count { //Check to see if there were new tracks added to the jukebox in firebase, and if so add them to the Spotify queue
                 for i in self.tracks.count..<sortedTracks.count {
                     if sortedTracks.count == 1 {
                         play(track: sortedTracks[i])
@@ -94,4 +99,8 @@ extension PlaybackEngine: FirebaseManagerDelegate {
             self.tracks = sortedTracks
         }
     }
+}
+
+protocol PlaybackEngineDelegate {
+    func updatedTracks()
 }

@@ -28,6 +28,11 @@ class PlaybackViewController: UIViewController {
             }
         }
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        playbackEngine.delegate = self
+    }
 
 }
 
@@ -46,6 +51,12 @@ extension PlaybackViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playbackCell", for: indexPath) as! PlaybackCell
         cell.track = playbackEngine.tracks[indexPath.row]
         return cell
+    }
+}
+
+extension PlaybackViewController: PlaybackEngineDelegate {
+    func updatedTracks() {
+        tracksTableVIew.reloadData()
     }
 }
 
