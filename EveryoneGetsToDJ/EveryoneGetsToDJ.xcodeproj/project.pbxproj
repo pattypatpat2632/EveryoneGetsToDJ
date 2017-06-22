@@ -26,6 +26,7 @@
 		EC5CC81C1EF1F6CC00F83E13 /* PlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC81B1EF1F6CC00F83E13 /* PlaybackViewController.swift */; };
 		EC5CC81E1EF1F70300F83E13 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC81D1EF1F70300F83E13 /* SelectionViewController.swift */; };
 		EC5F83601EFC080500EB4C4D /* NotificationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5F835F1EFC080500EB4C4D /* NotificationExt.swift */; };
+		EC5F83621EFC20C100EB4C4D /* PauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5F83611EFC20C100EB4C4D /* PauseButton.swift */; };
 		EC9D6D4C1EE8ABC60021370D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */; };
 		EC9D6D551EE8ABC60021370D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9D6D531EE8ABC60021370D /* Main.storyboard */; };
 		EC9D6D571EE8ABC60021370D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9D6D561EE8ABC60021370D /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 		EC5CC81B1EF1F6CC00F83E13 /* PlaybackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackViewController.swift; sourceTree = "<group>"; };
 		EC5CC81D1EF1F70300F83E13 /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		EC5F835F1EFC080500EB4C4D /* NotificationExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationExt.swift; sourceTree = "<group>"; };
+		EC5F83611EFC20C100EB4C4D /* PauseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseButton.swift; sourceTree = "<group>"; };
 		EC9D6D481EE8ABC60021370D /* EveryoneGetsToDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryoneGetsToDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = EveryoneGetsToDJ/AppDelegate.swift; sourceTree = "<group>"; };
 		EC9D6D541EE8ABC60021370D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				ECCC80691EFAB73400D1A294 /* TrackCell.swift */,
 				ECCC806F1EFAB9DC00D1A294 /* DJLabel.swift */,
 				ECCC80711EFAD84300D1A294 /* PlaybackCell.swift */,
+				EC5F83611EFC20C100EB4C4D /* PauseButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				EC2BC4621EF89282007A783C /* Serializing.swift in Sources */,
 				EC2BC4661EF89CA7007A783C /* JukeboxCell.swift in Sources */,
 				EC2BC45F1EF8887A007A783C /* MultipeerResource.swift in Sources */,
+				EC5F83621EFC20C100EB4C4D /* PauseButton.swift in Sources */,
 				ECCC80721EFAD84300D1A294 /* PlaybackCell.swift in Sources */,
 				EC13AA7A1EF97E4F00BD48C9 /* ColorScheme.swift in Sources */,
 				EC291B301EF047D800953483 /* Resource.swift in Sources */,

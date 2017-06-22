@@ -43,7 +43,14 @@ extension PlaybackEngine: SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDe
         })
     }
     
-    func set(isPlaying: Bool) {
+    func set(playback: PauseState) {
+        var isPlaying: Bool
+        switch playback {
+        case .playing:
+            isPlaying = true
+        case .paused:
+            isPlaying = false
+        }
         player?.setIsPlaying(isPlaying, callback: { (error) in
             
         })

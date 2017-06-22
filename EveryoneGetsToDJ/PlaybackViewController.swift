@@ -18,6 +18,7 @@ class PlaybackViewController: UIViewController {
     let playbackEngine = PlaybackEngine()
     
     @IBOutlet weak var tracksTableVIew: UITableView!
+    @IBOutlet weak var pauseButton: PauseButton!
     
     var playbackEnabled = false {
         didSet {
@@ -32,6 +33,10 @@ class PlaybackViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         playbackEngine.delegate = self
+    }
+    @IBAction func pauseButtonTapped(_ sender: Any) {
+        pauseButton.changeState()
+        playbackEngine.set(playback: pauseButton.pauseState)
     }
 
 }

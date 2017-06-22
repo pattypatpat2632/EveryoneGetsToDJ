@@ -13,11 +13,7 @@ final class MultipeerManager: NSObject {
     
     static let sharedInstance = MultipeerManager()
     let service = "everyonedj-3184"
-    var availableJukeboxes = [Jukebox]() {
-        didSet {
-            delegate?.updateAvailablePeers()
-        }
-    }
+    var availableJukeboxes = [Jukebox]()
     weak var delegate: MultipeerManagerDelegate?
     
     typealias jukeboxID = String
@@ -80,13 +76,17 @@ extension MultipeerManager {
     
     fileprivate func receive(data: Data) {
         if let json = try? JSONSerialization.jsonObject(with: data, options: []){
+            print("VALID JSON")
             if let resourceDict = json as? [String: Any] {
                 let resource = MultipeerResource(dictionary: resourceDict)
+                print(resource.jukebox)
                 switch resource.method {
                 case .send:
                     add(jukebox: resource.jukebox)
+                    delegate?.updateAvailablePeers()
                 case .remove:
                     remove(jukebox: resource.jukebox)
+                    delegate?.updateAvailablePeers()
                 }
             }
         }
@@ -98,6 +98,8 @@ extension MultipeerManager {
     
     fileprivate func add(jukebox: Jukebox) {
         self.availableJukeboxes.append(jukebox)
+        print(availableJukeboxes.count)
+        
     }
 }
 
@@ -108,7 +110,9 @@ extension MultipeerManager: MCNearbyServiceAdvertiserDelegate {
     }
     
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
+        print("INVITATION REVEIVED")
         if let context = context {
+            print("VALID CONTEXT")
             receive(data: context)
         }
         invitationHandler(true, self.session)
