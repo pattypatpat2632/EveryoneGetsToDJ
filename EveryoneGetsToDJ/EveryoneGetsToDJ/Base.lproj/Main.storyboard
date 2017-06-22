@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Hyr-b9-YP5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xJZ-6k-fFO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -49,6 +49,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.71764705880000002" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sOU-8k-W4K"/>
                     <connections>
                         <segue destination="Aj9-lG-t6f" kind="show" identifier="hostSegue" id="fbS-19-PmV"/>
                         <segue destination="yDi-gN-ULk" kind="show" identifier="joinSegue" id="W32-ww-R1m"/>
@@ -56,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Als-FS-Rzk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3676" y="-4428"/>
+            <point key="canvasLocation" x="-2736.8000000000002" y="-4428.0359820089961"/>
         </scene>
         <!--Create Jukebox View Controller-->
         <scene sceneID="Hlg-Mz-qPa">
@@ -71,26 +72,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name Your Jukebox" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T9n-tf-OSU" customClass="DJTextField" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="47" y="198" width="281" height="30"/>
+                                <rect key="frame" x="47" y="242" width="281" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0s-cy-MkS">
-                                <rect key="frame" x="163" y="349" width="48" height="30"/>
+                                <rect key="frame" x="163" y="393" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancelTapped:" destination="Aj9-lG-t6f" eventType="touchUpInside" id="M7L-LO-bMI"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c4P-Uz-cAS" customClass="DJTextField" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="47" y="254" width="281" height="30"/>
+                                <rect key="frame" x="47" y="298" width="281" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-BU-Hbb">
-                                <rect key="frame" x="134" y="301" width="107" height="30"/>
+                                <rect key="frame" x="134" y="345" width="107" height="30"/>
                                 <state key="normal" title="Create Jukebox"/>
                                 <connections>
                                     <action selector="createJukeboxTapped:" destination="Aj9-lG-t6f" eventType="touchUpInside" id="qQ3-f6-pfI"/>
@@ -119,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MG3-ex-zU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2700" y="-4633.1334332833585"/>
+            <point key="canvasLocation" x="-1760.8" y="-4633.1334332833585"/>
         </scene>
         <!--Find Jukebox View Controller-->
         <scene sceneID="f2x-2w-bj0">
@@ -217,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bED-q2-rrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2676" y="-3845.1274362818594"/>
+            <point key="canvasLocation" x="-1736.8" y="-3845.1274362818594"/>
         </scene>
         <!--Jukebox-->
         <scene sceneID="Lku-4v-2Xr">
@@ -377,10 +378,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gx-pb-dDi">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gx-pb-dDi" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                 <rect key="frame" x="167" y="20" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Exit"/>
+                                <connections>
+                                    <action selector="exitTapped:" destination="zDd-Am-9Tg" eventType="touchUpInside" id="0O5-7W-zIR"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Playback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNs-62-yUG">
                                 <rect key="frame" x="148" y="49" width="69" height="21"/>
@@ -467,7 +471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbu-zM-gvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-679.20000000000005" y="-4428.0359820089961"/>
+            <point key="canvasLocation" x="260" y="-4428.0359820089961"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Wcc-mS-i8V">
@@ -486,7 +490,25 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iko-71-qbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1618" y="-4633"/>
+            <point key="canvasLocation" x="-679.20000000000005" y="-4633.1334332833585"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fJz-3z-Zlr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xJZ-6k-fFO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ZPX-rc-q1I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Hyr-b9-YP5" kind="relationship" relationship="rootViewController" id="vvP-mQ-l29"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hz8-l8-IjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3676" y="-4428.0359820089961"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

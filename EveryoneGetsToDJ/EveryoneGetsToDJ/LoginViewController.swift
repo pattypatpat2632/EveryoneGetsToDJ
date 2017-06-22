@@ -16,6 +16,7 @@ class LoginViewController: UIViewController, DJView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         NotificationCenter.default.addObserver(self, selector: #selector(updateAfterFirstLogin), name: Notification.Name(rawValue: "loginSuccessfull"), object: nil)
         loginManager.setup()
     }
@@ -30,7 +31,6 @@ class LoginViewController: UIViewController, DJView {
     
     func updateAfterFirstLogin() {
         loginManager.updateAfterFirstLogin()
-        
         self.performSegue(withIdentifier: "hostSegue", sender: nil)
     }
     

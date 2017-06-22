@@ -27,6 +27,9 @@
 		EC5CC81E1EF1F70300F83E13 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC81D1EF1F70300F83E13 /* SelectionViewController.swift */; };
 		EC5F83601EFC080500EB4C4D /* NotificationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5F835F1EFC080500EB4C4D /* NotificationExt.swift */; };
 		EC5F83621EFC20C100EB4C4D /* PauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5F83611EFC20C100EB4C4D /* PauseButton.swift */; };
+		EC5F83661EFC75EB00EB4C4D /* DJButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5F83651EFC75EB00EB4C4D /* DJButton.swift */; };
+		EC5F836A1EFC77C200EB4C4D /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5F83691EFC77C200EB4C4D /* UIViewControllerExt.swift */; };
+		EC5F836C1EFC7E9E00EB4C4D /* DJNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5F836B1EFC7E9E00EB4C4D /* DJNavigationController.swift */; };
 		EC9D6D4C1EE8ABC60021370D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */; };
 		EC9D6D551EE8ABC60021370D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9D6D531EE8ABC60021370D /* Main.storyboard */; };
 		EC9D6D571EE8ABC60021370D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9D6D561EE8ABC60021370D /* Assets.xcassets */; };
@@ -89,6 +92,9 @@
 		EC5CC81D1EF1F70300F83E13 /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		EC5F835F1EFC080500EB4C4D /* NotificationExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationExt.swift; sourceTree = "<group>"; };
 		EC5F83611EFC20C100EB4C4D /* PauseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseButton.swift; sourceTree = "<group>"; };
+		EC5F83651EFC75EB00EB4C4D /* DJButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJButton.swift; sourceTree = "<group>"; };
+		EC5F83691EFC77C200EB4C4D /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		EC5F836B1EFC7E9E00EB4C4D /* DJNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJNavigationController.swift; sourceTree = "<group>"; };
 		EC9D6D481EE8ABC60021370D /* EveryoneGetsToDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryoneGetsToDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = EveryoneGetsToDJ/AppDelegate.swift; sourceTree = "<group>"; };
 		EC9D6D541EE8ABC60021370D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -187,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				EC5F835F1EFC080500EB4C4D /* NotificationExt.swift */,
+				EC5F83691EFC77C200EB4C4D /* UIViewControllerExt.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -287,6 +294,7 @@
 				EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */,
 				EC56CE541EF71C920023DDCE /* CreateJukeboxViewController.swift */,
 				EC2BC4631EF8991D007A783C /* FindJukeboxViewController.swift */,
+				EC5F836B1EFC7E9E00EB4C4D /* DJNavigationController.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -316,6 +324,7 @@
 				ECCC806F1EFAB9DC00D1A294 /* DJLabel.swift */,
 				ECCC80711EFAD84300D1A294 /* PlaybackCell.swift */,
 				EC5F83611EFC20C100EB4C4D /* PauseButton.swift */,
+				EC5F83651EFC75EB00EB4C4D /* DJButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -541,8 +550,10 @@
 			files = (
 				EC9D6D7F1EE8B67A0021370D /* LoginViewController.swift in Sources */,
 				EC9D6D7D1EE8B4BF0021370D /* BridgeViewController.m in Sources */,
+				EC5F83661EFC75EB00EB4C4D /* DJButton.swift in Sources */,
 				EC9D6D4C1EE8ABC60021370D /* AppDelegate.swift in Sources */,
 				EC2BC4621EF89282007A783C /* Serializing.swift in Sources */,
+				EC5F836A1EFC77C200EB4C4D /* UIViewControllerExt.swift in Sources */,
 				EC2BC4661EF89CA7007A783C /* JukeboxCell.swift in Sources */,
 				EC2BC45F1EF8887A007A783C /* MultipeerResource.swift in Sources */,
 				EC5F83621EFC20C100EB4C4D /* PauseButton.swift in Sources */,
@@ -551,6 +562,7 @@
 				EC291B301EF047D800953483 /* Resource.swift in Sources */,
 				ECFDFBF51EEB70EF00480F8F /* ApiError.swift in Sources */,
 				EC2BC45A1EF8634E007A783C /* Jukebox.swift in Sources */,
+				EC5F836C1EFC7E9E00EB4C4D /* DJNavigationController.swift in Sources */,
 				EC2BC4581EF83730007A783C /* DJTextField.swift in Sources */,
 				ECCC806A1EFAB73400D1A294 /* TrackCell.swift in Sources */,
 				EC2BC45D1EF87DA5007A783C /* MultipeerManager.swift in Sources */,

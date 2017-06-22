@@ -10,4 +10,5 @@ import Foundation
 
 extension Notification.Name {
     static let tracksUpdated = Notification.Name("tracks-updated")
+    static let logout = Notification.Name("logout")
 }

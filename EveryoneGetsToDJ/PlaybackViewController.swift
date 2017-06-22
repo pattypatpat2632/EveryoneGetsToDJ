@@ -38,6 +38,11 @@ class PlaybackViewController: UIViewController {
         pauseButton.changeState()
         playbackEngine.set(playback: pauseButton.pauseState)
     }
+    
+    @IBAction func exitTapped(_ sender: DJButton) {
+        
+        NotificationCenter.default.post(name: .logout, object: nil)
+    }
 
 }
 

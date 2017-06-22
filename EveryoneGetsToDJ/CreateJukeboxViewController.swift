@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class CreateJukeboxViewController: UIViewController {
     
@@ -19,6 +21,19 @@ class CreateJukeboxViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        do {
+            try AVAudioSession.sharedInstance().setActive(false)
+        } catch {
+            //TODO: error handle
+        }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: .allowAirPlay)
+        } catch {
+            
+        }
+        
+        
+        hideKeyboardWhenTappedAround()
         FirebaseManager.sharedInstance.login().catch{error in
             print(error.localizedDescription)
         }

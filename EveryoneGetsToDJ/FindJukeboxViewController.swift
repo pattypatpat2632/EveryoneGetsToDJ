@@ -25,6 +25,8 @@ class FindJukeboxViewController: UIViewController {
     @IBOutlet weak var textField: DJTextField!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         multipeerManager.delegate = self
         self.multipeerManager.startAdvertising()
         jukeboxes = multipeerManager.availableJukeboxes
