@@ -26,11 +26,7 @@ class CreateJukeboxViewController: UIViewController {
         } catch {
             //TODO: error handle
         }
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: .allowAirPlay)
-        } catch {
-            
-        }
+        
         
         navigationController?.setNavigationBarHidden(false, animated: true)
         hideKeyboardWhenTappedAround()

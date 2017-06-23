@@ -145,6 +145,24 @@
             </objects>
             <point key="canvasLocation" x="-1760.8" y="-4633.1334332833585"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Eso-bN-0Th">
+            <objects>
+                <viewController id="NNc-4s-hQH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rTJ-sQ-Qch"/>
+                        <viewControllerLayoutGuide type="bottom" id="d8N-tA-IY6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8WR-n6-HdN" customClass="DJContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l1A-zD-V89" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2734" y="-3741"/>
+        </scene>
         <!--Find Jukebox View Controller-->
         <scene sceneID="f2x-2w-bj0">
             <objects>
@@ -519,7 +537,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xJZ-6k-fFO" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZPX-rc-q1I">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ZPX-rc-q1I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

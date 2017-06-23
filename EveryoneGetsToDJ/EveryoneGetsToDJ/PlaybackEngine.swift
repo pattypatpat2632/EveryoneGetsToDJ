@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 class PlaybackEngine: NSObject {
     var player: SPTAudioStreamingController?
@@ -21,6 +22,12 @@ class PlaybackEngine: NSObject {
     
     override init() {
         super.init()
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        } catch {
+            
+        }
         NotificationCenter.default.addObserver(self, selector: #selector(tracksUpdated), name: .tracksUpdated, object: nil)
     }
 }
