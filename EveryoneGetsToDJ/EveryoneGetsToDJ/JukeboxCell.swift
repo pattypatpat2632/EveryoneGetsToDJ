@@ -8,9 +8,14 @@
 
 import UIKit
 
-class JukeboxCell: UITableViewCell {
+class JukeboxCell: UITableViewCell, DJView {
     
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameLabel: DJLabel!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.backgroundColor = colorScheme.model.backgroundColor
+    }
 
     var jukebox: Jukebox? {
         didSet{

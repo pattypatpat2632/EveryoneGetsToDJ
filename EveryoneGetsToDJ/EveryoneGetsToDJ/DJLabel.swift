@@ -10,6 +10,12 @@ import UIKit
 
 class DJLabel: UILabel, DJView {
 
-    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
 
+    func setup() {
+        textColor = colorScheme.model.foregroundColor
+    }
 }

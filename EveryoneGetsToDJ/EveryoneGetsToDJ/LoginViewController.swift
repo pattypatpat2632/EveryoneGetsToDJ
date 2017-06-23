@@ -9,7 +9,7 @@
 import UIKit
 import PromiseKit
 
-class LoginViewController: UIViewController, DJView {
+class LoginViewController: UIViewController {
     
     let apiClient = ApiClient.sharedInstance
     let loginManager = LoginManager.sharedInstance
@@ -33,10 +33,6 @@ class LoginViewController: UIViewController, DJView {
     func updateAfterFirstLogin() {
         loginManager.updateAfterFirstLogin()
         self.performSegue(withIdentifier: "hostSegue", sender: nil)
-    }
-    
-    func layout() {
-        view.backgroundColor = colorScheme.model.baseColor
     }
     
 }

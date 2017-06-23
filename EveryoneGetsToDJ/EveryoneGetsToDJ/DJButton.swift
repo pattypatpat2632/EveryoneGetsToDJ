@@ -8,14 +8,18 @@
 
 import UIKit
 
-class DJButton: UIButton {
+class DJButton: UIButton, DJView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
     }
-    */
-
+    
+    func setup() {
+        setTitleColor(colorScheme.model.foregroundColor, for: .normal)
+        backgroundColor = colorScheme.model.backgroundColor
+        layer.borderColor = colorScheme.model.foregroundColor.cgColor
+        layer.borderWidth = 5
+        layer.cornerRadius = 2
+    }
 }

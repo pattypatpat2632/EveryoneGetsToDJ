@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FindJukeboxViewController: UIViewController {
+class FindJukeboxViewController: UIViewController{
 
     let multipeerManager = MultipeerManager.sharedInstance
     let firManager = FirebaseManager.sharedInstance
@@ -27,6 +27,7 @@ class FindJukeboxViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
+        navigationController?.navigationBar.isHidden = false
         multipeerManager.delegate = self
         self.multipeerManager.startAdvertising()
         jukeboxes = multipeerManager.availableJukeboxes
@@ -44,12 +45,6 @@ class FindJukeboxViewController: UIViewController {
             
         }
     }
-    
-    @IBAction func cancelButtonTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-        self.dismiss(animated: true, completion: nil)
-    }
-
 }
 
 extension FindJukeboxViewController: MultipeerManagerDelegate {
