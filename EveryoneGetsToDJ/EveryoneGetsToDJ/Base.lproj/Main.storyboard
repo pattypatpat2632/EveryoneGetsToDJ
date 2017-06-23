@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,50 +26,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNp-iW-dwZ" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="141" y="269" width="93.5" height="50"/>
+                                <rect key="frame" x="141" y="282" width="93.5" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Host"/>
                                 <connections>
                                     <action selector="loginTapped:" destination="Hyr-b9-YP5" eventType="touchUpInside" id="6Sw-Fj-s7v"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMc-V1-lwb" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="140" y="406" width="94" height="50"/>
+                                <rect key="frame" x="140" y="419" width="94" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Join"/>
                                 <connections>
                                     <action selector="joinButtonTapped:" destination="Hyr-b9-YP5" eventType="touchUpInside" id="Abu-Qe-XtJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Requires a Spotify Premium account)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cn4-ef-Vxc" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="43" y="327" width="289" height="21"/>
+                                <rect key="frame" x="43" y="340" width="289" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Everyone Gets to DJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGg-yq-u5F" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="109" y="161" width="156" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="61.5" y="161" width="252" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xf-l4-Cph" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="153" y="617" width="81" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xf-l4-Cph" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="141" y="605" width="93.5" height="50"/>
                                 <state key="normal" title="Instructions"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.71764705880000002" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JMc-V1-lwb" firstAttribute="centerX" secondItem="gCb-dA-4bz" secondAttribute="centerX" id="1Ow-ae-otX"/>
+                            <constraint firstItem="8Xf-l4-Cph" firstAttribute="height" secondItem="gCb-dA-4bz" secondAttribute="height" multiplier="0.075" id="2YI-OC-cAq"/>
                             <constraint firstItem="GNp-iW-dwZ" firstAttribute="height" secondItem="gCb-dA-4bz" secondAttribute="height" multiplier="0.075" id="5I3-Bi-YKF"/>
                             <constraint firstItem="cn4-ef-Vxc" firstAttribute="centerX" secondItem="gCb-dA-4bz" secondAttribute="centerX" id="CNh-fH-5Sy"/>
                             <constraint firstItem="cn4-ef-Vxc" firstAttribute="top" secondItem="GNp-iW-dwZ" secondAttribute="bottom" constant="8" id="I1m-v3-1JC"/>
                             <constraint firstItem="GNp-iW-dwZ" firstAttribute="top" secondItem="iGg-yq-u5F" secondAttribute="bottom" constant="87.5" id="K6f-Gn-iSY"/>
+                            <constraint firstItem="sZx-Jo-gvT" firstAttribute="top" secondItem="8Xf-l4-Cph" secondAttribute="bottomMargin" constant="20" id="Npd-xX-KGl"/>
                             <constraint firstItem="JMc-V1-lwb" firstAttribute="width" secondItem="gCb-dA-4bz" secondAttribute="width" multiplier="0.25" id="T3Q-dc-a8C"/>
+                            <constraint firstItem="8Xf-l4-Cph" firstAttribute="centerX" secondItem="gCb-dA-4bz" secondAttribute="centerX" id="Xfo-mx-WVW"/>
                             <constraint firstItem="GNp-iW-dwZ" firstAttribute="centerX" secondItem="gCb-dA-4bz" secondAttribute="centerX" id="iY8-CI-I8a"/>
                             <constraint firstItem="iGg-yq-u5F" firstAttribute="centerX" secondItem="gCb-dA-4bz" secondAttribute="centerX" id="n5M-2J-obt"/>
                             <constraint firstItem="GNp-iW-dwZ" firstAttribute="width" secondItem="gCb-dA-4bz" secondAttribute="width" multiplier="0.25" id="pQx-U2-pig"/>
                             <constraint firstItem="iGg-yq-u5F" firstAttribute="top" secondItem="uRO-gr-H4z" secondAttribute="bottom" constant="97" id="se0-eL-YGi"/>
                             <constraint firstItem="JMc-V1-lwb" firstAttribute="top" secondItem="cn4-ef-Vxc" secondAttribute="bottom" constant="58" id="yp4-zC-mqD"/>
+                            <constraint firstItem="8Xf-l4-Cph" firstAttribute="width" secondItem="gCb-dA-4bz" secondAttribute="width" multiplier="0.25" id="zao-zX-ruC"/>
                             <constraint firstItem="JMc-V1-lwb" firstAttribute="height" secondItem="gCb-dA-4bz" secondAttribute="height" multiplier="0.075" id="zyV-LD-x4P"/>
                         </constraints>
                     </view>
@@ -89,7 +96,7 @@
                         <viewControllerLayoutGuide type="top" id="5vV-nu-k47"/>
                         <viewControllerLayoutGuide type="bottom" id="5lp-e3-LiD"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pWc-ZD-jvE">
+                    <view key="view" contentMode="scaleToFill" id="pWc-ZD-jvE" customClass="DJContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -99,21 +106,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0s-cy-MkS">
-                                <rect key="frame" x="163" y="393" width="48" height="30"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="cancelTapped:" destination="Aj9-lG-t6f" eventType="touchUpInside" id="M7L-LO-bMI"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c4P-Uz-cAS" customClass="DJTextField" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                 <rect key="frame" x="47" y="298" width="281" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-BU-Hbb">
-                                <rect key="frame" x="134" y="345" width="107" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-BU-Hbb" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="94" y="345" width="187.5" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Create Jukebox"/>
                                 <connections>
                                     <action selector="createJukeboxTapped:" destination="Aj9-lG-t6f" eventType="touchUpInside" id="qQ3-f6-pfI"/>
@@ -122,16 +123,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="k0s-cy-MkS" firstAttribute="centerX" secondItem="pWc-ZD-jvE" secondAttribute="centerX" id="1qX-nj-GUQ"/>
                             <constraint firstItem="c4P-Uz-cAS" firstAttribute="top" secondItem="T9n-tf-OSU" secondAttribute="bottom" constant="26" id="6M2-eK-SV9"/>
                             <constraint firstItem="T9n-tf-OSU" firstAttribute="width" secondItem="pWc-ZD-jvE" secondAttribute="width" multiplier="0.75" id="BPm-9Y-odz"/>
                             <constraint firstItem="T9n-tf-OSU" firstAttribute="centerX" secondItem="pWc-ZD-jvE" secondAttribute="centerX" id="FgO-Eu-LYw"/>
+                            <constraint firstItem="ibm-BU-Hbb" firstAttribute="width" secondItem="pWc-ZD-jvE" secondAttribute="width" multiplier="0.5" id="POk-g6-fbm"/>
                             <constraint firstItem="ibm-BU-Hbb" firstAttribute="top" secondItem="c4P-Uz-cAS" secondAttribute="bottom" constant="17" id="QC9-iF-boh"/>
                             <constraint firstItem="c4P-Uz-cAS" firstAttribute="leading" secondItem="T9n-tf-OSU" secondAttribute="trailing" constant="-281" id="SaH-Dp-mdd"/>
                             <constraint firstItem="c4P-Uz-cAS" firstAttribute="width" secondItem="T9n-tf-OSU" secondAttribute="width" id="VKj-Yd-vQ7"/>
                             <constraint firstItem="ibm-BU-Hbb" firstAttribute="centerX" secondItem="pWc-ZD-jvE" secondAttribute="centerX" id="euo-ny-Hxb"/>
+                            <constraint firstItem="ibm-BU-Hbb" firstAttribute="height" secondItem="pWc-ZD-jvE" secondAttribute="height" multiplier="0.075" id="f8j-Rz-xff"/>
                             <constraint firstItem="T9n-tf-OSU" firstAttribute="top" secondItem="5vV-nu-k47" secondAttribute="bottom" constant="178" id="hMn-8M-afM"/>
-                            <constraint firstItem="k0s-cy-MkS" firstAttribute="top" secondItem="ibm-BU-Hbb" secondAttribute="bottom" constant="18" id="mxk-cZ-bYv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -254,49 +255,47 @@
                         <viewControllerLayoutGuide type="top" id="E4F-Fi-Yg4"/>
                         <viewControllerLayoutGuide type="bottom" id="H8q-oh-nsn"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VRa-PC-XXJ">
+                    <view key="view" contentMode="scaleToFill" id="VRa-PC-XXJ" customClass="DJContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Find Songs" translatesAutoresizingMaskIntoConstraints="NO" id="Tak-Ge-9eh">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" placeholder="Search by song name" translatesAutoresizingMaskIntoConstraints="NO" id="Tak-Ge-9eh">
+                                <rect key="frame" x="0.0" y="66" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ToB-MR-Qak">
-                                <rect key="frame" x="67" y="317" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="62" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ToB-MR-Qak" customClass="DJTableView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="37" y="170" width="300" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackCell" id="JW6-XM-mU8" customClass="TrackCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackCell" rowHeight="62" id="JW6-XM-mU8" customClass="TrackCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="300" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JW6-XM-mU8" id="UbN-QQ-IgV">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="61.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF0-Rl-J63" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="29"/>
+                                                    <rect key="frame" x="16" y="16" width="268" height="15.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nh6-Rk-z6O" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="29" width="232" height="14"/>
+                                                    <rect key="frame" x="16" y="31.5" width="276" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="tF0-Rl-J63" firstAttribute="top" secondItem="UbN-QQ-IgV" secondAttribute="topMargin" constant="-8" id="21R-hq-NTL"/>
-                                                <constraint firstItem="nh6-Rk-z6O" firstAttribute="bottom" secondItem="UbN-QQ-IgV" secondAttribute="bottomMargin" constant="7.5" id="97G-gY-O8P"/>
-                                                <constraint firstItem="tF0-Rl-J63" firstAttribute="trailing" secondItem="UbN-QQ-IgV" secondAttribute="trailingMargin" constant="8" id="DZ2-8d-kU2"/>
-                                                <constraint firstItem="tF0-Rl-J63" firstAttribute="leading" secondItem="UbN-QQ-IgV" secondAttribute="leadingMargin" constant="-8" id="Lya-Fd-cYi"/>
-                                                <constraint firstItem="tF0-Rl-J63" firstAttribute="height" secondItem="UbN-QQ-IgV" secondAttribute="height" multiplier="0.6666" id="OkT-zb-pNE"/>
+                                                <constraint firstItem="tF0-Rl-J63" firstAttribute="top" secondItem="UbN-QQ-IgV" secondAttribute="topMargin" constant="8" id="21R-hq-NTL"/>
+                                                <constraint firstItem="nh6-Rk-z6O" firstAttribute="bottom" secondItem="UbN-QQ-IgV" secondAttribute="bottomMargin" constant="8" id="97G-gY-O8P"/>
+                                                <constraint firstItem="tF0-Rl-J63" firstAttribute="trailing" secondItem="UbN-QQ-IgV" secondAttribute="trailingMargin" constant="-8" id="DZ2-8d-kU2"/>
+                                                <constraint firstItem="tF0-Rl-J63" firstAttribute="leading" secondItem="UbN-QQ-IgV" secondAttribute="leadingMargin" constant="8" id="Lya-Fd-cYi"/>
+                                                <constraint firstItem="tF0-Rl-J63" firstAttribute="height" secondItem="UbN-QQ-IgV" secondAttribute="height" multiplier="0.25" id="OkT-zb-pNE"/>
                                                 <constraint firstItem="nh6-Rk-z6O" firstAttribute="trailing" secondItem="UbN-QQ-IgV" secondAttribute="trailingMargin" id="WaZ-EK-CnN"/>
                                                 <constraint firstItem="nh6-Rk-z6O" firstAttribute="top" secondItem="tF0-Rl-J63" secondAttribute="bottom" id="sGk-67-lym"/>
-                                                <constraint firstItem="nh6-Rk-z6O" firstAttribute="leading" secondItem="UbN-QQ-IgV" secondAttribute="leadingMargin" constant="-8" id="uWf-3o-mpd"/>
+                                                <constraint firstItem="nh6-Rk-z6O" firstAttribute="leading" secondItem="UbN-QQ-IgV" secondAttribute="leadingMargin" constant="8" id="uWf-3o-mpd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -310,35 +309,16 @@
                                     <outlet property="delegate" destination="EoE-Qd-SxF" id="GIz-S6-WCB"/>
                                 </connections>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8d5-g3-hd2">
-                                <rect key="frame" x="71" y="482" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="albumCell" id="oRW-uq-k4W">
-                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oRW-uq-k4W" id="82w-zX-Z74">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="EoE-Qd-SxF" id="u6w-Jk-yan"/>
-                                    <outlet property="delegate" destination="EoE-Qd-SxF" id="SHt-CA-Eoo"/>
-                                </connections>
-                            </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tdj-fG-9NR">
-                                <rect key="frame" x="67" y="152" width="240" height="128"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tdj-fG-9NR" customClass="DJTableView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="523" width="68" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="artistCell" id="NhS-vc-cbf">
-                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="68" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NhS-vc-cbf" id="Zzm-vC-RAo">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NhS-vc-cbf" id="Zzm-vC-RAo" customClass="DJContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="68" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -348,49 +328,66 @@
                                     <outlet property="delegate" destination="EoE-Qd-SxF" id="HaC-yO-MM5"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Track" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI9-cP-zGR">
-                                <rect key="frame" x="167" y="288" width="43" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selections left: 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAn-ET-fmw" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="110" width="262" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obb-7D-Ihx">
-                                <rect key="frame" x="167" y="453" width="49" height="21"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8d5-g3-hd2" customClass="DJTableView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="83" y="523" width="67" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selections left: 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAn-ET-fmw">
-                                <rect key="frame" x="16" y="72" width="262" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yO-tL-cLg">
-                                <rect key="frame" x="166" y="123" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="albumCell" id="oRW-uq-k4W">
+                                        <rect key="frame" x="0.0" y="28" width="67" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oRW-uq-k4W" id="82w-zX-Z74">
+                                            <rect key="frame" x="0.0" y="0.0" width="67" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="EoE-Qd-SxF" id="u6w-Jk-yan"/>
+                                    <outlet property="delegate" destination="EoE-Qd-SxF" id="SHt-CA-Eoo"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI9-cP-zGR" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="166" y="139" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ToB-MR-Qak" firstAttribute="height" secondItem="VRa-PC-XXJ" secondAttribute="height" multiplier="0.5" id="2bK-ef-Ekk"/>
+                            <constraint firstItem="ToB-MR-Qak" firstAttribute="top" secondItem="hI9-cP-zGR" secondAttribute="bottom" constant="10" id="2qo-eR-IlZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tAn-ET-fmw" secondAttribute="trailing" constant="97" id="WLc-oA-7LX"/>
+                            <constraint firstItem="hI9-cP-zGR" firstAttribute="top" secondItem="tAn-ET-fmw" secondAttribute="bottom" constant="8" id="Wyi-de-GQT"/>
+                            <constraint firstItem="tAn-ET-fmw" firstAttribute="leading" secondItem="VRa-PC-XXJ" secondAttribute="leadingMargin" constant="-16" id="cL5-iF-sAv"/>
+                            <constraint firstItem="ToB-MR-Qak" firstAttribute="width" secondItem="VRa-PC-XXJ" secondAttribute="width" multiplier="0.8" id="fNv-Al-CWK"/>
+                            <constraint firstItem="ToB-MR-Qak" firstAttribute="centerX" secondItem="VRa-PC-XXJ" secondAttribute="centerX" id="gs7-35-Evv"/>
+                            <constraint firstItem="Tak-Ge-9eh" firstAttribute="top" secondItem="E4F-Fi-Yg4" secondAttribute="bottom" constant="2" id="qbZ-4H-yYK"/>
+                            <constraint firstItem="tAn-ET-fmw" firstAttribute="top" secondItem="Tak-Ge-9eh" secondAttribute="bottom" id="usv-xc-nkh"/>
+                            <constraint firstItem="Tak-Ge-9eh" firstAttribute="width" secondItem="VRa-PC-XXJ" secondAttribute="width" id="vB5-oJ-NV4"/>
+                            <constraint firstItem="Tak-Ge-9eh" firstAttribute="centerX" secondItem="VRa-PC-XXJ" secondAttribute="centerX" id="vaa-3I-9re"/>
+                            <constraint firstItem="hI9-cP-zGR" firstAttribute="centerX" secondItem="VRa-PC-XXJ" secondAttribute="centerX" id="xD9-ds-uU3"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Jukebox" id="O02-cU-liA"/>
                     <connections>
-                        <outlet property="albumTableView" destination="8d5-g3-hd2" id="j0Z-R9-RgL"/>
-                        <outlet property="artistTableView" destination="tdj-fG-9NR" id="fD5-ch-mj2"/>
+                        <outlet property="albumTableView" destination="8d5-g3-hd2" id="amE-zU-RjO"/>
+                        <outlet property="artistTableView" destination="tdj-fG-9NR" id="72v-4t-zoK"/>
                         <outlet property="searchBar" destination="Tak-Ge-9eh" id="nGh-9R-HQH"/>
                         <outlet property="selectionLabel" destination="tAn-ET-fmw" id="CqB-Zr-s9W"/>
-                        <outlet property="trackTableView" destination="ToB-MR-Qak" id="kEg-3q-K1n"/>
+                        <outlet property="trackTableView" destination="ToB-MR-Qak" id="Aaf-gk-13U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad2-8v-IJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-983" y="-3600"/>
+            <point key="canvasLocation" x="-679.20000000000005" y="-3845.1274362818594"/>
         </scene>
         <!--Playback-->
         <scene sceneID="5nQ-Xo-vwv">
@@ -400,7 +397,7 @@
                         <viewControllerLayoutGuide type="top" id="I2y-u1-cUl"/>
                         <viewControllerLayoutGuide type="bottom" id="NHb-DM-jQ6"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mXB-k2-lU9">
+                    <view key="view" contentMode="scaleToFill" id="mXB-k2-lU9" customClass="DJContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -412,23 +409,18 @@
                                     <action selector="exitTapped:" destination="zDd-Am-9Tg" eventType="touchUpInside" id="0O5-7W-zIR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Playback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNs-62-yUG">
-                                <rect key="frame" x="148" y="49" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEf-FZ-SCs" customClass="PauseButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="167" y="538" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEf-FZ-SCs" customClass="PauseButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="159.5" y="512" width="56.5" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rEf-FZ-SCs" secondAttribute="height" multiplier="1:1" id="yKB-LS-NEm"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="||"/>
                                 <connections>
                                     <action selector="pauseButtonTapped:" destination="zDd-Am-9Tg" eventType="touchUpInside" id="i5t-gu-n0w"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ztq-L5-9cb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ztq-L5-9cb" customClass="DJTableView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                 <rect key="frame" x="16" y="78" width="343" height="423"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -437,41 +429,40 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bmc-C2-ITn" id="unY-pP-2CP">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="129.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj2-O1-IcL" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="0.0" width="171.5" height="86.5"/>
+                                                    <rect key="frame" x="16" y="0.0" width="274.5" height="65"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4R-aY-Oe4" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="108" width="171.5" height="21"/>
+                                                    <rect key="frame" x="24" y="86.5" width="137.5" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contributer Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dd-ft-aj1" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="163.5" y="0.0" width="171.5" height="129.5"/>
+                                                    <rect key="frame" x="197" y="65" width="130" height="49"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="sj2-O1-IcL" firstAttribute="leading" secondItem="unY-pP-2CP" secondAttribute="leadingMargin" id="1SS-mK-KVc"/>
-                                                <constraint firstItem="v4R-aY-Oe4" firstAttribute="leading" secondItem="sj2-O1-IcL" secondAttribute="leading" id="AgE-93-15d"/>
-                                                <constraint firstItem="sj2-O1-IcL" firstAttribute="width" secondItem="unY-pP-2CP" secondAttribute="width" multiplier="0.5" id="IUi-XH-sWe"/>
-                                                <constraint firstItem="3dd-ft-aj1" firstAttribute="trailing" secondItem="unY-pP-2CP" secondAttribute="trailingMargin" id="Pex-ho-uyY"/>
-                                                <constraint firstItem="3dd-ft-aj1" firstAttribute="width" secondItem="unY-pP-2CP" secondAttribute="width" multiplier="0.5" id="U0O-ng-VjP"/>
+                                                <constraint firstItem="sj2-O1-IcL" firstAttribute="leading" secondItem="unY-pP-2CP" secondAttribute="leadingMargin" constant="8" id="1SS-mK-KVc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3dd-ft-aj1" secondAttribute="trailing" constant="8" id="7AT-Ib-fbz"/>
+                                                <constraint firstItem="v4R-aY-Oe4" firstAttribute="leading" secondItem="sj2-O1-IcL" secondAttribute="leading" constant="8" id="AgE-93-15d"/>
+                                                <constraint firstItem="sj2-O1-IcL" firstAttribute="width" secondItem="unY-pP-2CP" secondAttribute="width" multiplier="0.8" id="IUi-XH-sWe"/>
+                                                <constraint firstItem="3dd-ft-aj1" firstAttribute="top" secondItem="sj2-O1-IcL" secondAttribute="bottom" id="Lc7-6G-kG8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3dd-ft-aj1" secondAttribute="bottom" constant="8" id="bwk-yC-hua"/>
                                                 <constraint firstItem="v4R-aY-Oe4" firstAttribute="top" secondItem="sj2-O1-IcL" secondAttribute="bottom" constant="21.5" id="dkm-m8-Bb0"/>
-                                                <constraint firstItem="v4R-aY-Oe4" firstAttribute="bottom" secondItem="unY-pP-2CP" secondAttribute="bottomMargin" constant="7.5" id="fSG-tr-e3A"/>
-                                                <constraint firstItem="sj2-O1-IcL" firstAttribute="height" secondItem="unY-pP-2CP" secondAttribute="height" multiplier="0.6666" id="fxw-uK-UDs"/>
+                                                <constraint firstItem="v4R-aY-Oe4" firstAttribute="bottom" secondItem="unY-pP-2CP" secondAttribute="bottomMargin" constant="-8" id="fSG-tr-e3A"/>
+                                                <constraint firstItem="sj2-O1-IcL" firstAttribute="height" secondItem="unY-pP-2CP" secondAttribute="height" multiplier="0.5" id="fxw-uK-UDs"/>
                                                 <constraint firstItem="sj2-O1-IcL" firstAttribute="top" secondItem="unY-pP-2CP" secondAttribute="topMargin" constant="-8" id="jiT-xy-NNh"/>
-                                                <constraint firstItem="3dd-ft-aj1" firstAttribute="top" secondItem="unY-pP-2CP" secondAttribute="topMargin" constant="-8" id="kAn-Yn-w9O"/>
-                                                <constraint firstItem="3dd-ft-aj1" firstAttribute="height" secondItem="unY-pP-2CP" secondAttribute="height" id="rFF-Ag-J59"/>
-                                                <constraint firstItem="v4R-aY-Oe4" firstAttribute="width" secondItem="sj2-O1-IcL" secondAttribute="width" id="yAo-e4-cNn"/>
+                                                <constraint firstItem="v4R-aY-Oe4" firstAttribute="width" secondItem="sj2-O1-IcL" secondAttribute="width" multiplier="0.5" id="yAo-e4-cNn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -488,11 +479,16 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.28252414711770313" green="1" blue="0.19639116146461422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NHb-DM-jQ6" firstAttribute="top" secondItem="rEf-FZ-SCs" secondAttribute="bottom" constant="50" id="UXA-yn-xtn"/>
+                            <constraint firstItem="rEf-FZ-SCs" firstAttribute="centerX" secondItem="mXB-k2-lU9" secondAttribute="centerX" id="fZz-3w-qyk"/>
+                            <constraint firstItem="rEf-FZ-SCs" firstAttribute="width" secondItem="mXB-k2-lU9" secondAttribute="width" multiplier="0.15" id="fz3-rC-Jt8"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Playback" id="k8b-oJ-RvC"/>
                     <connections>
                         <outlet property="pauseButton" destination="rEf-FZ-SCs" id="cBZ-hG-c0k"/>
-                        <outlet property="tracksTableVIew" destination="ztq-L5-9cb" id="Xnu-Bn-eAI"/>
+                        <outlet property="tracksTableView" destination="ztq-L5-9cb" id="013-7k-BR6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbu-zM-gvh" userLabel="First Responder" sceneMemberID="firstResponder"/>

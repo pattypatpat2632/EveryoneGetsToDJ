@@ -17,7 +17,8 @@ class PlaybackViewController: UIViewController {
     let firManager = FirebaseManager.sharedInstance
     let playbackEngine = PlaybackEngine()
     
-    @IBOutlet weak var tracksTableVIew: UITableView!
+
+    @IBOutlet weak var tracksTableView: DJTableView!
     @IBOutlet weak var pauseButton: PauseButton!
     
     var playbackEnabled = false {
@@ -66,7 +67,7 @@ extension PlaybackViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension PlaybackViewController: PlaybackEngineDelegate {
     func updatedTracks() {
-        tracksTableVIew.reloadData()
+        tracksTableView.reloadData()
     }
 }
 

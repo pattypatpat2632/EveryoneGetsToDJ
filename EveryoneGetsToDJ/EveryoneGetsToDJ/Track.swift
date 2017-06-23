@@ -30,7 +30,7 @@ extension Track {
         let artistArray = dictionary["artists"] as? [[String: Any]] ?? []
         for artist in artistArray {
             let name = artist["name"] as? String ?? "No Name"
-            self.artistName = self.artistName + ", \(name)"
+            self.artistName = self.artistName + "\(name) "
             self.artistID = artist["id"] as? String ?? "No ID"
         }
         let albumDict = dictionary["album"] as? [String: String] ?? [:]

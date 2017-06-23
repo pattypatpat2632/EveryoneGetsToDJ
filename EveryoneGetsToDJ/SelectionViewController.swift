@@ -40,15 +40,18 @@ class SelectionViewController: UIViewController {
     }
     
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var artistTableView: UITableView!
-    @IBOutlet weak var trackTableView: UITableView!
-    @IBOutlet weak var albumTableView: UITableView!
+    @IBOutlet weak var artistTableView: DJTableView!
+    @IBOutlet weak var trackTableView: DJTableView!
+    @IBOutlet weak var albumTableView: DJTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
         hideKeyboardWhenTappedAround()
         NotificationCenter.default.addObserver(self, selector: #selector(updateSelectionCount), name: .tracksUpdated, object: nil)
+        
+        artistTableView.isHidden = true
+        albumTableView.isHidden = true
     }
     
     func updateSelectionCount() {

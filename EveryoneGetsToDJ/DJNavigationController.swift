@@ -8,12 +8,11 @@
 
 import UIKit
 
-class DJNavigationController: UINavigationController {
+class DJNavigationController: UINavigationController, DJView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationBar.isHidden = true
-        // Do any additional setup after loading the view.
+        navigationBar.backgroundColor = colorScheme.model.baseColor
     }
 
 }

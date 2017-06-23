@@ -26,7 +26,7 @@ class PlaybackCell: UITableViewCell, DJView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
+        setProperties()
     }
 }
 

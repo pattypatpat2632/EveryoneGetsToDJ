@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PauseButton: UIButton, DJView {
+class PauseButton: DJButton {
     
     var pauseState: PauseState = .playing {
         didSet {
