@@ -30,6 +30,7 @@
 		EC5F83661EFC75EB00EB4C4D /* DJButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5F83651EFC75EB00EB4C4D /* DJButton.swift */; };
 		EC5F836A1EFC77C200EB4C4D /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5F83691EFC77C200EB4C4D /* UIViewControllerExt.swift */; };
 		EC5F836C1EFC7E9E00EB4C4D /* DJNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5F836B1EFC7E9E00EB4C4D /* DJNavigationController.swift */; };
+		EC5F836E1EFC86AB00EB4C4D /* DJContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5F836D1EFC86AB00EB4C4D /* DJContentView.swift */; };
 		EC9D6D4C1EE8ABC60021370D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */; };
 		EC9D6D551EE8ABC60021370D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9D6D531EE8ABC60021370D /* Main.storyboard */; };
 		EC9D6D571EE8ABC60021370D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9D6D561EE8ABC60021370D /* Assets.xcassets */; };
@@ -95,6 +96,7 @@
 		EC5F83651EFC75EB00EB4C4D /* DJButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJButton.swift; sourceTree = "<group>"; };
 		EC5F83691EFC77C200EB4C4D /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		EC5F836B1EFC7E9E00EB4C4D /* DJNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJNavigationController.swift; sourceTree = "<group>"; };
+		EC5F836D1EFC86AB00EB4C4D /* DJContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJContentView.swift; sourceTree = "<group>"; };
 		EC9D6D481EE8ABC60021370D /* EveryoneGetsToDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryoneGetsToDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = EveryoneGetsToDJ/AppDelegate.swift; sourceTree = "<group>"; };
 		EC9D6D541EE8ABC60021370D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 				ECCC80711EFAD84300D1A294 /* PlaybackCell.swift */,
 				EC5F83611EFC20C100EB4C4D /* PauseButton.swift */,
 				EC5F83651EFC75EB00EB4C4D /* DJButton.swift */,
+				EC5F836D1EFC86AB00EB4C4D /* DJContentView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				EC2BC4641EF8991D007A783C /* FindJukeboxViewController.swift in Sources */,
 				EC56CE531EF7119C0023DDCE /* FirebaseManager.swift in Sources */,
 				EC9D6D831EE9BE9A0021370D /* ApiClient.swift in Sources */,
+				EC5F836E1EFC86AB00EB4C4D /* DJContentView.swift in Sources */,
 				ECCC80741EFB060300D1A294 /* PlaybackEngine.swift in Sources */,
 				EC5F83601EFC080500EB4C4D /* NotificationExt.swift in Sources */,
 				EC9D6D891EEB4BD30021370D /* Artist.swift in Sources */,

@@ -19,9 +19,10 @@ class LoginViewController: UIViewController, DJView {
         hideKeyboardWhenTappedAround()
         NotificationCenter.default.addObserver(self, selector: #selector(updateAfterFirstLogin), name: Notification.Name(rawValue: "loginSuccessfull"), object: nil)
         loginManager.setup()
+        navigationController?.navigationBar.isHidden = true
     }
     
-    @IBAction func loginTapped(_ sender: UIButton) {
+    @IBAction func loginTapped(_ sender: DJButton) {
         loginManager.login()
     }
     

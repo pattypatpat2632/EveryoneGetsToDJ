@@ -19,35 +19,53 @@
                         <viewControllerLayoutGuide type="top" id="uRO-gr-H4z"/>
                         <viewControllerLayoutGuide type="bottom" id="sZx-Jo-gvT"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gCb-dA-4bz">
+                    <view key="view" contentMode="scaleToFill" id="gCb-dA-4bz" customClass="DJContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNp-iW-dwZ">
-                                <rect key="frame" x="121" y="282" width="132" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create A Jukebox"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNp-iW-dwZ" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="170.5" y="269" width="33" height="30"/>
+                                <state key="normal" title="Host"/>
                                 <connections>
-                                    <action selector="loginTapped:" destination="Hyr-b9-YP5" eventType="touchUpInside" id="YNb-tR-nka"/>
+                                    <action selector="loginTapped:" destination="Hyr-b9-YP5" eventType="touchUpInside" id="6Sw-Fj-s7v"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMc-V1-lwb">
-                                <rect key="frame" x="136" y="393" width="102" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Join a Jukebox"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMc-V1-lwb" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="172" y="386" width="30" height="30"/>
+                                <state key="normal" title="Join"/>
                                 <connections>
-                                    <action selector="joinButtonTapped:" destination="Hyr-b9-YP5" eventType="touchUpInside" id="MxR-BM-efp"/>
+                                    <action selector="joinButtonTapped:" destination="Hyr-b9-YP5" eventType="touchUpInside" id="Abu-Qe-XtJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Requires a Spotify Premium account)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cn4-ef-Vxc">
-                                <rect key="frame" x="43" y="314" width="289" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Requires a Spotify Premium account)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cn4-ef-Vxc">
+                                <rect key="frame" x="43" y="307" width="289" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Everyone Gets to DJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGg-yq-u5F" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="109" y="161" width="156" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xf-l4-Cph" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="153" y="617" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Instructions"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.71764705880000002" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JMc-V1-lwb" firstAttribute="centerX" secondItem="gCb-dA-4bz" secondAttribute="centerX" id="1Ow-ae-otX"/>
+                            <constraint firstItem="cn4-ef-Vxc" firstAttribute="centerX" secondItem="gCb-dA-4bz" secondAttribute="centerX" id="CNh-fH-5Sy"/>
+                            <constraint firstItem="cn4-ef-Vxc" firstAttribute="top" secondItem="GNp-iW-dwZ" secondAttribute="bottom" constant="8" id="I1m-v3-1JC"/>
+                            <constraint firstItem="GNp-iW-dwZ" firstAttribute="top" secondItem="iGg-yq-u5F" secondAttribute="bottom" constant="87.5" id="K6f-Gn-iSY"/>
+                            <constraint firstItem="GNp-iW-dwZ" firstAttribute="centerX" secondItem="gCb-dA-4bz" secondAttribute="centerX" id="iY8-CI-I8a"/>
+                            <constraint firstItem="iGg-yq-u5F" firstAttribute="centerX" secondItem="gCb-dA-4bz" secondAttribute="centerX" id="n5M-2J-obt"/>
+                            <constraint firstItem="iGg-yq-u5F" firstAttribute="top" secondItem="uRO-gr-H4z" secondAttribute="bottom" constant="97" id="se0-eL-YGi"/>
+                            <constraint firstItem="JMc-V1-lwb" firstAttribute="top" secondItem="cn4-ef-Vxc" secondAttribute="bottom" constant="58" id="yp4-zC-mqD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sOU-8k-W4K"/>
                     <connections>
@@ -150,7 +168,7 @@
                                         <rect key="frame" x="0.0" y="28" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xhy-Ti-7dl" id="yB9-Du-M5q">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jukebox Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyR-G8-fxh">
@@ -246,7 +264,7 @@
                                         <rect key="frame" x="0.0" y="28" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JW6-XM-mU8" id="UbN-QQ-IgV">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF0-Rl-J63" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
@@ -293,7 +311,7 @@
                                         <rect key="frame" x="0.0" y="28" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oRW-uq-k4W" id="82w-zX-Z74">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -312,7 +330,7 @@
                                         <rect key="frame" x="0.0" y="28" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NhS-vc-cbf" id="Zzm-vC-RAo">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -411,7 +429,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bmc-C2-ITn" id="unY-pP-2CP">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="129.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj2-O1-IcL" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
