@@ -27,7 +27,7 @@ class FindJukeboxViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
-        navigationController?.navigationBar.isHidden = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
         multipeerManager.delegate = self
         self.multipeerManager.startAdvertising()
         jukeboxes = multipeerManager.availableJukeboxes
