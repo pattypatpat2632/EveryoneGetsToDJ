@@ -263,7 +263,7 @@
                                 <rect key="frame" x="0.0" y="66" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="62" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ToB-MR-Qak" customClass="DJTableView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="62" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ToB-MR-Qak" customClass="DJTableView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                 <rect key="frame" x="37" y="170" width="300" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -271,7 +271,7 @@
                                         <rect key="frame" x="0.0" y="28" width="300" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JW6-XM-mU8" id="UbN-QQ-IgV">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="61.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF0-Rl-J63" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
@@ -519,7 +519,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xJZ-6k-fFO" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ZPX-rc-q1I">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZPX-rc-q1I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
