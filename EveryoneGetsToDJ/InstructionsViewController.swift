@@ -8,8 +8,11 @@
 
 import UIKit
 
-class InstructionsViewController: UIViewController {
+class InstructionsViewController: UIViewController, DJView {
 
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
 
 }

@@ -35,6 +35,12 @@ class PlaybackViewController: UIViewController {
         super.viewDidLoad()
         playbackEngine.delegate = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        playbackEngine.tracksUpdated()
+    }
+    
     @IBAction func pauseButtonTapped(_ sender: Any) {
         pauseButton.changeState()
         playbackEngine.set(playback: pauseButton.pauseState)
