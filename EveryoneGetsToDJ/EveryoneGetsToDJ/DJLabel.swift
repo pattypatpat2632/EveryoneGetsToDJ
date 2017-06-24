@@ -17,5 +17,6 @@ class DJLabel: UILabel, DJView {
 
     func setup() {
         textColor = colorScheme.model.foregroundColor
+        self.backgroundColor = UIColor.clear
     }
 }
