@@ -15,6 +15,4 @@ class DJTabBarController: UITabBarController {
         navigationController?.setNavigationBarHidden(true, animated: true)
         
     }
-
-
 }

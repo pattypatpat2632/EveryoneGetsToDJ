@@ -60,6 +60,9 @@ class SelectionViewController: UIViewController {
             selectionLabel.text = "Selections left: \(selectionsLeft)"
         }
     }
+    @IBAction func exitTapped(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
 }
 
 extension SelectionViewController: UISearchBarDelegate {

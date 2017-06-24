@@ -41,8 +41,8 @@ class PlaybackViewController: UIViewController {
     }
     
     @IBAction func exitTapped(_ sender: DJButton) {
-        
-        NotificationCenter.default.post(name: .logout, object: nil)
+        print("exit tapped")
+        navigationController?.popToRootViewController(animated: true)
     }
 
 }
