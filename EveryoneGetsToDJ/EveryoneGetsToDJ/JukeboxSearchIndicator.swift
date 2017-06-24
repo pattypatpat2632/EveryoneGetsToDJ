@@ -9,23 +9,34 @@
 import UIKit
 
 class JukeboxSearchIndicator: DJLabel {
-
+    
+    var animateStage: CGFloat = 0
+    var animateIncrementing = false
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.backgroundColor = colorScheme.model.baseColor
-        textColor = colorScheme.model.foregroundColor
-        animate()
+        
+        let timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(animate), userInfo: nil, repeats: true)
+        timer.fire()
     }
     
     func animate() {
-        let textColor = colorScheme.model.foregroundColor
-        UIView.animateKeyframes(withDuration: 0.4, delay: 0, options: .repeat, animations: {
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.2, animations: {
-                self.textColor = self.colorScheme.model.highlightColor
-            })
-            UIView.addKeyframe(withRelativeStartTime: 0.2, relativeDuration: 0.2, animations: {
-                self.textColor = textColor
-            })
-        }, completion: nil)
+        if animateStage <= 0 {
+            animateIncrementing = true
+            animateStage += 0.1
+            self.alpha = animateStage
+        } else if animateStage >= 1.0 {
+            animateIncrementing = false
+            animateStage -= 0.1
+            self.alpha = animateStage
+        } else {
+            if animateIncrementing {
+                animateStage += 0.1
+                self.alpha = animateStage
+            } else {
+                animateStage -= 0.1
+                self.alpha = animateStage
+            }
+        }
     }
 }
