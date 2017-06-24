@@ -15,14 +15,7 @@ class SelectionViewController: UIViewController {
     let firManager = FirebaseManager.sharedInstance
     var searchActive = false
     var selectionsLeft: Int = 5
-    
-    var artists = [Artist]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.artistTableView.reloadData()
-            }
-        }
-    }
+    @IBOutlet weak var activityIndicator: DJActivityIndicatorView!
     
     var tracks = [Track]() {
         didSet {
@@ -31,27 +24,18 @@ class SelectionViewController: UIViewController {
             }
         }
     }
-    var albums = [Album]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.albumTableView.reloadData()
-            }
-        }
-    }
+    
     
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var artistTableView: DJTableView!
+    
     @IBOutlet weak var trackTableView: DJTableView!
-    @IBOutlet weak var albumTableView: DJTableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
         hideKeyboardWhenTappedAround()
         NotificationCenter.default.addObserver(self, selector: #selector(updateSelectionCount), name: .tracksUpdated, object: nil)
-        
-        artistTableView.isHidden = true
-        albumTableView.isHidden = true
     }
     
     func updateSelectionCount() {
@@ -102,12 +86,14 @@ extension SelectionViewController: UISearchBarDelegate {
     }
     
     private func search(text: String) {
+        indicateActivity()
         apiClient.getToken().then { token in
             return self.apiClient.query(input: text, with: token)
             }.then { (response) -> String in
-                self.artists = response.0
+                
                 self.tracks = response.1
-                self.albums = response.2
+                
+                self.stopActivity()
                 return ("test")
             }.catch{ error in
                 print(error.localizedDescription)
@@ -122,29 +108,14 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == artistTableView {
-            return artists.count
-        } else if tableView == trackTableView {
-            return tracks.count
-        } else {
-            return albums.count
-        }
+        return tracks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if tableView == artistTableView {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "artistCell", for: indexPath)
-            cell.backgroundColor = UIColor.red
-            return cell
-        } else if tableView == trackTableView {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "trackCell", for: indexPath) as! TrackCell
-            cell.track = tracks[indexPath.row]
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath)
-            cell.backgroundColor = UIColor.blue
-            return cell
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "trackCell", for: indexPath) as! TrackCell
+        cell.track = tracks[indexPath.row]
+        return cell
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -153,5 +124,20 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
             guard let jukeboxID = firManager.jukebox?.id else {return}
             firManager.add(track: tracks[indexPath.row], toJukebox: jukeboxID)
         }
+    }
+}
+
+//MARK: activity indicator
+extension SelectionViewController {
+    
+    fileprivate func indicateActivity() {
+        activityIndicator.isHidden = false
+        trackTableView.isHidden = true
+        activityIndicator.startAnimating()
+    }
+    
+    fileprivate func stopActivity() {
+        activityIndicator.stopAnimating()
+        trackTableView.isHidden = false
     }
 }

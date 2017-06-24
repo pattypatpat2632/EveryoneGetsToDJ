@@ -182,7 +182,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gcK-4W-8al">
-                                <rect key="frame" x="37" y="324" width="300" height="233.5"/>
+                                <rect key="frame" x="37" y="305.5" width="300" height="233.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="jukeboxCell" id="Xhy-Ti-7dl" customClass="JukeboxCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
@@ -229,8 +229,14 @@
                                     <action selector="joinButtonTapped:" destination="yDi-gN-ULk" eventType="touchUpInside" id="ryI-4R-0aa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Jukebox to join:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-o4-fpA" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="94.5" y="285" width="186" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Jukebox to join:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-o4-fpA" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="95" y="285" width="185.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for jukebox..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UQ-lX-rWG" customClass="JukeboxSearchIndicator" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="37" y="412" width="300" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -239,7 +245,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qoi-f9-YLZ" firstAttribute="centerX" secondItem="6Li-1o-gq1" secondAttribute="centerX" id="0tA-DL-Of3"/>
-                            <constraint firstItem="gcK-4W-8al" firstAttribute="top" secondItem="fSB-o4-fpA" secondAttribute="bottom" constant="18" id="7Ix-ZQ-77V"/>
+                            <constraint firstItem="8UQ-lX-rWG" firstAttribute="centerY" secondItem="gcK-4W-8al" secondAttribute="centerY" id="6ub-2E-AN7"/>
+                            <constraint firstItem="fSB-o4-fpA" firstAttribute="bottom" secondItem="gcK-4W-8al" secondAttribute="top" id="7Ix-ZQ-77V"/>
                             <constraint firstItem="fSB-o4-fpA" firstAttribute="top" secondItem="qoi-f9-YLZ" secondAttribute="bottom" constant="66" id="7JE-fR-NFr"/>
                             <constraint firstItem="iMN-AI-DMc" firstAttribute="centerX" secondItem="6Li-1o-gq1" secondAttribute="centerX" id="K4t-w6-OPi"/>
                             <constraint firstItem="gcK-4W-8al" firstAttribute="centerX" secondItem="6Li-1o-gq1" secondAttribute="centerX" id="LVY-ne-b9o"/>
@@ -248,7 +255,9 @@
                             <constraint firstItem="qoi-f9-YLZ" firstAttribute="top" secondItem="iMN-AI-DMc" secondAttribute="bottom" constant="73" id="TBd-Ay-WGQ"/>
                             <constraint firstItem="oRs-ze-eum" firstAttribute="height" secondItem="6Li-1o-gq1" secondAttribute="height" multiplier="0.075" id="UHL-Gp-QfM"/>
                             <constraint firstItem="oRs-ze-eum" firstAttribute="centerX" secondItem="6Li-1o-gq1" secondAttribute="centerX" id="YQo-ey-e67"/>
+                            <constraint firstItem="8UQ-lX-rWG" firstAttribute="leading" secondItem="gcK-4W-8al" secondAttribute="leading" id="ZYG-MN-oAj"/>
                             <constraint firstItem="qoi-f9-YLZ" firstAttribute="width" secondItem="6Li-1o-gq1" secondAttribute="width" multiplier="0.8" id="b1r-J4-65M"/>
+                            <constraint firstItem="8UQ-lX-rWG" firstAttribute="width" secondItem="gcK-4W-8al" secondAttribute="width" id="fsf-up-TJ9"/>
                             <constraint firstItem="iMN-AI-DMc" firstAttribute="top" secondItem="GsR-eO-KSc" secondAttribute="bottom" constant="31" id="iRG-X2-cXS"/>
                             <constraint firstItem="gcK-4W-8al" firstAttribute="height" secondItem="6Li-1o-gq1" secondAttribute="height" multiplier="0.35" id="m8V-4n-cvm"/>
                             <constraint firstItem="oRs-ze-eum" firstAttribute="width" secondItem="6Li-1o-gq1" secondAttribute="width" multiplier="0.25" id="ul0-rY-3Qt"/>
@@ -256,6 +265,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchingLabel" destination="8UQ-lX-rWG" id="Rqc-c1-DyI"/>
                         <outlet property="tableView" destination="gcK-4W-8al" id="xHZ-mU-zjh"/>
                         <outlet property="textField" destination="qoi-f9-YLZ" id="LP3-F6-fU6"/>
                         <segue destination="Zf9-w9-9k0" kind="show" identifier="joinJukeboxSegue" id="yFO-Ig-jrK"/>
@@ -339,7 +349,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYH-Eo-sjf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYH-Eo-sjf" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                 <rect key="frame" x="16" y="563" width="94" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hYH-Eo-sjf" secondAttribute="height" multiplier="2:1" id="y0K-u8-NTx"/>
@@ -349,6 +359,9 @@
                                     <action selector="exitTapped:" destination="EoE-Qd-SxF" eventType="touchUpInside" id="BWx-is-SDa"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="StK-ru-czr" customClass="DJActivityIndicatorView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="177" y="327" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -363,14 +376,17 @@
                             <constraint firstItem="ToB-MR-Qak" firstAttribute="width" secondItem="VRa-PC-XXJ" secondAttribute="width" multiplier="0.8" id="fNv-Al-CWK"/>
                             <constraint firstItem="ToB-MR-Qak" firstAttribute="centerX" secondItem="VRa-PC-XXJ" secondAttribute="centerX" id="gs7-35-Evv"/>
                             <constraint firstItem="Tak-Ge-9eh" firstAttribute="top" secondItem="E4F-Fi-Yg4" secondAttribute="bottom" constant="2" id="qbZ-4H-yYK"/>
+                            <constraint firstItem="StK-ru-czr" firstAttribute="centerX" secondItem="ToB-MR-Qak" secondAttribute="centerX" id="s5C-DS-pls"/>
                             <constraint firstItem="tAn-ET-fmw" firstAttribute="top" secondItem="Tak-Ge-9eh" secondAttribute="bottom" id="usv-xc-nkh"/>
                             <constraint firstItem="Tak-Ge-9eh" firstAttribute="width" secondItem="VRa-PC-XXJ" secondAttribute="width" id="vB5-oJ-NV4"/>
                             <constraint firstItem="Tak-Ge-9eh" firstAttribute="centerX" secondItem="VRa-PC-XXJ" secondAttribute="centerX" id="vaa-3I-9re"/>
                             <constraint firstItem="hI9-cP-zGR" firstAttribute="centerX" secondItem="VRa-PC-XXJ" secondAttribute="centerX" id="xD9-ds-uU3"/>
+                            <constraint firstItem="StK-ru-czr" firstAttribute="centerY" secondItem="ToB-MR-Qak" secondAttribute="centerY" id="yPv-ou-mvb"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Jukebox" id="O02-cU-liA"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="StK-ru-czr" id="CdF-Pc-JVm"/>
                         <outlet property="searchBar" destination="Tak-Ge-9eh" id="nGh-9R-HQH"/>
                         <outlet property="selectionLabel" destination="tAn-ET-fmw" id="CqB-Zr-s9W"/>
                         <outlet property="trackTableView" destination="ToB-MR-Qak" id="Aaf-gk-13U"/>

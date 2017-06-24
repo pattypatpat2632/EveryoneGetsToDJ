@@ -23,9 +23,11 @@ class FindJukeboxViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: DJTextField!
+    @IBOutlet weak var searchingLabel: JukeboxSearchIndicator!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        indicateSearching()
         hideKeyboardWhenTappedAround()
         navigationController?.setNavigationBarHidden(false, animated: true)
         multipeerManager.delegate = self
@@ -58,6 +60,11 @@ extension FindJukeboxViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if jukeboxes.count == 0 {
+            indicateSearching()
+        } else {
+            indicateNotSearching()
+        }
         return jukeboxes.count
     }
     
@@ -91,5 +98,17 @@ extension FindJukeboxViewController {
             }.catch{_ in
                 
         }
+    }
+}
+
+extension FindJukeboxViewController {
+    func indicateSearching() {
+        searchingLabel.isHidden = false
+        tableView.isHidden = true
+    }
+    
+    func indicateNotSearching() {
+        searchingLabel.isHidden = true
+        tableView.isHidden = false
     }
 }
