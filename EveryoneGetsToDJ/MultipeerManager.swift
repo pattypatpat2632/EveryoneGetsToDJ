@@ -12,7 +12,7 @@ import MultipeerConnectivity
 final class MultipeerManager: NSObject {
     
     static let sharedInstance = MultipeerManager()
-    let service = "everyonedj-3184"
+    let service = serviceID
     var availableJukeboxes = [Jukebox]()
     weak var delegate: MultipeerManagerDelegate?
     

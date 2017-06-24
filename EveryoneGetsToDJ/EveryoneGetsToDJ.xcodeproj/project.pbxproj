@@ -23,6 +23,7 @@
 		EC56CE551EF71C920023DDCE /* CreateJukeboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56CE541EF71C920023DDCE /* CreateJukeboxViewController.swift */; };
 		EC586C631EFDBB46008321DA /* DJTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC586C621EFDBB46008321DA /* DJTableView.swift */; };
 		EC586C651EFDC4D0008321DA /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC586C641EFDC4D0008321DA /* InstructionsViewController.swift */; };
+		EC586C671EFEE38A008321DA /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC586C661EFEE38A008321DA /* UIViewExt.swift */; };
 		EC5AB8F01EF2E2F200483E13 /* DJTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */; };
 		EC5CC81A1EF1F45000F83E13 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC8191EF1F45000F83E13 /* LoginManager.swift */; };
 		EC5CC81C1EF1F6CC00F83E13 /* PlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC81B1EF1F6CC00F83E13 /* PlaybackViewController.swift */; };
@@ -91,6 +92,7 @@
 		EC56CE541EF71C920023DDCE /* CreateJukeboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateJukeboxViewController.swift; sourceTree = "<group>"; };
 		EC586C621EFDBB46008321DA /* DJTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJTableView.swift; sourceTree = "<group>"; };
 		EC586C641EFDC4D0008321DA /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		EC586C661EFEE38A008321DA /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJTabBarController.swift; sourceTree = "<group>"; };
 		EC5CC8191EF1F45000F83E13 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		EC5CC81B1EF1F6CC00F83E13 /* PlaybackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			children = (
 				EC5F835F1EFC080500EB4C4D /* NotificationExt.swift */,
 				EC5F83691EFC77C200EB4C4D /* UIViewControllerExt.swift */,
+				EC586C661EFEE38A008321DA /* UIViewExt.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC586C671EFEE38A008321DA /* UIViewExt.swift in Sources */,
 				EC9D6D7F1EE8B67A0021370D /* LoginViewController.swift in Sources */,
 				EC9D6D7D1EE8B4BF0021370D /* BridgeViewController.m in Sources */,
 				EC5F83661EFC75EB00EB4C4D /* DJButton.swift in Sources */,

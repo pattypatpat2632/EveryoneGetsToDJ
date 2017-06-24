@@ -45,8 +45,7 @@ class CreateJukeboxViewController: UIViewController {
     }
     
     @IBAction func createJukeboxTapped(_ sender: Any) {
-        guard textField.isNotEmpty() else {return} //TODO: indicate to user that textfields are empty
-        guard userTextField.isNotEmpty() else {return}//TODO: indicate to user that textfields are empty
+        guard textFieldsEntered() else {return}
         firManager.set(username: userTextField.text)
         firManager.createJukebox(named: textField.text!).then { jukeboxID in //TODO: refactor force unwrap
             return self.firManager.observe(jukebox: jukeboxID)
@@ -57,7 +56,17 @@ class CreateJukeboxViewController: UIViewController {
         }
     }
     
-    @IBAction func cancelTapped(_ sender: Any) {
+    private func textFieldsEntered() -> Bool {
+        var textEntered = true
+        if textField.isEmpty() {
+            textField.flash()
+            textEntered = false
+        }
+        if userTextField.isEmpty() {
+            userTextField.flash()
+            textEntered = false
+        }
+        return textEntered
     }
     
 }

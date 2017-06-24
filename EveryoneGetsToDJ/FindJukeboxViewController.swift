@@ -34,16 +34,15 @@ class FindJukeboxViewController: UIViewController{
     }
     
     @IBAction func joinButtonTapped(_ sender: Any) {
-        guard let selectedJukebox = selectedJukebox else {return} //TODO: user indicators
-        guard textField.isNotEmpty() else {return}
-        firManager.set(username: textField.text)
-        firManager.login().then{_ in 
-            self.firManager.observe(jukebox: selectedJukebox.id)
-        }.then {_ in
-            self.performSegue(withIdentifier: "joinJukeboxSegue", sender: nil)
-        }.catch{_ in
-            
+        guard textField.isNotEmpty() else {
+            textField.flash()
+            return
         }
+        guard let selectedJukebox = selectedJukebox else {
+            noJukeboxAlert()
+            return
+        }
+        join(selectedJukebox)
     }
 }
 
@@ -71,5 +70,26 @@ extension FindJukeboxViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedJukebox = jukeboxes[indexPath.row]
+    }
+}
+
+//MARK: helper functions
+extension FindJukeboxViewController {
+    fileprivate func noJukeboxAlert() {
+        let alert = UIAlertController(title: "No Jukebox Selected", message: "Please select a Jukebox to join", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    fileprivate func join(_ jukebox: Jukebox){
+        firManager.set(username: textField.text)
+        firManager.login().then{_ in
+            self.firManager.observe(jukebox: jukebox.id)
+            }.then {_ in
+                self.performSegue(withIdentifier: "joinJukeboxSegue", sender: nil)
+            }.catch{_ in
+                
+        }
     }
 }
