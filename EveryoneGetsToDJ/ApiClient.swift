@@ -12,8 +12,11 @@ import PromiseKit
 final class ApiClient {
     
     static let sharedInstance = ApiClient()
+    let searchQueue = OperationQueue()
     
-    private init() {}
+    private init() {
+        searchQueue.qualityOfService = .userInitiated
+    }
     
     func getToken() -> Promise<String> {
         return Promise { fulfill, reject in
@@ -43,16 +46,20 @@ final class ApiClient {
     }
     
     func query(input: String, with token: String) -> Promise<([Artist], [Track], [Album])> {
-        return Promise { fulfill, reject in
-            let artistsResource = artistSearchResource(from: input)! //TODO: refactor
-            let tracksResource = trackSearchResource(from: input)!
-            let albumsResource = albumSearchResource(from: input)!
-            
-            when(fulfilled: fetch(resource: artistsResource, with: token), fetch(resource: tracksResource, with: token), fetch(resource: albumsResource, with: token)).then(execute: { (response) -> Void in
-                fulfill(response)
-            }).catch(execute: { (error) in
-                reject(error)
-            })
+            searchQueue.cancelAllOperations()
+            return Promise { fulfill, reject in
+                let promiseOp = BlockOperation {
+                let artistsResource = self.artistSearchResource(from: input)! //TODO: refactor
+                let tracksResource = self.trackSearchResource(from: input)!
+                let albumsResource = self.albumSearchResource(from: input)!
+                
+                when(fulfilled: self.fetch(resource: artistsResource, with: token), self.fetch(resource: tracksResource, with: token), self.fetch(resource: albumsResource, with: token)).then(execute: { (response) -> Void in
+                    fulfill(response)
+                }).catch(execute: { (error) in
+                    reject(error)
+                })
+            }
+            searchQueue.addOperation(promiseOp)
         }
     }
     
@@ -80,7 +87,7 @@ final class ApiClient {
             } else {
                 return String(character)
             }
-        }.joined().lowercased()
+            }.joined().lowercased()
         return sanitized
     }
     
