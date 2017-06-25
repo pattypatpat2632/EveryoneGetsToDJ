@@ -8,6 +8,7 @@
 
 import UIKit
 import PromiseKit
+import AVFoundation
 
 class LoginViewController: UIViewController {
     
@@ -16,15 +17,21 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         hideKeyboardWhenTappedAround()
         NotificationCenter.default.addObserver(self, selector: #selector(updateAfterFirstLogin), name: Notification.Name(rawValue: "loginSuccessfull"), object: nil)
         loginManager.setup()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
+        do {
+           try SPTAudioStreamingController.sharedInstance().stop()
+        } catch {
+            //TODO: error handling
+        }
+        
     }
     
     @IBAction func loginTapped(_ sender: DJButton) {
