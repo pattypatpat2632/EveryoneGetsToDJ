@@ -13,6 +13,7 @@ class PlaybackCell: UITableViewCell, DJView {
     @IBOutlet weak var titleLabel: DJLabel!
     @IBOutlet weak var artistLabel: DJLabel!
     @IBOutlet weak var userLabel: DJLabel!
+    @IBOutlet weak var diskView: DiskView!
  
     var track: Track? {
         didSet{

@@ -67,6 +67,11 @@ extension PlaybackViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playbackCell", for: indexPath) as! PlaybackCell
         cell.track = playbackEngine.tracks[indexPath.row]
+        if indexPath.row == 0 {
+            cell.diskView.animate()
+        } else {
+            cell.diskView.isHidden = true
+        }
         return cell
     }
 }

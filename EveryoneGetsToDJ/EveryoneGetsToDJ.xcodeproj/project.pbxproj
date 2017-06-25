@@ -60,6 +60,7 @@
 		ECCC80721EFAD84300D1A294 /* PlaybackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC80711EFAD84300D1A294 /* PlaybackCell.swift */; };
 		ECCC80741EFB060300D1A294 /* PlaybackEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC80731EFB060300D1A294 /* PlaybackEngine.swift */; };
 		ECDA79CE1F00102E004F1DAD /* SelectionsLeftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA79CD1F00102E004F1DAD /* SelectionsLeftView.swift */; };
+		ECDA79D01F003967004F1DAD /* DiskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA79CF1F003967004F1DAD /* DiskView.swift */; };
 		ECF108841EF98175006365AB /* DJView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF108831EF98175006365AB /* DJView.swift */; };
 		ECFDFBF51EEB70EF00480F8F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFDFBF41EEB70EF00480F8F /* ApiError.swift */; };
 /* End PBXBuildFile section */
@@ -138,6 +139,7 @@
 		ECCC80711EFAD84300D1A294 /* PlaybackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackCell.swift; sourceTree = "<group>"; };
 		ECCC80731EFB060300D1A294 /* PlaybackEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackEngine.swift; sourceTree = "<group>"; };
 		ECDA79CD1F00102E004F1DAD /* SelectionsLeftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionsLeftView.swift; sourceTree = "<group>"; };
+		ECDA79CF1F003967004F1DAD /* DiskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskView.swift; sourceTree = "<group>"; };
 		ECF108831EF98175006365AB /* DJView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJView.swift; sourceTree = "<group>"; };
 		ECFDFBF41EEB70EF00480F8F /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -345,6 +347,7 @@
 				EC586C681EFEEDF0008321DA /* DJActivityIndicatorView.swift */,
 				EC586C6A1EFEF3D4008321DA /* JukeboxSearchIndicator.swift */,
 				ECDA79CD1F00102E004F1DAD /* SelectionsLeftView.swift */,
+				ECDA79CF1F003967004F1DAD /* DiskView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				EC2BC4621EF89282007A783C /* Serializing.swift in Sources */,
 				EC5F836A1EFC77C200EB4C4D /* UIViewControllerExt.swift in Sources */,
 				EC2BC4661EF89CA7007A783C /* JukeboxCell.swift in Sources */,
+				ECDA79D01F003967004F1DAD /* DiskView.swift in Sources */,
 				EC2BC45F1EF8887A007A783C /* MultipeerResource.swift in Sources */,
 				ECDA79CE1F00102E004F1DAD /* SelectionsLeftView.swift in Sources */,
 				EC586C631EFDBB46008321DA /* DJTableView.swift in Sources */,

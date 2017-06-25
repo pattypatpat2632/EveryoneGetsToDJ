@@ -463,14 +463,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj2-O1-IcL" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="0.0" width="274.5" height="65"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj2-O1-IcL" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="0.0" width="206" height="65"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4R-aY-Oe4" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="24" y="86.5" width="137.5" height="27.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4R-aY-Oe4" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                                    <rect key="frame" x="24" y="86.5" width="165" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -481,23 +481,41 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PJP-ln-4xi" customClass="DiskView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                                    <rect key="frame" x="220.5" y="13" width="61.5" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Playing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auc-er-LcB" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                                            <rect key="frame" x="10" y="19.5" width="41" height="14.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <outlet property="label" destination="auc-er-LcB" id="7TX-F6-ZU8"/>
+                                                    </connections>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="sj2-O1-IcL" firstAttribute="leading" secondItem="unY-pP-2CP" secondAttribute="leadingMargin" constant="8" id="1SS-mK-KVc"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="3dd-ft-aj1" secondAttribute="trailing" constant="8" id="7AT-Ib-fbz"/>
                                                 <constraint firstItem="v4R-aY-Oe4" firstAttribute="leading" secondItem="sj2-O1-IcL" secondAttribute="leading" constant="8" id="AgE-93-15d"/>
-                                                <constraint firstItem="sj2-O1-IcL" firstAttribute="width" secondItem="unY-pP-2CP" secondAttribute="width" multiplier="0.8" id="IUi-XH-sWe"/>
+                                                <constraint firstItem="sj2-O1-IcL" firstAttribute="width" secondItem="unY-pP-2CP" secondAttribute="width" multiplier="0.6" id="IUi-XH-sWe"/>
                                                 <constraint firstItem="3dd-ft-aj1" firstAttribute="top" secondItem="sj2-O1-IcL" secondAttribute="bottom" id="Lc7-6G-kG8"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="3dd-ft-aj1" secondAttribute="bottom" constant="8" id="bwk-yC-hua"/>
                                                 <constraint firstItem="v4R-aY-Oe4" firstAttribute="top" secondItem="sj2-O1-IcL" secondAttribute="bottom" constant="21.5" id="dkm-m8-Bb0"/>
                                                 <constraint firstItem="v4R-aY-Oe4" firstAttribute="bottom" secondItem="unY-pP-2CP" secondAttribute="bottomMargin" constant="-8" id="fSG-tr-e3A"/>
                                                 <constraint firstItem="sj2-O1-IcL" firstAttribute="height" secondItem="unY-pP-2CP" secondAttribute="height" multiplier="0.5" id="fxw-uK-UDs"/>
                                                 <constraint firstItem="sj2-O1-IcL" firstAttribute="top" secondItem="unY-pP-2CP" secondAttribute="topMargin" constant="-8" id="jiT-xy-NNh"/>
-                                                <constraint firstItem="v4R-aY-Oe4" firstAttribute="width" secondItem="sj2-O1-IcL" secondAttribute="width" multiplier="0.5" id="yAo-e4-cNn"/>
+                                                <constraint firstItem="v4R-aY-Oe4" firstAttribute="width" secondItem="sj2-O1-IcL" secondAttribute="width" multiplier="0.8" id="yAo-e4-cNn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="artistLabel" destination="v4R-aY-Oe4" id="Gv4-xQ-YgJ"/>
+                                            <outlet property="diskView" destination="PJP-ln-4xi" id="yNJ-4o-Wdl"/>
                                             <outlet property="titleLabel" destination="sj2-O1-IcL" id="P9J-j9-yMV"/>
                                             <outlet property="userLabel" destination="3dd-ft-aj1" id="GEA-wo-Dg1"/>
                                         </connections>
