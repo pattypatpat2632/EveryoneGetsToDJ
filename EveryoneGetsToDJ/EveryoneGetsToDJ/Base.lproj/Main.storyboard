@@ -307,8 +307,48 @@
                                 <rect key="frame" x="0.0" y="66" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI9-cP-zGR" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="166" y="158" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYH-Eo-sjf" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="16" y="563" width="94" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hYH-Eo-sjf" secondAttribute="height" multiplier="2:1" id="y0K-u8-NTx"/>
+                                </constraints>
+                                <state key="normal" title="Exit"/>
+                                <connections>
+                                    <action selector="exitTapped:" destination="EoE-Qd-SxF" eventType="touchUpInside" id="BWx-is-SDa"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="StK-ru-czr" customClass="DJActivityIndicatorView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="177" y="386.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vk4-Fc-hcK" customClass="SelectionsLeftView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="156" y="570.5" width="150" height="26.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selections Left: 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raE-nJ-auF" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="raE-nJ-auF" firstAttribute="centerX" secondItem="Vk4-Fc-hcK" secondAttribute="centerX" id="Pfl-G3-05n"/>
+                                    <constraint firstItem="raE-nJ-auF" firstAttribute="centerY" secondItem="Vk4-Fc-hcK" secondAttribute="centerY" id="YQC-7f-C3w"/>
+                                    <constraint firstItem="raE-nJ-auF" firstAttribute="width" secondItem="Vk4-Fc-hcK" secondAttribute="width" id="eeQ-iC-5b1"/>
+                                    <constraint firstItem="raE-nJ-auF" firstAttribute="height" secondItem="Vk4-Fc-hcK" secondAttribute="height" id="vYI-cX-Qi0"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="label" destination="raE-nJ-auF" id="r6Y-fL-XOC"/>
+                                </connections>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="62" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ToB-MR-Qak" customClass="DJTableView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="37" y="170" width="300" height="333.5"/>
+                                <rect key="frame" x="37" y="187" width="300" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackCell" rowHeight="62" id="JW6-XM-mU8" customClass="TrackCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
@@ -353,58 +393,34 @@
                                     <outlet property="delegate" destination="EoE-Qd-SxF" id="GIz-S6-WCB"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selections left: 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAn-ET-fmw" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="110" width="262" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI9-cP-zGR" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="166" y="139" width="43" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYH-Eo-sjf" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="16" y="563" width="94" height="47"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="hYH-Eo-sjf" secondAttribute="height" multiplier="2:1" id="y0K-u8-NTx"/>
-                                </constraints>
-                                <state key="normal" title="Exit"/>
-                                <connections>
-                                    <action selector="exitTapped:" destination="EoE-Qd-SxF" eventType="touchUpInside" id="BWx-is-SDa"/>
-                                </connections>
-                            </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="StK-ru-czr" customClass="DJActivityIndicatorView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="177" y="327" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="H8q-oh-nsn" firstAttribute="top" secondItem="Vk4-Fc-hcK" secondAttribute="bottom" constant="21" id="1jg-mc-7ZB"/>
                             <constraint firstItem="ToB-MR-Qak" firstAttribute="height" secondItem="VRa-PC-XXJ" secondAttribute="height" multiplier="0.5" id="2bK-ef-Ekk"/>
-                            <constraint firstItem="ToB-MR-Qak" firstAttribute="top" secondItem="hI9-cP-zGR" secondAttribute="bottom" constant="10" id="2qo-eR-IlZ"/>
+                            <constraint firstItem="ToB-MR-Qak" firstAttribute="top" secondItem="hI9-cP-zGR" secondAttribute="bottom" constant="8" id="2qo-eR-IlZ"/>
                             <constraint firstItem="hYH-Eo-sjf" firstAttribute="width" secondItem="VRa-PC-XXJ" secondAttribute="width" multiplier="0.25" id="FmI-Ei-IED"/>
                             <constraint firstItem="H8q-oh-nsn" firstAttribute="top" secondItem="hYH-Eo-sjf" secondAttribute="bottom" constant="8" id="MnR-3D-hs9"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="hYH-Eo-sjf" secondAttribute="leading" id="VQ8-9H-aCg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tAn-ET-fmw" secondAttribute="trailing" constant="97" id="WLc-oA-7LX"/>
-                            <constraint firstItem="hI9-cP-zGR" firstAttribute="top" secondItem="tAn-ET-fmw" secondAttribute="bottom" constant="8" id="Wyi-de-GQT"/>
-                            <constraint firstItem="tAn-ET-fmw" firstAttribute="leading" secondItem="VRa-PC-XXJ" secondAttribute="leadingMargin" constant="-16" id="cL5-iF-sAv"/>
+                            <constraint firstItem="Vk4-Fc-hcK" firstAttribute="leading" secondItem="ToB-MR-Qak" secondAttribute="trailing" constant="-181" id="P8z-iL-YzU"/>
+                            <constraint firstItem="hYH-Eo-sjf" firstAttribute="leading" secondItem="VRa-PC-XXJ" secondAttribute="leadingMargin" id="VQ8-9H-aCg"/>
+                            <constraint firstItem="Vk4-Fc-hcK" firstAttribute="top" secondItem="ToB-MR-Qak" secondAttribute="bottom" constant="50" id="Y9d-JP-skv"/>
+                            <constraint firstItem="hYH-Eo-sjf" firstAttribute="top" secondItem="ToB-MR-Qak" secondAttribute="bottom" constant="42.5" id="YFE-Gl-D7m"/>
                             <constraint firstItem="ToB-MR-Qak" firstAttribute="width" secondItem="VRa-PC-XXJ" secondAttribute="width" multiplier="0.8" id="fNv-Al-CWK"/>
                             <constraint firstItem="ToB-MR-Qak" firstAttribute="centerX" secondItem="VRa-PC-XXJ" secondAttribute="centerX" id="gs7-35-Evv"/>
+                            <constraint firstItem="Vk4-Fc-hcK" firstAttribute="width" secondItem="ToB-MR-Qak" secondAttribute="width" multiplier="0.5" id="jCn-5p-kE1"/>
                             <constraint firstItem="Tak-Ge-9eh" firstAttribute="top" secondItem="E4F-Fi-Yg4" secondAttribute="bottom" constant="2" id="qbZ-4H-yYK"/>
                             <constraint firstItem="StK-ru-czr" firstAttribute="centerX" secondItem="ToB-MR-Qak" secondAttribute="centerX" id="s5C-DS-pls"/>
-                            <constraint firstItem="tAn-ET-fmw" firstAttribute="top" secondItem="Tak-Ge-9eh" secondAttribute="bottom" id="usv-xc-nkh"/>
                             <constraint firstItem="Tak-Ge-9eh" firstAttribute="width" secondItem="VRa-PC-XXJ" secondAttribute="width" id="vB5-oJ-NV4"/>
                             <constraint firstItem="Tak-Ge-9eh" firstAttribute="centerX" secondItem="VRa-PC-XXJ" secondAttribute="centerX" id="vaa-3I-9re"/>
                             <constraint firstItem="hI9-cP-zGR" firstAttribute="centerX" secondItem="VRa-PC-XXJ" secondAttribute="centerX" id="xD9-ds-uU3"/>
-                            <constraint firstItem="StK-ru-czr" firstAttribute="centerY" secondItem="ToB-MR-Qak" secondAttribute="centerY" id="yPv-ou-mvb"/>
+                            <constraint firstItem="StK-ru-czr" firstAttribute="centerY" secondItem="ToB-MR-Qak" secondAttribute="centerY" constant="42.75" id="yPv-ou-mvb"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Jukebox" id="O02-cU-liA"/>
                     <connections>
                         <outlet property="activityIndicator" destination="StK-ru-czr" id="CdF-Pc-JVm"/>
                         <outlet property="searchBar" destination="Tak-Ge-9eh" id="nGh-9R-HQH"/>
-                        <outlet property="selectionLabel" destination="tAn-ET-fmw" id="CqB-Zr-s9W"/>
+                        <outlet property="selectionsLeftView" destination="Vk4-Fc-hcK" id="ORa-JT-xcw"/>
                         <outlet property="trackTableView" destination="ToB-MR-Qak" id="Aaf-gk-13U"/>
                     </connections>
                 </viewController>

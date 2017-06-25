@@ -10,12 +10,13 @@ import UIKit
 
 class SelectionViewController: UIViewController {
     
-    @IBOutlet weak var selectionLabel: UILabel!
+    
     let apiClient = ApiClient.sharedInstance
     let firManager = FirebaseManager.sharedInstance
     var searchActive = false
     var selectionsLeft: Int = 5
     @IBOutlet weak var activityIndicator: DJActivityIndicatorView!
+    @IBOutlet weak var selectionsLeftView: SelectionsLeftView!
     
     var tracks = [Track]() {
         didSet {
@@ -41,7 +42,7 @@ class SelectionViewController: UIViewController {
     func updateSelectionCount() {
         if let tracks = firManager.jukebox?.tracks {
             selectionsLeft = 5 - tracks.filter{$0.selectorID == firManager.uid}.count
-            selectionLabel.text = "Selections left: \(selectionsLeft)"
+            selectionsLeftView.updateLabel(withValue: selectionsLeft)
         }
     }
     @IBAction func exitTapped(_ sender: Any) {
@@ -119,7 +120,10 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard selectionsLeft > 0 else {return} //TODO: indicate no selections left
+        guard selectionsLeft > 0 else {
+            selectionsLeftView.flash()
+            return
+        }
         if tableView == trackTableView {
             guard let jukeboxID = firManager.jukebox?.id else {return}
             firManager.add(track: tracks[indexPath.row], toJukebox: jukeboxID)
