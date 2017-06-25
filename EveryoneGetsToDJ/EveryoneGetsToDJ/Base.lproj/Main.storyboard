@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNp-iW-dwZ" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="141" y="296" width="93.5" height="50"/>
+                                <rect key="frame" x="141" y="296" width="94" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Host"/>
                                 <connections>
@@ -56,17 +56,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Everyone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGg-yq-u5F" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="37" y="139" width="302.5" height="70"/>
+                                <rect key="frame" x="36" y="139" width="303" height="70"/>
                                 <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="64"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xf-l4-Cph" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="141" y="605" width="93.5" height="50"/>
+                                <rect key="frame" x="141" y="605" width="94" height="50"/>
                                 <state key="normal" title="Instructions"/>
+                                <connections>
+                                    <segue destination="NNc-4s-hQH" kind="show" id="Fwj-d0-fwU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gets to DJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUS-rN-xPU" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="240.5" y="204.5" width="99" height="21.5"/>
+                                <rect key="frame" x="240" y="205" width="99" height="22"/>
                                 <fontDescription key="fontDescription" name="Neons" family="Neons" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -129,7 +132,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-BU-Hbb" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="94" y="345" width="187.5" height="50"/>
+                                <rect key="frame" x="94" y="345" width="188" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Create Jukebox"/>
                                 <connections>
@@ -161,10 +164,10 @@
             </objects>
             <point key="canvasLocation" x="-1760.8" y="-4633.1334332833585"/>
         </scene>
-        <!--View Controller-->
+        <!--Instructions View Controller-->
         <scene sceneID="Eso-bN-0Th">
             <objects>
-                <viewController id="NNc-4s-hQH" sceneMemberID="viewController">
+                <viewController id="NNc-4s-hQH" customClass="InstructionsViewController" customModule="EveryoneGetsToDJ" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rTJ-sQ-Qch"/>
                         <viewControllerLayoutGuide type="bottom" id="d8N-tA-IY6"/>
@@ -172,12 +175,28 @@
                     <view key="view" contentMode="scaleToFill" id="8WR-n6-HdN" customClass="DJContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywk-Yl-WSQ" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="7" y="72" width="360" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="43"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H69-j8-nGb" customClass="instructionsTextView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="16" y="156" width="343" height="491"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1A-zD-V89" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2734" y="-3741"/>
+            <point key="canvasLocation" x="-2738.4000000000001" y="-3586.0569715142433"/>
         </scene>
         <!--Find Jukebox View Controller-->
         <scene sceneID="f2x-2w-bj0">
@@ -192,13 +211,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join a Jukebox" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMN-AI-DMc" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="130.5" y="95" width="114" height="21"/>
+                                <rect key="frame" x="131" y="95" width="114" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gcK-4W-8al">
-                                <rect key="frame" x="37" y="305.5" width="300" height="233.5"/>
+                                <rect key="frame" x="37" y="306" width="300" height="234"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="jukeboxCell" id="Xhy-Ti-7dl" customClass="JukeboxCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
@@ -209,7 +228,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jukebox Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyR-G8-fxh" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -233,26 +252,26 @@
                                 </connections>
                             </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qoi-f9-YLZ" customClass="DJTextField" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="37.5" y="189" width="300" height="30"/>
+                                <rect key="frame" x="38" y="189" width="300" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRs-ze-eum" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="140.5" y="567" width="94" height="50"/>
+                                <rect key="frame" x="141" y="567" width="94" height="50"/>
                                 <state key="normal" title="Join"/>
                                 <connections>
                                     <action selector="joinButtonTapped:" destination="yDi-gN-ULk" eventType="touchUpInside" id="ryI-4R-0aa"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Jukebox to join:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-o4-fpA" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="95" y="285" width="185.5" height="20.5"/>
+                                <rect key="frame" x="95" y="285" width="186" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for jukebox..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UQ-lX-rWG" customClass="JukeboxSearchIndicator" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="37" y="412" width="300" height="20.5"/>
+                                <rect key="frame" x="37" y="412" width="300" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -291,7 +310,7 @@
             </objects>
             <point key="canvasLocation" x="-1736.8" y="-3845.1274362818594"/>
         </scene>
-        <!--Jukebox-->
+        <!--Pick Songs-->
         <scene sceneID="Lku-4v-2Xr">
             <objects>
                 <viewController id="EoE-Qd-SxF" customClass="SelectionViewController" customModule="EveryoneGetsToDJ" customModuleProvider="target" sceneMemberID="viewController">
@@ -307,9 +326,9 @@
                                 <rect key="frame" x="0.0" y="66" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI9-cP-zGR" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="166" y="158" width="43" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Song:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI9-cP-zGR" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="88" y="148" width="201" height="31"/>
+                                <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -324,13 +343,13 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="StK-ru-czr" customClass="DJActivityIndicatorView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="177" y="386.5" width="20" height="20"/>
+                                <rect key="frame" x="177" y="387" width="20" height="20"/>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vk4-Fc-hcK" customClass="SelectionsLeftView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="156" y="570.5" width="150" height="26.5"/>
+                                <rect key="frame" x="156" y="571" width="150" height="26"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selections Left: 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raE-nJ-auF" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="26"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -348,7 +367,7 @@
                                 </connections>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="62" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ToB-MR-Qak" customClass="DJTableView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="37" y="187" width="300" height="333.5"/>
+                                <rect key="frame" x="37" y="187" width="300" height="334"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackCell" rowHeight="62" id="JW6-XM-mU8" customClass="TrackCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
@@ -359,13 +378,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF0-Rl-J63" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="16" width="268" height="15.5"/>
+                                                    <rect key="frame" x="16" y="16" width="268" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nh6-Rk-z6O" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="31.5" width="276" height="30"/>
+                                                    <rect key="frame" x="16" y="32" width="276" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -416,7 +435,7 @@
                             <constraint firstItem="StK-ru-czr" firstAttribute="centerY" secondItem="ToB-MR-Qak" secondAttribute="centerY" constant="42.75" id="yPv-ou-mvb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Jukebox" id="O02-cU-liA"/>
+                    <tabBarItem key="tabBarItem" title="Pick Songs" id="O02-cU-liA"/>
                     <connections>
                         <outlet property="activityIndicator" destination="StK-ru-czr" id="CdF-Pc-JVm"/>
                         <outlet property="searchBar" destination="Tak-Ge-9eh" id="nGh-9R-HQH"/>
@@ -428,7 +447,7 @@
             </objects>
             <point key="canvasLocation" x="-679.20000000000005" y="-3845.1274362818594"/>
         </scene>
-        <!--Playback-->
+        <!--Playlist-->
         <scene sceneID="5nQ-Xo-vwv">
             <objects>
                 <viewController id="zDd-Am-9Tg" customClass="PlaybackViewController" customModule="EveryoneGetsToDJ" customModuleProvider="target" sceneMemberID="viewController">
@@ -441,7 +460,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEf-FZ-SCs" customClass="PauseButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="159.5" y="512" width="56.5" height="56"/>
+                                <rect key="frame" x="160" y="512" width="56" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rEf-FZ-SCs" secondAttribute="height" multiplier="1:1" id="yKB-LS-NEm"/>
                                 </constraints>
@@ -470,7 +489,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4R-aY-Oe4" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="24" y="86.5" width="165" height="27.5"/>
+                                                    <rect key="frame" x="24" y="87" width="165" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -547,7 +566,7 @@
                             <constraint firstItem="NHb-DM-jQ6" firstAttribute="top" secondItem="0cY-4J-IAc" secondAttribute="bottom" constant="8" id="z4f-xZ-FaI"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Playback" id="k8b-oJ-RvC"/>
+                    <tabBarItem key="tabBarItem" title="Playlist" id="k8b-oJ-RvC"/>
                     <connections>
                         <outlet property="pauseButton" destination="rEf-FZ-SCs" id="cBZ-hG-c0k"/>
                         <outlet property="tracksTableView" destination="ztq-L5-9cb" id="013-7k-BR6"/>

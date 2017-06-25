@@ -119,11 +119,15 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         guard selectionsLeft > 0 else {
             selectionsLeftView.flash()
-            return
+            return nil
         }
+        return indexPath
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == trackTableView {
             guard let jukeboxID = firManager.jukebox?.id else {return}
             firManager.add(track: tracks[indexPath.row], toJukebox: jukeboxID)

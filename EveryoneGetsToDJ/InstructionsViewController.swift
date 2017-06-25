@@ -12,7 +12,7 @@ class InstructionsViewController: UIViewController, DJView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
 }
