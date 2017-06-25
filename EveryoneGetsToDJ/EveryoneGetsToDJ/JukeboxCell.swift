@@ -18,7 +18,7 @@ class JukeboxCell: UITableViewCell, DJView {
         contentView.backgroundColor = colorScheme.model.backgroundColor
         
     }
-
+    
     var jukebox: Jukebox? {
         didSet{
             if let name = jukebox?.name{
@@ -26,13 +26,36 @@ class JukeboxCell: UITableViewCell, DJView {
             }
         }
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         if selected {
-            self.backgroundColor = colorScheme.model.highlightColor
-        } else {
-            self.backgroundColor = colorScheme.model.backgroundColor
+            flash()
         }
     }
-
+    
+    private func flash() {
+        let bgColor = self.backgroundColor
+        UIView.animateKeyframes(withDuration: 0.8, delay: 0, options: .calculationModeLinear, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.2, animations: {
+                self.backgroundColor = self.colorScheme.model.highlightColor
+            })
+            UIView.addKeyframe(withRelativeStartTime: 0.2, relativeDuration: 0.2, animations: {
+                self.backgroundColor = bgColor
+            })
+            UIView.addKeyframe(withRelativeStartTime: 0.4, relativeDuration: 0.2, animations: {
+                self.backgroundColor = self.colorScheme.model.highlightColor
+            })
+            UIView.addKeyframe(withRelativeStartTime: 0.6, relativeDuration: 0.2, animations: {
+                self.backgroundColor = bgColor
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.4, animations: {
+                self.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
+            })
+            UIView.addKeyframe(withRelativeStartTime: 0.4, relativeDuration: 0.4, animations: {
+                self.transform = CGAffineTransform(scaleX: 1, y: 1)
+            })
+        }, completion: nil)
+    }
+    
 }

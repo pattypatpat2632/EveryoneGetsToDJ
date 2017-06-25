@@ -301,6 +301,7 @@
                     </view>
                     <connections>
                         <outlet property="searchingLabel" destination="8UQ-lX-rWG" id="Rqc-c1-DyI"/>
+                        <outlet property="selectionLabel" destination="fSB-o4-fpA" id="BOw-82-yY7"/>
                         <outlet property="tableView" destination="gcK-4W-8al" id="xHZ-mU-zjh"/>
                         <outlet property="textField" destination="qoi-f9-YLZ" id="LP3-F6-fU6"/>
                         <segue destination="Zf9-w9-9k0" kind="show" identifier="joinJukeboxSegue" id="yFO-Ig-jrK"/>
@@ -310,7 +311,7 @@
             </objects>
             <point key="canvasLocation" x="-1736.8" y="-3845.1274362818594"/>
         </scene>
-        <!--Pick Songs-->
+        <!--Selection View Controller-->
         <scene sceneID="Lku-4v-2Xr">
             <objects>
                 <viewController id="EoE-Qd-SxF" customClass="SelectionViewController" customModule="EveryoneGetsToDJ" customModuleProvider="target" sceneMemberID="viewController">
@@ -327,7 +328,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Song:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI9-cP-zGR" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="88" y="148" width="201" height="31"/>
+                                <rect key="frame" x="87" y="148" width="201" height="31"/>
                                 <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -435,7 +436,7 @@
                             <constraint firstItem="StK-ru-czr" firstAttribute="centerY" secondItem="ToB-MR-Qak" secondAttribute="centerY" constant="42.75" id="yPv-ou-mvb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pick Songs" id="O02-cU-liA"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="O02-cU-liA"/>
                     <connections>
                         <outlet property="activityIndicator" destination="StK-ru-czr" id="CdF-Pc-JVm"/>
                         <outlet property="searchBar" destination="Tak-Ge-9eh" id="nGh-9R-HQH"/>
@@ -566,7 +567,7 @@
                             <constraint firstItem="NHb-DM-jQ6" firstAttribute="top" secondItem="0cY-4J-IAc" secondAttribute="bottom" constant="8" id="z4f-xZ-FaI"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Playlist" id="k8b-oJ-RvC"/>
+                    <tabBarItem key="tabBarItem" title="Playlist" image="Image" id="k8b-oJ-RvC"/>
                     <connections>
                         <outlet property="pauseButton" destination="rEf-FZ-SCs" id="cBZ-hG-c0k"/>
                         <outlet property="tracksTableView" destination="ztq-L5-9cb" id="013-7k-BR6"/>
@@ -614,6 +615,9 @@
             <point key="canvasLocation" x="-3676" y="-4428.0359820089961"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="40" height="35"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yFO-Ig-jrK"/>
     </inferredMetricsTieBreakers>

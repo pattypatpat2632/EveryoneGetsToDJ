@@ -9,7 +9,7 @@
 import UIKit
 
 class FindJukeboxViewController: UIViewController{
-
+    
     let multipeerManager = MultipeerManager.sharedInstance
     let firManager = FirebaseManager.sharedInstance
     var selectedJukebox: Jukebox?
@@ -24,6 +24,7 @@ class FindJukeboxViewController: UIViewController{
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: DJTextField!
     @IBOutlet weak var searchingLabel: JukeboxSearchIndicator!
+    @IBOutlet weak var selectionLabel: DJLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +78,9 @@ extension FindJukeboxViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedJukebox = jukeboxes[indexPath.row]
+        if let name = selectedJukebox?.name {
+            selectionLabel.text = "Selected: \(name)"
+        }
     }
 }
 
