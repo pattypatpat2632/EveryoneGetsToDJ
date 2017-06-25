@@ -23,7 +23,6 @@
 		EC56CE551EF71C920023DDCE /* CreateJukeboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56CE541EF71C920023DDCE /* CreateJukeboxViewController.swift */; };
 		EC586C631EFDBB46008321DA /* DJTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC586C621EFDBB46008321DA /* DJTableView.swift */; };
 		EC586C651EFDC4D0008321DA /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC586C641EFDC4D0008321DA /* InstructionsViewController.swift */; };
-		EC586C671EFEE38A008321DA /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC586C661EFEE38A008321DA /* UIViewExt.swift */; };
 		EC586C691EFEEDF0008321DA /* DJActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC586C681EFEEDF0008321DA /* DJActivityIndicatorView.swift */; };
 		EC586C6B1EFEF3D4008321DA /* JukeboxSearchIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC586C6A1EFEF3D4008321DA /* JukeboxSearchIndicator.swift */; };
 		EC5AB8F01EF2E2F200483E13 /* DJTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */; };
@@ -52,6 +51,7 @@
 		EC9D6D891EEB4BD30021370D /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D881EEB4BD30021370D /* Artist.swift */; };
 		EC9D6D8B1EEB4BE50021370D /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D8A1EEB4BE50021370D /* Track.swift */; };
 		EC9D6D8D1EEB4BF70021370D /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D8C1EEB4BF70021370D /* Album.swift */; };
+		ECC8D6341EFF413B00413911 /* Picadilly.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECC8D6331EFF413B00413911 /* Picadilly.ttf */; };
 		ECCC80681EFAB70000D1A294 /* Urban Jungle.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECCC80671EFAB70000D1A294 /* Urban Jungle.ttf */; };
 		ECCC806A1EFAB73400D1A294 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC80691EFAB73400D1A294 /* TrackCell.swift */; };
 		ECCC806C1EFAB7F300D1A294 /* Electricity Personal Use.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECCC806B1EFAB7F300D1A294 /* Electricity Personal Use.ttf */; };
@@ -94,7 +94,6 @@
 		EC56CE541EF71C920023DDCE /* CreateJukeboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateJukeboxViewController.swift; sourceTree = "<group>"; };
 		EC586C621EFDBB46008321DA /* DJTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJTableView.swift; sourceTree = "<group>"; };
 		EC586C641EFDC4D0008321DA /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
-		EC586C661EFEE38A008321DA /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		EC586C681EFEEDF0008321DA /* DJActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJActivityIndicatorView.swift; sourceTree = "<group>"; };
 		EC586C6A1EFEF3D4008321DA /* JukeboxSearchIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JukeboxSearchIndicator.swift; sourceTree = "<group>"; };
 		EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJTabBarController.swift; sourceTree = "<group>"; };
@@ -129,6 +128,7 @@
 		EC9D6D881EEB4BD30021370D /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		EC9D6D8A1EEB4BE50021370D /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		EC9D6D8C1EEB4BF70021370D /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		ECC8D6331EFF413B00413911 /* Picadilly.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Picadilly.ttf; sourceTree = "<group>"; };
 		ECCC80671EFAB70000D1A294 /* Urban Jungle.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urban Jungle.ttf"; sourceTree = "<group>"; };
 		ECCC80691EFAB73400D1A294 /* TrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		ECCC806B1EFAB7F300D1A294 /* Electricity Personal Use.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Electricity Personal Use.ttf"; sourceTree = "<group>"; };
@@ -206,7 +206,6 @@
 			children = (
 				EC5F835F1EFC080500EB4C4D /* NotificationExt.swift */,
 				EC5F83691EFC77C200EB4C4D /* UIViewControllerExt.swift */,
-				EC586C661EFEE38A008321DA /* UIViewExt.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -350,6 +349,7 @@
 		ECCC80661EFAB6E200D1A294 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ECC8D6331EFF413B00413911 /* Picadilly.ttf */,
 				ECCC806B1EFAB7F300D1A294 /* Electricity Personal Use.ttf */,
 				ECCC806D1EFAB91000D1A294 /* Neons_demo.otf */,
 				ECCC80671EFAB70000D1A294 /* Urban Jungle.ttf */,
@@ -458,6 +458,7 @@
 				EC9D6D5A1EE8ABC60021370D /* LaunchScreen.storyboard in Resources */,
 				EC2018351EF70C9900ECB4ED /* GoogleService-Info.plist in Resources */,
 				EC9D6D571EE8ABC60021370D /* Assets.xcassets in Resources */,
+				ECC8D6341EFF413B00413911 /* Picadilly.ttf in Resources */,
 				ECCC806E1EFAB91000D1A294 /* Neons_demo.otf in Resources */,
 				EC9D6D551EE8ABC60021370D /* Main.storyboard in Resources */,
 				ECCC80681EFAB70000D1A294 /* Urban Jungle.ttf in Resources */,
@@ -571,7 +572,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC586C671EFEE38A008321DA /* UIViewExt.swift in Sources */,
 				EC9D6D7F1EE8B67A0021370D /* LoginViewController.swift in Sources */,
 				EC9D6D7D1EE8B4BF0021370D /* BridgeViewController.m in Sources */,
 				EC5F83661EFC75EB00EB4C4D /* DJButton.swift in Sources */,
