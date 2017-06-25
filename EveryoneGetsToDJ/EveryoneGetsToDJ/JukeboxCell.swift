@@ -28,9 +28,11 @@ class JukeboxCell: UITableViewCell, DJView {
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        if selected {
+            self.backgroundColor = colorScheme.model.highlightColor
+        } else {
+            self.backgroundColor = colorScheme.model.backgroundColor
+        }
     }
 
 }

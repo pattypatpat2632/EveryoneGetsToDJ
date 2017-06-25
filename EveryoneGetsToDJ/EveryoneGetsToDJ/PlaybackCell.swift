@@ -28,6 +28,10 @@ class PlaybackCell: UITableViewCell, DJView {
         super.init(coder: aDecoder)
         setProperties()
     }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        //override to prevent any selection animations
+    }
 }
 
 extension PlaybackCell {
