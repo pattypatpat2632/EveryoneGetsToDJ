@@ -23,8 +23,14 @@ class DiskView: UIView, DJView {
         
         UIView.animate(withDuration: 0.2) { 
             self.isHidden = false
+            self.backgroundColor = self.colorScheme.model.highlightColor
             
         }
+    }
+    
+    func stopAnimation() {
+        self.isHidden = true
+        self.backgroundColor = colorScheme.model.backgroundColor
     }
 
 }

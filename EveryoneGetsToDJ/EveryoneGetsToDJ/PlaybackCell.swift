@@ -42,4 +42,12 @@ extension PlaybackCell {
         self.layer.borderWidth = 5
         self.layer.cornerRadius = 2
     }
+    
+    func highlight() {
+        self.backgroundColor = colorScheme.model.highlightColor
+    }
+    
+    func stopHighlight() {
+        self.backgroundColor = colorScheme.model.backgroundColor
+    }
 }

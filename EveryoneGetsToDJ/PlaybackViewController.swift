@@ -69,8 +69,10 @@ extension PlaybackViewController: UITableViewDelegate, UITableViewDataSource {
         cell.track = playbackEngine.tracks[indexPath.row]
         if indexPath.row == 0 {
             cell.diskView.animate()
+            cell.highlight()
         } else {
-            cell.diskView.isHidden = true
+            cell.diskView.stopAnimation()
+            cell.stopHighlight()
         }
         return cell
     }
