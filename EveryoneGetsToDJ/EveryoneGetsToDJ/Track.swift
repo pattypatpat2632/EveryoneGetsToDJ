@@ -28,6 +28,11 @@ extension Track {
         self.name = dictionary["name"] as? String ?? ""
         self.uri = dictionary["uri"] as? String ?? ""
         let artistArray = dictionary["artists"] as? [[String: Any]] ?? []
+        if let artistsDictionary = dictionary["artists"] as? [String: Any]{
+            self.artistName = artistsDictionary["artistName"] as? String ?? "No Artist Name"
+            self.artistID = artistsDictionary["id"] as? String ?? "No ID"
+        }
+        
         for artist in artistArray {
             let name = artist["name"] as? String ?? "No Name"
             self.artistName = self.artistName + "\(name) "
