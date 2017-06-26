@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SpriteKit
 
 class PlaybackViewController: UIViewController {
     
@@ -68,11 +69,11 @@ extension PlaybackViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playbackCell", for: indexPath) as! PlaybackCell
         cell.track = playbackEngine.tracks[indexPath.row]
         if indexPath.row == 0 {
-            cell.diskView.animate()
-            cell.highlight()
+            
+            cell.diskView.display()
         } else {
-            cell.diskView.stopAnimation()
-            cell.stopHighlight()
+            
+            cell.diskView.hide()
         }
         return cell
     }

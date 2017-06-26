@@ -19,6 +19,7 @@
 		EC2BC4621EF89282007A783C /* Serializing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC4611EF89282007A783C /* Serializing.swift */; };
 		EC2BC4641EF8991D007A783C /* FindJukeboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC4631EF8991D007A783C /* FindJukeboxViewController.swift */; };
 		EC2BC4661EF89CA7007A783C /* JukeboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC4651EF89CA7007A783C /* JukeboxCell.swift */; };
+		EC3EABFF1F01802E00F9EF11 /* DiskScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EC3EABFE1F01802E00F9EF11 /* DiskScene.sks */; };
 		EC56CE531EF7119C0023DDCE /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56CE521EF7119C0023DDCE /* FirebaseManager.swift */; };
 		EC56CE551EF71C920023DDCE /* CreateJukeboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56CE541EF71C920023DDCE /* CreateJukeboxViewController.swift */; };
 		EC586C631EFDBB46008321DA /* DJTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC586C621EFDBB46008321DA /* DJTableView.swift */; };
@@ -93,6 +94,7 @@
 		EC2BC4611EF89282007A783C /* Serializing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializing.swift; sourceTree = "<group>"; };
 		EC2BC4631EF8991D007A783C /* FindJukeboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindJukeboxViewController.swift; sourceTree = "<group>"; };
 		EC2BC4651EF89CA7007A783C /* JukeboxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JukeboxCell.swift; sourceTree = "<group>"; };
+		EC3EABFE1F01802E00F9EF11 /* DiskScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DiskScene.sks; sourceTree = "<group>"; };
 		EC56CE521EF7119C0023DDCE /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		EC56CE541EF71C920023DDCE /* CreateJukeboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateJukeboxViewController.swift; sourceTree = "<group>"; };
 		EC586C621EFDBB46008321DA /* DJTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJTableView.swift; sourceTree = "<group>"; };
@@ -207,6 +209,14 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
+		EC3EABFD1F017FF600F9EF11 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				EC3EABFE1F01802E00F9EF11 /* DiskScene.sks */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
 		EC5F835E1EFC07F100EB4C4D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +229,7 @@
 		EC9D6D3F1EE8ABC60021370D = {
 			isa = PBXGroup;
 			children = (
+				EC3EABFD1F017FF600F9EF11 /* Scenes */,
 				EC9D6D4A1EE8ABC60021370D /* EveryoneGetsToDJ */,
 				EC9D6D631EE8ABC60021370D /* EveryoneGetsToDJTests */,
 				EC9D6D491EE8ABC60021370D /* Products */,
@@ -471,6 +482,7 @@
 				ECCC806E1EFAB91000D1A294 /* Neons_demo.otf in Resources */,
 				EC9D6D551EE8ABC60021370D /* Main.storyboard in Resources */,
 				ECCC80681EFAB70000D1A294 /* Urban Jungle.ttf in Resources */,
+				EC3EABFF1F01802E00F9EF11 /* DiskScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

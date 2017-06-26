@@ -7,30 +7,23 @@
 //
 
 import UIKit
+import SpriteKit
 
-class DiskView: UIView, DJView {
+class DiskView: SKView {
     
-    @IBOutlet weak var label: DJLabel!
-
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        let scene = SKScene(fileNamed: "DiskScene")
+        self.presentScene(scene)
         self.isHidden = true
-        self.backgroundColor = colorScheme.model.backgroundColor
-        
     }
     
-    func animate() {
-        
-        UIView.animate(withDuration: 0.2) { 
-            self.isHidden = false
-            self.backgroundColor = self.colorScheme.model.highlightColor
-            
-        }
+    func display() {
+        self.isHidden = false
     }
     
-    func stopAnimation() {
+    func hide() {
         self.isHidden = true
-        self.backgroundColor = colorScheme.model.backgroundColor
     }
 
 }
