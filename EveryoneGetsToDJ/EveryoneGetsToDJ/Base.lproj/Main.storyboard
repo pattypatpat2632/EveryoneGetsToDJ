@@ -501,10 +501,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PJP-ln-4xi" customClass="DiskView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="220.5" y="13" width="61.5" height="52"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJP-ln-4xi" customClass="DiskView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                                    <rect key="frame" x="275" y="8" width="60" height="60"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="PJP-ln-4xi" secondAttribute="height" multiplier="1:1" id="yle-yz-oIk"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -513,11 +515,14 @@
                                                 <constraint firstItem="v4R-aY-Oe4" firstAttribute="leading" secondItem="sj2-O1-IcL" secondAttribute="leading" constant="8" id="AgE-93-15d"/>
                                                 <constraint firstItem="sj2-O1-IcL" firstAttribute="width" secondItem="unY-pP-2CP" secondAttribute="width" multiplier="0.6" id="IUi-XH-sWe"/>
                                                 <constraint firstItem="3dd-ft-aj1" firstAttribute="top" secondItem="sj2-O1-IcL" secondAttribute="bottom" id="Lc7-6G-kG8"/>
+                                                <constraint firstAttribute="topMargin" secondItem="PJP-ln-4xi" secondAttribute="top" id="apU-9b-qyC"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="3dd-ft-aj1" secondAttribute="bottom" constant="8" id="bwk-yC-hua"/>
+                                                <constraint firstItem="PJP-ln-4xi" firstAttribute="leading" secondItem="unY-pP-2CP" secondAttribute="leadingMargin" constant="267" id="cl8-Vv-2rx"/>
                                                 <constraint firstItem="v4R-aY-Oe4" firstAttribute="top" secondItem="sj2-O1-IcL" secondAttribute="bottom" constant="21.5" id="dkm-m8-Bb0"/>
                                                 <constraint firstItem="v4R-aY-Oe4" firstAttribute="bottom" secondItem="unY-pP-2CP" secondAttribute="bottomMargin" constant="-8" id="fSG-tr-e3A"/>
                                                 <constraint firstItem="sj2-O1-IcL" firstAttribute="height" secondItem="unY-pP-2CP" secondAttribute="height" multiplier="0.5" id="fxw-uK-UDs"/>
                                                 <constraint firstItem="sj2-O1-IcL" firstAttribute="top" secondItem="unY-pP-2CP" secondAttribute="topMargin" constant="-8" id="jiT-xy-NNh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PJP-ln-4xi" secondAttribute="trailing" id="m2U-jc-H7M"/>
                                                 <constraint firstItem="v4R-aY-Oe4" firstAttribute="width" secondItem="sj2-O1-IcL" secondAttribute="width" multiplier="0.8" id="yAo-e4-cNn"/>
                                             </constraints>
                                         </tableViewCellContentView>
