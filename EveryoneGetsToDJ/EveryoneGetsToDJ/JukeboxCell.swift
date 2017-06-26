@@ -15,7 +15,7 @@ class JukeboxCell: UITableViewCell, DJView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.backgroundColor = colorScheme.model.backgroundColor
-        contentView.backgroundColor = colorScheme.model.backgroundColor
+        contentView.backgroundColor = UIColor.clear
         
     }
     

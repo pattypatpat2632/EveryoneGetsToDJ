@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xJZ-6k-fFO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xJZ-6k-fFO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -56,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Everyone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGg-yq-u5F" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="36" y="139" width="303" height="70"/>
+                                <rect key="frame" x="36.5" y="139" width="302.5" height="70"/>
                                 <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="64"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -69,7 +69,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gets to DJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUS-rN-xPU" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="240" y="205" width="99" height="22"/>
+                                <rect key="frame" x="240" y="205" width="99" height="21.5"/>
                                 <fontDescription key="fontDescription" name="Neons" family="Neons" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -216,7 +216,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gcK-4W-8al">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gcK-4W-8al" customClass="DJTableView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                 <rect key="frame" x="37" y="306" width="300" height="234"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -302,7 +302,7 @@
                     <connections>
                         <outlet property="searchingLabel" destination="8UQ-lX-rWG" id="Rqc-c1-DyI"/>
                         <outlet property="selectionLabel" destination="fSB-o4-fpA" id="BOw-82-yY7"/>
-                        <outlet property="tableView" destination="gcK-4W-8al" id="xHZ-mU-zjh"/>
+                        <outlet property="tableView" destination="gcK-4W-8al" id="a9g-AZ-eFS"/>
                         <outlet property="textField" destination="qoi-f9-YLZ" id="LP3-F6-fU6"/>
                         <segue destination="Zf9-w9-9k0" kind="show" identifier="joinJukeboxSegue" id="yFO-Ig-jrK"/>
                     </connections>
@@ -328,7 +328,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Song:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI9-cP-zGR" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="87" y="148" width="201" height="31"/>
+                                <rect key="frame" x="87.5" y="148" width="200.5" height="31"/>
                                 <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

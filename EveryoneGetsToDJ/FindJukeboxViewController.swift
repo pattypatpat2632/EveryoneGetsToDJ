@@ -21,7 +21,7 @@ class FindJukeboxViewController: UIViewController{
         }
     }
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: DJTableView!
     @IBOutlet weak var textField: DJTextField!
     @IBOutlet weak var searchingLabel: JukeboxSearchIndicator!
     @IBOutlet weak var selectionLabel: DJLabel!
@@ -72,7 +72,7 @@ extension FindJukeboxViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "jukeboxCell", for: indexPath) as! JukeboxCell
         cell.jukebox = jukeboxes[indexPath.row]
-        cell.backgroundColor = UIColor.red
+       
         return cell
     }
     
