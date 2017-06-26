@@ -13,13 +13,14 @@ class DiskView: SKView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        let scene = SKScene(fileNamed: "DiskScene")
-        self.presentScene(scene)
+        
         self.isHidden = true
     }
     
     func display() {
         self.isHidden = false
+        let scene = SKScene(fileNamed: "DiskScene")
+        self.presentScene(scene)
     }
     
     func hide() {
