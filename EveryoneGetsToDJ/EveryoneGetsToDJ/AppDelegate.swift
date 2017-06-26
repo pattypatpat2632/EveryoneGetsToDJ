@@ -61,11 +61,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 // 5- Add session to User Defaults
                 let userDefaults = UserDefaults.standard
-                let sessionData = NSKeyedArchiver.archivedData(withRootObject: session!)
-                userDefaults.set(sessionData, forKey: "SpotifySession")
-                userDefaults.synchronize()
-                // 6 - Tell notification center login is successful
-                NotificationCenter.default.post(name: Notification.Name(rawValue: "loginSuccessfull"), object: nil)
+                if let session = session {
+                    let sessionData = NSKeyedArchiver.archivedData(withRootObject: session)
+                    userDefaults.set(sessionData, forKey: "SpotifySession")
+                    userDefaults.synchronize()
+                    // 6 - Tell notification center login is successful
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: "loginSuccessfull"), object: nil)
+                } 
             })
             return true
         }
