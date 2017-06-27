@@ -10,6 +10,7 @@ import UIKit
 
 class TrackCell: UITableViewCell, DJView {
     
+    var viewCopy: UIView?
     
     @IBOutlet weak var trackNameLabel: DJLabel!
     @IBOutlet weak var artistNameLabel: DJLabel!
@@ -35,35 +36,11 @@ class TrackCell: UITableViewCell, DJView {
         }
     }
     
-    private func flash() {
-        let bgColor = self.backgroundColor
-        UIView.animateKeyframes(withDuration: 0.8, delay: 0, options: .calculationModeLinear, animations: {
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.2, animations: {
-                self.backgroundColor = self.colorScheme.model.highlightColor
-            })
-            UIView.addKeyframe(withRelativeStartTime: 0.2, relativeDuration: 0.2, animations: {
-                self.backgroundColor = bgColor
-            })
-            UIView.addKeyframe(withRelativeStartTime: 0.4, relativeDuration: 0.2, animations: {
-                self.backgroundColor = self.colorScheme.model.highlightColor
-            })
-            UIView.addKeyframe(withRelativeStartTime: 0.6, relativeDuration: 0.2, animations: {
-                self.backgroundColor = bgColor
-            })
-            
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.4, animations: {
-                self.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
-            })
-            UIView.addKeyframe(withRelativeStartTime: 0.4, relativeDuration: 0.4, animations: {
-                self.transform = CGAffineTransform(scaleX: 1, y: 1)
-            })
-        }, completion: nil)
-    }
-    
 }
 
 extension TrackCell {
     func setProperties() {
+        self.viewCopy = self
         self.backgroundColor = colorScheme.model.backgroundColor
         self.contentView.layer.borderWidth = 5
         contentView.layer.borderColor = colorScheme.model.foregroundColor.cgColor

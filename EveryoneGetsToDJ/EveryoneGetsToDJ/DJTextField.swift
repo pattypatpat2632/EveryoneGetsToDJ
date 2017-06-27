@@ -10,6 +10,8 @@ import UIKit
 
 class DJTextField: UITextField, DJView {
     
+    var viewCopy: UIView?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
@@ -21,6 +23,7 @@ class DJTextField: UITextField, DJView {
     }
     
     func commonInit() {
+        self.viewCopy = self
         layer.borderWidth = 5
         layer.cornerRadius = 2
         layer.borderColor = colorScheme.model.foregroundColor.cgColor
@@ -36,28 +39,4 @@ class DJTextField: UITextField, DJView {
         return !isEmpty()
     }
     
-    func flash() {
-        let bgColor = self.backgroundColor
-        UIView.animateKeyframes(withDuration: 0.8, delay: 0, options: .calculationModeLinear, animations: {
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.2, animations: {
-                self.backgroundColor = self.colorScheme.model.highlightColor
-            })
-            UIView.addKeyframe(withRelativeStartTime: 0.2, relativeDuration: 0.2, animations: {
-                self.backgroundColor = bgColor
-            })
-            UIView.addKeyframe(withRelativeStartTime: 0.4, relativeDuration: 0.2, animations: {
-                self.backgroundColor = self.colorScheme.model.highlightColor
-            })
-            UIView.addKeyframe(withRelativeStartTime: 0.6, relativeDuration: 0.2, animations: {
-                self.backgroundColor = bgColor
-            })
-            
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.4, animations: {
-                self.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
-            })
-            UIView.addKeyframe(withRelativeStartTime: 0.4, relativeDuration: 0.4, animations: {
-                self.transform = CGAffineTransform(scaleX: 1, y: 1)
-            })
-        }, completion: nil)
-    }
 }

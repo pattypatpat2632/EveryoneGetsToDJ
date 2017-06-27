@@ -10,6 +10,8 @@ import UIKit
 
 class NoTracksPlayingView: UIView, DJView {
     
+    var viewCopy: UIView?
+    
     @IBOutlet var contentView: DJContentView!
     @IBOutlet weak var label: UILabel!
     
@@ -24,6 +26,9 @@ class NoTracksPlayingView: UIView, DJView {
     }
     
     func commonInit() {
+        
+        self.viewCopy = self
+        
         Bundle.main.loadNibNamed("NoTracksPlayingView", owner: self, options: nil)
         
         self.addSubview(contentView)

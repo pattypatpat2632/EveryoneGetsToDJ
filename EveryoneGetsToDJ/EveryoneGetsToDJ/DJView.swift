@@ -10,9 +10,12 @@ import Foundation
 
 protocol DJView {
     var colorScheme: ColorScheme {get}
+    var viewCopy: UIView? {get set}
     
     func hide()
     func display()
+    
+    func flash()
 }
 
 extension DJView {
@@ -30,4 +33,32 @@ extension DJView {
         
     }
     
+    //In order to use the flash function, set viewCopy equal to the view you'd like to flash
+    func flash() {
+        if let viewCopy = viewCopy {
+        let bgColor = viewCopy.backgroundColor
+            UIView.animateKeyframes(withDuration: 0.8, delay: 0, options: .calculationModeLinear, animations: {
+                UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.2, animations: {
+                    viewCopy.backgroundColor = self.colorScheme.model.highlightColor
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.2, relativeDuration: 0.2, animations: {
+                    viewCopy.backgroundColor = bgColor
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.4, relativeDuration: 0.2, animations: {
+                    viewCopy.backgroundColor = self.colorScheme.model.highlightColor
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.6, relativeDuration: 0.2, animations: {
+                    viewCopy.backgroundColor = bgColor
+                })
+                
+                UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.4, animations: {
+                    viewCopy.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.4, relativeDuration: 0.4, animations: {
+                    viewCopy.transform = CGAffineTransform(scaleX: 1, y: 1)
+                })
+            }, completion: nil)
+        
+        }
+    }
 }
