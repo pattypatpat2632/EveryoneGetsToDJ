@@ -21,6 +21,7 @@ class PlaybackViewController: UIViewController {
 
     @IBOutlet weak var tracksTableView: DJTableView!
     @IBOutlet weak var pauseButton: PauseButton!
+    @IBOutlet weak var noTracksPlayingView: NoTracksPlayingView!
     
     var playbackEnabled = false {
         didSet {
@@ -35,6 +36,7 @@ class PlaybackViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         playbackEngine.delegate = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,6 +84,14 @@ extension PlaybackViewController: UITableViewDelegate, UITableViewDataSource {
 extension PlaybackViewController: PlaybackEngineDelegate {
     func updatedTracks() {
         tracksTableView.reloadData()
+        
+        if playbackEngine.tracks.isEmpty {
+            tracksTableView.isHidden = true
+            noTracksPlayingView.display()
+        } else {
+            tracksTableView.isHidden = false
+            noTracksPlayingView.hide()
+        }
     }
 }
 

@@ -91,12 +91,10 @@ extension SelectionViewController: UISearchBarDelegate {
         indicateActivity()
         apiClient.getToken().then { token in
             return self.apiClient.query(input: text, with: token)
-            }.then { (response) -> String in
-                
-                self.tracks = response.1
-                
+            }.then { (tracks) -> String in
+                self.tracks = tracks
                 self.stopActivity()
-                return ("test")
+                return "Done"
             }.catch{ error in
                 print(error.localizedDescription)
         }

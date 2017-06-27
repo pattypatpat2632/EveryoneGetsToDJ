@@ -45,24 +45,24 @@ final class ApiClient {
         }
     }
     
-    func query(input: String, with token: String) -> Promise<([Artist], [Track], [Album])> {
-            searchQueue.cancelAllOperations()
-            return Promise { fulfill, reject in
-                let promiseOp = BlockOperation {
-                let artistsResource = self.artistSearchResource(from: input)! //TODO: refactor
-                let tracksResource = self.trackSearchResource(from: input)!
-                let albumsResource = self.albumSearchResource(from: input)!
+    func query(input: String, with token: String) -> Promise<[Track]> {
+        searchQueue.cancelAllOperations()
+        return Promise { fulfill, reject in
+            let promiseOp = BlockOperation {
                 
-                when(fulfilled: self.fetch(resource: artistsResource, with: token), self.fetch(resource: tracksResource, with: token), self.fetch(resource: albumsResource, with: token)).then(execute: { (response) -> Void in
-                    fulfill(response)
-                }).catch(execute: { (error) in
-                    reject(error)
-                })
+                if let tracksResource = self.trackSearchResource(from: input) {
+                    self.fetch(resource: tracksResource, with: token).then(execute: { (tracks) in
+                        fulfill(tracks)
+                    }).catch(execute: { (error) in
+                        reject(error)
+                    })
+                } else {
+                    reject(ApiError.unexpected("Invalid track search resource"))
+                }
             }
             searchQueue.addOperation(promiseOp)
         }
     }
-    
     
     
     func fetch<T>(resource: Resource<T>, with token: String) -> Promise<T> {
@@ -95,6 +95,8 @@ final class ApiClient {
 }
 //MARK: resources
 extension ApiClient {
+    
+    //Currently not in use - keep for later version which will include artist and album search
     func artistSearchResource(from artist: String) -> Resource<[Artist]>? {
         let formattedArtist = sanitize(artist)
         let endpoint = "https://api.spotify.com/v1/search?q=\(formattedArtist)&type=artist"
@@ -118,6 +120,7 @@ extension ApiClient {
         return artistsResource
     }
     
+    //Currently not in use - keep for later version which will include artist and album search
     func albumSearchResource(from album: String) -> Resource<[Album]>? {
         let formattedAlbum = sanitize(album)
         let endpoint = "https://api.spotify.com/v1/search?q=\(formattedAlbum)&type=album"

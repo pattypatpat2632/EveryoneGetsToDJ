@@ -10,6 +10,9 @@ import Foundation
 
 protocol DJView {
     var colorScheme: ColorScheme {get}
+    
+    func hide()
+    func display()
 }
 
 extension DJView {
@@ -18,4 +21,13 @@ extension DJView {
             return .shadowy
         }
     }
+    
+    func hide() {
+        
+    }
+    
+    func display() {
+        
+    }
+    
 }

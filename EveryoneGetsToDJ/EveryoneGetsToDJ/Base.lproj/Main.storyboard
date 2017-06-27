@@ -328,7 +328,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Song:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI9-cP-zGR" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="87.5" y="148" width="200.5" height="31"/>
+                                <rect key="frame" x="88" y="148" width="200.5" height="31"/>
                                 <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -460,6 +460,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5q-Me-sK4" customClass="NoTracksPlayingView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="16" y="64" width="343" height="448"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEf-FZ-SCs" customClass="PauseButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                 <rect key="frame" x="160" y="512" width="56" height="56"/>
                                 <constraints>
@@ -552,16 +556,21 @@
                         </subviews>
                         <color key="backgroundColor" red="0.28252414711770313" green="1" blue="0.19639116146461422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="rEf-FZ-SCs" firstAttribute="top" secondItem="K5q-Me-sK4" secondAttribute="bottom" id="N4t-RX-Nhj"/>
+                            <constraint firstItem="K5q-Me-sK4" firstAttribute="leading" secondItem="mXB-k2-lU9" secondAttribute="leadingMargin" id="NWJ-eu-lRx"/>
                             <constraint firstItem="NHb-DM-jQ6" firstAttribute="top" secondItem="rEf-FZ-SCs" secondAttribute="bottom" constant="50" id="UXA-yn-xtn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K5q-Me-sK4" secondAttribute="trailing" id="VBb-XM-Wb2"/>
                             <constraint firstItem="0cY-4J-IAc" firstAttribute="leading" secondItem="mXB-k2-lU9" secondAttribute="leadingMargin" id="evl-H3-azL"/>
                             <constraint firstItem="rEf-FZ-SCs" firstAttribute="centerX" secondItem="mXB-k2-lU9" secondAttribute="centerX" id="fZz-3w-qyk"/>
                             <constraint firstItem="rEf-FZ-SCs" firstAttribute="width" secondItem="mXB-k2-lU9" secondAttribute="width" multiplier="0.15" id="fz3-rC-Jt8"/>
                             <constraint firstItem="0cY-4J-IAc" firstAttribute="width" secondItem="mXB-k2-lU9" secondAttribute="width" multiplier="0.25" id="uhL-96-Ofz"/>
+                            <constraint firstItem="K5q-Me-sK4" firstAttribute="top" secondItem="I2y-u1-cUl" secondAttribute="bottom" id="xOC-lN-Hno"/>
                             <constraint firstItem="NHb-DM-jQ6" firstAttribute="top" secondItem="0cY-4J-IAc" secondAttribute="bottom" constant="8" id="z4f-xZ-FaI"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Playlist" image="Image" id="k8b-oJ-RvC"/>
                     <connections>
+                        <outlet property="noTracksPlayingView" destination="K5q-Me-sK4" id="hGk-b4-fuk"/>
                         <outlet property="pauseButton" destination="rEf-FZ-SCs" id="cBZ-hG-c0k"/>
                         <outlet property="tracksTableView" destination="ztq-L5-9cb" id="013-7k-BR6"/>
                     </connections>
@@ -594,7 +603,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xJZ-6k-fFO" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZPX-rc-q1I">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ZPX-rc-q1I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
