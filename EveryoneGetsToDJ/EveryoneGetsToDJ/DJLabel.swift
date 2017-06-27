@@ -9,6 +9,8 @@
 import UIKit
 
 class DJLabel: UILabel, DJView {
+    var viewCopy: UIView?
+
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

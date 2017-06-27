@@ -9,7 +9,8 @@
 import UIKit
 
 class PlaybackCell: UITableViewCell, DJView {
-    
+    var viewCopy: UIView?
+
     @IBOutlet weak var titleLabel: DJLabel!
     @IBOutlet weak var artistLabel: DJLabel!
     @IBOutlet weak var userLabel: DJLabel!

@@ -9,6 +9,8 @@
 import UIKit
 
 class DJContentView: UIView, DJView {
+    var viewCopy: UIView?
+
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

@@ -9,6 +9,8 @@
 import UIKit
 
 class InstructionsViewController: UIViewController, DJView {
+    var viewCopy: UIView?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
