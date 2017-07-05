@@ -8,9 +8,7 @@
 
 import UIKit
 
-class NoTracksPlayingView: UIView, DJView {
-    
-    var viewCopy: UIView?
+class NoTracksPlayingView: UIView {
     
     @IBOutlet var contentView: DJContentView!
     @IBOutlet weak var label: UILabel!
@@ -27,7 +25,7 @@ class NoTracksPlayingView: UIView, DJView {
     
     func commonInit() {
         
-        self.viewCopy = self
+
         
         Bundle.main.loadNibNamed("NoTracksPlayingView", owner: self, options: nil)
         
@@ -42,11 +40,5 @@ class NoTracksPlayingView: UIView, DJView {
         label.textColor = colorScheme.model.foregroundColor
     }
     
-    func hide() {
-        self.isHidden = true
-    }
-    
-    func display() {
-        self.isHidden = false
-    }
+
 }

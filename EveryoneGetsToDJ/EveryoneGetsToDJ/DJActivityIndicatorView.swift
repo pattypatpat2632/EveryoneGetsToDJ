@@ -8,9 +8,7 @@
 
 import UIKit
 
-class DJActivityIndicatorView: UIActivityIndicatorView, DJView {
-    var viewCopy: UIView?
-
+class DJActivityIndicatorView: UIActivityIndicatorView {
 
     required init(coder: NSCoder) {
         super.init(coder: coder)

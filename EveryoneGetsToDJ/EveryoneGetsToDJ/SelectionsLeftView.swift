@@ -9,9 +9,8 @@
 import Foundation
 import UIKit
 
-class SelectionsLeftView: UIView, DJView {
+class SelectionsLeftView: UIView {
     
-    var viewCopy: UIView?
     
     @IBOutlet weak var label: DJLabel!
     
@@ -21,7 +20,6 @@ class SelectionsLeftView: UIView, DJView {
         self.layer.borderWidth = 5
         self.layer.borderColor = colorScheme.model.foregroundColor.cgColor
         self.layer.cornerRadius = 2
-        self.viewCopy = self
     }
     
     func updateLabel(withValue value: Int) {

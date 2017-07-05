@@ -8,9 +8,8 @@
 
 import UIKit
 
-class DJButton: UIButton, DJView {
+class DJButton: UIButton{
     
-    var viewCopy: UIView?
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

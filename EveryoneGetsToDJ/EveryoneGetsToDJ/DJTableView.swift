@@ -8,9 +8,7 @@
 
 import UIKit
 
-class DJTableView: UITableView, DJView {
-    var viewCopy: UIView?
-
+class DJTableView: UITableView {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

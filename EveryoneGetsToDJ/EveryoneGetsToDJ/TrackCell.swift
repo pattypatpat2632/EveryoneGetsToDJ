@@ -8,9 +8,9 @@
 
 import UIKit
 
-class TrackCell: UITableViewCell, DJView {
+class TrackCell: UITableViewCell {
     
-    var viewCopy: UIView?
+    
     
     @IBOutlet weak var trackNameLabel: DJLabel!
     @IBOutlet weak var artistNameLabel: DJLabel!
@@ -40,7 +40,6 @@ class TrackCell: UITableViewCell, DJView {
 
 extension TrackCell {
     func setProperties() {
-        self.viewCopy = self
         self.backgroundColor = colorScheme.model.backgroundColor
         self.contentView.layer.borderWidth = 5
         contentView.layer.borderColor = colorScheme.model.foregroundColor.cgColor

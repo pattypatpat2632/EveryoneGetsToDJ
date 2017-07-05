@@ -8,9 +8,7 @@
 
 import UIKit
 
-class instructionsTextView: UITextView, DJView {
-    var viewCopy: UIView?
-
+class instructionsTextView: UITextView {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

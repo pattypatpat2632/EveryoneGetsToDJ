@@ -328,7 +328,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Song:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI9-cP-zGR" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="88" y="148" width="200.5" height="31"/>
+                                <rect key="frame" x="87.5" y="148" width="200.5" height="31"/>
                                 <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -347,10 +347,10 @@
                                 <rect key="frame" x="177" y="387" width="20" height="20"/>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vk4-Fc-hcK" customClass="SelectionsLeftView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="156" y="571" width="150" height="26"/>
+                                <rect key="frame" x="156" y="571" width="210" height="26"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selections Left: 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raE-nJ-auF" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="26"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="26"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -427,7 +427,8 @@
                             <constraint firstItem="hYH-Eo-sjf" firstAttribute="top" secondItem="ToB-MR-Qak" secondAttribute="bottom" constant="42.5" id="YFE-Gl-D7m"/>
                             <constraint firstItem="ToB-MR-Qak" firstAttribute="width" secondItem="VRa-PC-XXJ" secondAttribute="width" multiplier="0.8" id="fNv-Al-CWK"/>
                             <constraint firstItem="ToB-MR-Qak" firstAttribute="centerX" secondItem="VRa-PC-XXJ" secondAttribute="centerX" id="gs7-35-Evv"/>
-                            <constraint firstItem="Vk4-Fc-hcK" firstAttribute="width" secondItem="ToB-MR-Qak" secondAttribute="width" multiplier="0.5" id="jCn-5p-kE1"/>
+                            <constraint firstItem="Vk4-Fc-hcK" firstAttribute="width" secondItem="ToB-MR-Qak" secondAttribute="width" multiplier="0.7" id="jCn-5p-kE1"/>
+                            <constraint firstItem="hI9-cP-zGR" firstAttribute="top" secondItem="Tak-Ge-9eh" secondAttribute="bottom" constant="38" id="knn-ux-Hn9"/>
                             <constraint firstItem="Tak-Ge-9eh" firstAttribute="top" secondItem="E4F-Fi-Yg4" secondAttribute="bottom" constant="2" id="qbZ-4H-yYK"/>
                             <constraint firstItem="StK-ru-czr" firstAttribute="centerX" secondItem="ToB-MR-Qak" secondAttribute="centerX" id="s5C-DS-pls"/>
                             <constraint firstItem="Tak-Ge-9eh" firstAttribute="width" secondItem="VRa-PC-XXJ" secondAttribute="width" id="vB5-oJ-NV4"/>

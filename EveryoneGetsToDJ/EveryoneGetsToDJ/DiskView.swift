@@ -17,14 +17,9 @@ class DiskView: SKView {
         self.isHidden = true
     }
     
-    func display() {
-        self.isHidden = false
+    override func display() {
+        super.display()
         let scene = SKScene(fileNamed: "DiskScene")
         self.presentScene(scene)
     }
-    
-    func hide() {
-        self.isHidden = true
-    }
-
 }

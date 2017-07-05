@@ -8,9 +8,9 @@
 
 import UIKit
 
-class DJTextField: UITextField, DJView {
+class DJTextField: UITextField{
     
-    var viewCopy: UIView?
+
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -23,7 +23,7 @@ class DJTextField: UITextField, DJView {
     }
     
     func commonInit() {
-        self.viewCopy = self
+       
         layer.borderWidth = 5
         layer.cornerRadius = 2
         layer.borderColor = colorScheme.model.foregroundColor.cgColor

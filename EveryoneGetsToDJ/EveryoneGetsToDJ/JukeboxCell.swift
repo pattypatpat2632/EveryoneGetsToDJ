@@ -8,9 +8,9 @@
 
 import UIKit
 
-class JukeboxCell: UITableViewCell, DJView {
+class JukeboxCell: UITableViewCell {
     
-    var viewCopy: UIView?
+ 
     
     @IBOutlet weak var nameLabel: DJLabel!
     
@@ -18,7 +18,6 @@ class JukeboxCell: UITableViewCell, DJView {
         super.init(coder: aDecoder)
         self.backgroundColor = colorScheme.model.backgroundColor
         contentView.backgroundColor = UIColor.clear
-        self.viewCopy = self
         
     }
     

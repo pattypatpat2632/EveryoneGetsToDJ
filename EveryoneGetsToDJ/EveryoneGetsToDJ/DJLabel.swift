@@ -8,8 +8,7 @@
 
 import UIKit
 
-class DJLabel: UILabel, DJView {
-    var viewCopy: UIView?
+class DJLabel: UILabel{
 
 
     required init?(coder aDecoder: NSCoder) {
