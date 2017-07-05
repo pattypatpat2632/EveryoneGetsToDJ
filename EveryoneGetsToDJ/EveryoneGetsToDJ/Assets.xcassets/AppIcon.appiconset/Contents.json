@@ -3,49 +3,49 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "ecdjicon 40x40.png",
+      "filename" : "EGTDJ Logo 40x40.png",
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "ecdjicon 60x60.png",
+      "filename" : "EGTDJ Logo 60x60.png",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "ecdjicon 58x58.png",
+      "filename" : "EGTDJ Logo 58x58.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "ecdjicon 87x87.png",
+      "filename" : "EGTDJ Logo 87x87.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "ecdjicon 80x80.png",
+      "filename" : "EGTDJ Logo 80x80.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "ecdjicon 120x120.png",
+      "filename" : "EGTDJ Logo 120x120.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "ecdjicon 120x120-1.png",
+      "filename" : "EGTDJ Logo 120x120-1.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "ecdjicon 180x180.png",
+      "filename" : "EGTDJ Logo 180x180.png",
       "scale" : "3x"
     }
   ],
