@@ -10,7 +10,13 @@ import UIKit
 
 class JukeboxCell: UITableViewCell {
     
- 
+    var jukebox: Jukebox? {
+        didSet{
+            if let name = jukebox?.name{
+                self.nameLabel.text = name
+            }
+        }
+    }
     
     @IBOutlet weak var nameLabel: DJLabel!
     
@@ -19,14 +25,6 @@ class JukeboxCell: UITableViewCell {
         self.backgroundColor = colorScheme.model.backgroundColor
         contentView.backgroundColor = UIColor.clear
         
-    }
-    
-    var jukebox: Jukebox? {
-        didSet{
-            if let name = jukebox?.name{
-                self.nameLabel.text = name
-            }
-        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

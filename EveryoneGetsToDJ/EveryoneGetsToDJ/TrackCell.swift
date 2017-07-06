@@ -10,11 +10,6 @@ import UIKit
 
 class TrackCell: UITableViewCell {
     
-    
-    
-    @IBOutlet weak var trackNameLabel: DJLabel!
-    @IBOutlet weak var artistNameLabel: DJLabel!
-    
     var track: Track? {
         didSet {
             if let track = self.track{
@@ -23,6 +18,9 @@ class TrackCell: UITableViewCell {
             }
         }
     }
+    
+    @IBOutlet weak var trackNameLabel: DJLabel!
+    @IBOutlet weak var artistNameLabel: DJLabel!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
