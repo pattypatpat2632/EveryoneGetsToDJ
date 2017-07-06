@@ -56,7 +56,7 @@ class CreateJukeboxViewController: UIViewController {
         }
     }
     
-    private func textFieldsEntered() -> Bool {
+    private func textFieldsEntered() -> Bool { //returns true if all text fields are entered. Otherwise, returns false and indicates to the user which text fields were not filled out
         var textEntered = true
         if textField.isEmpty() {
             textField.flash()

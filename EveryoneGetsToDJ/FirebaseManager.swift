@@ -47,13 +47,16 @@ final class FirebaseManager {
         self.username = username
     }
     
-    func createJukebox(named name: String) -> Promise<JukeboxID>  {
+    func createJukebox(named name: String?) -> Promise<JukeboxID>  {
         return Promise{fulfill, reject in
-            
-            let newID = ref.child("jukeboxes").childByAutoId().key
-            let newJukebox = Jukebox(id: newID, creatorID: FirebaseManager.sharedInstance.uid, name: name, tracks: [])
-            ref.child("jukeboxes").child(newID).setValue(newJukebox.asDictionary())
-            fulfill(newID)
+            if let name = name {
+                let newID = ref.child("jukeboxes").childByAutoId().key
+                let newJukebox = Jukebox(id: newID, creatorID: FirebaseManager.sharedInstance.uid, name: name, tracks: [])
+                ref.child("jukeboxes").child(newID).setValue(newJukebox.asDictionary())
+                fulfill(newID)
+            } else {
+                reject(ApiError.unexpected("Invalid jukebox name"))
+            }
         }
     }
     
