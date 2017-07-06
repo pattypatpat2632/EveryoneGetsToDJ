@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xJZ-6k-fFO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xJZ-6k-fFO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -176,22 +176,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywk-Yl-WSQ" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="7" y="72" width="360" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywk-Yl-WSQ" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="-0.5" y="72" width="375" height="47"/>
                                 <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="43"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H69-j8-nGb" customClass="instructionsTextView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="16" y="156" width="343" height="491"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H69-j8-nGb" customClass="instructionsTextView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="156" width="300" height="491"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H69-j8-nGb" firstAttribute="top" secondItem="Ywk-Yl-WSQ" secondAttribute="bottom" constant="37" id="7WF-5S-Bh2"/>
+                            <constraint firstItem="Ywk-Yl-WSQ" firstAttribute="centerX" secondItem="8WR-n6-HdN" secondAttribute="centerX" id="HGb-Sd-lSc"/>
+                            <constraint firstItem="H69-j8-nGb" firstAttribute="width" secondItem="8WR-n6-HdN" secondAttribute="width" multiplier="0.8" id="aKI-gp-BFd"/>
+                            <constraint firstItem="H69-j8-nGb" firstAttribute="centerX" secondItem="8WR-n6-HdN" secondAttribute="centerX" id="jy7-Ne-5jE"/>
+                            <constraint firstItem="Ywk-Yl-WSQ" firstAttribute="width" secondItem="8WR-n6-HdN" secondAttribute="width" id="ojE-PE-ahe"/>
+                            <constraint firstItem="d8N-tA-IY6" firstAttribute="top" secondItem="H69-j8-nGb" secondAttribute="bottom" constant="20" id="v6c-m9-0XH"/>
+                            <constraint firstItem="Ywk-Yl-WSQ" firstAttribute="top" secondItem="rTJ-sQ-Qch" secondAttribute="bottom" constant="8" id="xoR-af-ugP"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1A-zD-V89" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -328,7 +335,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Song:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI9-cP-zGR" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="87.5" y="148" width="200.5" height="31"/>
+                                <rect key="frame" x="88" y="148" width="200.5" height="31"/>
                                 <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
