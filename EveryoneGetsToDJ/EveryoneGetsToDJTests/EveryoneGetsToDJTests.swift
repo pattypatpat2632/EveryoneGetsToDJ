@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import EveryoneGetsToDJ
+import PromiseKit
 
 class EveryoneGetsToDJTests: XCTestCase {
     
@@ -21,15 +22,20 @@ class EveryoneGetsToDJTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testObserveTracks() {
+        let firExpectation = expectation(description: "expect return from observe function")
+        let firManager = FirebaseManager.sharedInstance
+        firManager.observe(jukebox: "-KnZjudS6PoKyQFaQU5M").then { jukebox -> String in
+            XCTAssertTrue(jukebox.tracks.count == 1, "Should observe one track within test jukebox")
+            firExpectation.fulfill()
+            return "Done"
+        }.catch { error in
+            
+        }
+        waitForExpectations(timeout: 20) { (error) in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
         }
     }
     
