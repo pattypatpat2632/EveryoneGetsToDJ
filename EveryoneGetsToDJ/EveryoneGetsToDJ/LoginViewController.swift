@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         hideKeyboardWhenTappedAround()
-        NotificationCenter.default.addObserver(self, selector: #selector(updateAfterFirstLogin), name: Notification.Name(rawValue: "loginSuccessfull"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateAfterFirstLogin), name: Notification.Name.loginSuccessful, object: nil)
         loginManager.setup()
     }
     
@@ -29,9 +29,9 @@ class LoginViewController: UIViewController {
         do {
            try SPTAudioStreamingController.sharedInstance().stop()
         } catch {
-            //TODO: error handling
+            print("Unable to stop spotify streaming controller")
+            //TODO: error handling - this probably only fails if user has lost data connection - should alert user to this fact? - according to doc, logout should occur before sharedInstance.stop is called - may be causing crash error
         }
-        
     }
     
     @IBAction func loginTapped(_ sender: DJButton) {

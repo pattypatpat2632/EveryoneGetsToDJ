@@ -13,10 +13,10 @@ class DJButton: UIButton{
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+        commonInit()
     }
     
-    func setup() {
+    func commonInit() {
         setTitleColor(colorScheme.model.foregroundColor, for: .normal)
         backgroundColor = colorScheme.model.backgroundColor
         layer.borderColor = colorScheme.model.foregroundColor.cgColor

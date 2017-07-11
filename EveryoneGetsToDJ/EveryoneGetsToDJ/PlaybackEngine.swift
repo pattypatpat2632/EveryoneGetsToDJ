@@ -37,14 +37,14 @@ extension PlaybackEngine: SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDe
     func initializePlayer(authSession: SPTSession){
         if self.player == nil {
             self.player = SPTAudioStreamingController.sharedInstance()
-            self.player!.playbackDelegate = self //TODO: refactor !
-            self.player!.delegate = self
+            self.player?.playbackDelegate = self
+            self.player?.delegate = self
             do {
-                try player!.start(withClientId: loginManager.auth.clientID)
+                try player?.start(withClientId: loginManager.auth.clientID)
             } catch {
                 print("player already initialized")
             }
-            self.player!.login(withAccessToken: authSession.accessToken)
+            self.player?.login(withAccessToken: authSession.accessToken)
         }
     }
     
@@ -87,9 +87,6 @@ extension PlaybackEngine: SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDe
         guard let jukebox = firManager.jukebox else {return}
         firManager.remove(track: tracks[0], fromJukebox: jukebox)
     }
-    
-    
-    
 }
 
 extension PlaybackEngine {

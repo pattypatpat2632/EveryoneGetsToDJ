@@ -10,11 +10,6 @@ import Foundation
 
 protocol DJView {
     var colorScheme: ColorScheme {get}
-
-    
-   
-    
-
 }
 
 extension DJView {
@@ -23,7 +18,4 @@ extension DJView {
             return .shadowy
         }
     }
-    
-
-    
 }

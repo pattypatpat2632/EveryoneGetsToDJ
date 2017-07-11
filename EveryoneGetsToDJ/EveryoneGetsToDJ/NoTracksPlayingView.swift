@@ -24,9 +24,6 @@ class NoTracksPlayingView: UIView {
     }
     
     func commonInit() {
-        
-
-        
         Bundle.main.loadNibNamed("NoTracksPlayingView", owner: self, options: nil)
         
         self.addSubview(contentView)

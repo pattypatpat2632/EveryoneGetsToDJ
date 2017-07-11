@@ -32,6 +32,5 @@ extension MultipeerResource {
         let id = jukeboxValues["id"] as? String ?? ""
         let newJukebox = Jukebox(id: id, dictionary: jukeboxValues)
         self.jukebox = newJukebox
-        
     }
 }

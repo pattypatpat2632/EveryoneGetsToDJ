@@ -9,9 +9,7 @@
 import UIKit
 
 class DJTextField: UITextField{
-    
-
-    
+        
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()

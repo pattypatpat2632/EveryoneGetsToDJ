@@ -27,22 +27,22 @@ class PlaybackCell: UITableViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setProperties()
+        commonInit()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
-        //override to prevent any selection animations
+        //overridden to prevent any selection animations
     }
 }
 
 extension PlaybackCell {
-    func setProperties() {
+    func commonInit() {
         self.backgroundColor = colorScheme.model.backgroundColor
         self.layer.borderColor = colorScheme.model.foregroundColor.cgColor
         self.layer.borderWidth = 5
         self.layer.cornerRadius = 2
     }
-    
+//TODO: pretty sure I'm not using these functions anymore - check if depracated
     func highlight() {
         self.backgroundColor = colorScheme.model.highlightColor
     }

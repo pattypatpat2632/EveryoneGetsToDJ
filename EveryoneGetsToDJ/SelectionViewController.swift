@@ -31,8 +31,6 @@ class SelectionViewController: UIViewController {
     
     @IBOutlet weak var trackTableView: DJTableView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
@@ -50,7 +48,7 @@ class SelectionViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
 }
-
+//MARK: search bar delegate
 extension SelectionViewController: UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -96,11 +94,11 @@ extension SelectionViewController: UISearchBarDelegate {
                 self.stopActivity()
                 return "Done"
             }.catch{ error in
-                print(error.localizedDescription)
-        }
+                
+            }
     }
 }
-
+// MARK: tableview delegate and data source
 extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     userDefaults.set(sessionData, forKey: "SpotifySession")
                     userDefaults.synchronize()
                     // 6 - Tell notification center login is successful
-                    NotificationCenter.default.post(name: Notification.Name(rawValue: "loginSuccessfull"), object: nil)
+                    NotificationCenter.default.post(name: Notification.Name.loginSuccessful, object: nil)
                 } 
             })
             return true

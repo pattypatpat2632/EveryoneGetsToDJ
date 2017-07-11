@@ -61,7 +61,7 @@ extension Track {
         selectedDate = Date()
     }
     
-    mutating func asDictionary() -> [String: Any] {
+   mutating func asDictionary() -> [String: Any] {
         self.tag()
         let dictionary: [String: Any] = [
             "name": name,

@@ -13,10 +13,10 @@ class DJLabel: UILabel{
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+        commonInit()
     }
 
-    func setup() {
+    func commonInit() {
         textColor = colorScheme.model.foregroundColor
         self.backgroundColor = UIColor.clear
     }
