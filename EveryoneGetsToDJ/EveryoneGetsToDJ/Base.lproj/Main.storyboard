@@ -381,13 +381,33 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackCell" rowHeight="62" id="JW6-XM-mU8" customClass="TrackCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="300" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JW6-XM-mU8" id="UbN-QQ-IgV" customClass="TrackContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JW6-XM-mU8" id="UbN-QQ-IgV">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AU6-2w-m4O" customClass="TrackContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="62"/>
+                                                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPr-6i-yZh">
+                                                    <rect key="frame" x="240" y="0.0" width="60" height="62"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AU6-2w-m4O" firstAttribute="width" secondItem="UbN-QQ-IgV" secondAttribute="width" multiplier="0.8" id="7v0-NE-tjG"/>
+                                                <constraint firstItem="FPr-6i-yZh" firstAttribute="top" secondItem="UbN-QQ-IgV" secondAttribute="top" id="Rn2-1P-RPX"/>
+                                                <constraint firstItem="FPr-6i-yZh" firstAttribute="leading" secondItem="AU6-2w-m4O" secondAttribute="trailing" id="Sve-0s-H8V"/>
+                                                <constraint firstItem="AU6-2w-m4O" firstAttribute="top" secondItem="UbN-QQ-IgV" secondAttribute="top" id="c60-AV-qab"/>
+                                                <constraint firstItem="AU6-2w-m4O" firstAttribute="height" secondItem="UbN-QQ-IgV" secondAttribute="height" id="dHY-xu-tZf"/>
+                                                <constraint firstItem="FPr-6i-yZh" firstAttribute="trailing" secondItem="UbN-QQ-IgV" secondAttribute="trailing" id="kcP-1L-pZ1"/>
+                                                <constraint firstItem="AU6-2w-m4O" firstAttribute="leading" secondItem="UbN-QQ-IgV" secondAttribute="leading" id="krQ-fa-dpj"/>
+                                                <constraint firstItem="FPr-6i-yZh" firstAttribute="bottom" secondItem="UbN-QQ-IgV" secondAttribute="bottom" id="lhW-46-dVv"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contentView" destination="UbN-QQ-IgV" id="Vf9-K6-foe"/>
-                                            <outlet property="trackContentView" destination="UbN-QQ-IgV" id="rRP-2z-IEK"/>
+                                            <outlet property="trackContentView" destination="AU6-2w-m4O" id="m4n-Da-pXr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -588,38 +608,10 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" rowHeight="62" id="Yzf-tg-nGI" customClass="TrackCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="300" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yzf-tg-nGI" id="uYw-BJ-9Vo">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="62"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yzf-tg-nGI" id="uYw-BJ-9Vo" customClass="TrackContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="61.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsM-TT-qEb" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="16" width="268" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2m-EH-jGn" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="32" width="276" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="VsM-TT-qEb" firstAttribute="height" secondItem="uYw-BJ-9Vo" secondAttribute="height" multiplier="0.25" id="74P-B0-Jan"/>
-                                                <constraint firstItem="S2m-EH-jGn" firstAttribute="top" secondItem="VsM-TT-qEb" secondAttribute="bottom" id="7Nh-Sq-p2j"/>
-                                                <constraint firstItem="VsM-TT-qEb" firstAttribute="top" secondItem="uYw-BJ-9Vo" secondAttribute="topMargin" constant="8" id="KjM-iW-6S4"/>
-                                                <constraint firstItem="S2m-EH-jGn" firstAttribute="trailing" secondItem="uYw-BJ-9Vo" secondAttribute="trailingMargin" id="ZBF-r1-Xea"/>
-                                                <constraint firstItem="VsM-TT-qEb" firstAttribute="trailing" secondItem="uYw-BJ-9Vo" secondAttribute="trailingMargin" constant="-8" id="eBj-5n-c2h"/>
-                                                <constraint firstItem="S2m-EH-jGn" firstAttribute="bottom" secondItem="uYw-BJ-9Vo" secondAttribute="bottomMargin" constant="8" id="jgd-Jk-OH8"/>
-                                                <constraint firstItem="VsM-TT-qEb" firstAttribute="leading" secondItem="uYw-BJ-9Vo" secondAttribute="leadingMargin" constant="8" id="paA-hD-O9s"/>
-                                                <constraint firstItem="S2m-EH-jGn" firstAttribute="leading" secondItem="uYw-BJ-9Vo" secondAttribute="leadingMargin" constant="8" id="y3F-H3-CBF"/>
-                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="artistNameLabel" destination="S2m-EH-jGn" id="Tvh-WE-QgH"/>
-                                            <outlet property="trackNameLabel" destination="VsM-TT-qEb" id="1yA-iH-rWJ"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

@@ -18,8 +18,6 @@ class TrackCell: UITableViewCell {
         }
     }
     
-    @IBOutlet weak var trackNameLabel: DJLabel!
-    @IBOutlet weak var artistNameLabel: DJLabel!
     @IBOutlet weak var trackContentView: TrackContentView!
     
     required init?(coder aDecoder: NSCoder) {
