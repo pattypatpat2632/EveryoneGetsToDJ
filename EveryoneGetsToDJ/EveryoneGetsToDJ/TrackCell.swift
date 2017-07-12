@@ -13,14 +13,14 @@ class TrackCell: UITableViewCell {
     var track: Track? {
         didSet {
             if let track = self.track{
-                trackNameLabel.text = track.name
-                artistNameLabel.text = track.artistName
+                trackContentView.setLabels(to: track)
             }
         }
     }
     
     @IBOutlet weak var trackNameLabel: DJLabel!
     @IBOutlet weak var artistNameLabel: DJLabel!
+    @IBOutlet weak var trackContentView: TrackContentView!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

@@ -69,6 +69,8 @@
 		ECF108841EF98175006365AB /* DJView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF108831EF98175006365AB /* DJView.swift */; };
 		ECFDFBF51EEB70EF00480F8F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFDFBF41EEB70EF00480F8F /* ApiError.swift */; };
 		ECFE68861F169BCB00A631A2 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFE68851F169BCB00A631A2 /* FavoritesViewController.swift */; };
+		ECFE68881F169E8400A631A2 /* TrackContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECFE68871F169E8400A631A2 /* TrackContentView.xib */; };
+		ECFE688A1F169EF600A631A2 /* TrackContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFE68891F169EF600A631A2 /* TrackContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +156,8 @@
 		ECF108831EF98175006365AB /* DJView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJView.swift; sourceTree = "<group>"; };
 		ECFDFBF41EEB70EF00480F8F /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		ECFE68851F169BCB00A631A2 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		ECFE68871F169E8400A631A2 /* TrackContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackContentView.xib; sourceTree = "<group>"; };
+		ECFE68891F169EF600A631A2 /* TrackContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +378,8 @@
 				ECDA79D11F0044D7004F1DAD /* instructionsTextView.swift */,
 				ECD349211F02C46400A27DA8 /* NoTracksPlayingView.xib */,
 				ECD349231F02C49600A27DA8 /* NoTracksPlayingView.swift */,
+				ECFE68871F169E8400A631A2 /* TrackContentView.xib */,
+				ECFE68891F169EF600A631A2 /* TrackContentView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -488,6 +494,7 @@
 			files = (
 				ECCC806C1EFAB7F300D1A294 /* Electricity Personal Use.ttf in Resources */,
 				EC9D6D5A1EE8ABC60021370D /* LaunchScreen.storyboard in Resources */,
+				ECFE68881F169E8400A631A2 /* TrackContentView.xib in Resources */,
 				ECD349221F02C46400A27DA8 /* NoTracksPlayingView.xib in Resources */,
 				EC2018351EF70C9900ECB4ED /* GoogleService-Info.plist in Resources */,
 				EC9D6D571EE8ABC60021370D /* Assets.xcassets in Resources */,
@@ -650,6 +657,7 @@
 				ECCC80741EFB060300D1A294 /* PlaybackEngine.swift in Sources */,
 				EC5F83601EFC080500EB4C4D /* NotificationExt.swift in Sources */,
 				EC9D6D891EEB4BD30021370D /* Artist.swift in Sources */,
+				ECFE688A1F169EF600A631A2 /* TrackContentView.swift in Sources */,
 				ECCC80701EFAB9DC00D1A294 /* DJLabel.swift in Sources */,
 				EC5CC81E1EF1F70300F83E13 /* SelectionViewController.swift in Sources */,
 			);

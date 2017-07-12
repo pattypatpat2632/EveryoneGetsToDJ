@@ -381,37 +381,13 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackCell" rowHeight="62" id="JW6-XM-mU8" customClass="TrackCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="300" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JW6-XM-mU8" id="UbN-QQ-IgV">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JW6-XM-mU8" id="UbN-QQ-IgV" customClass="TrackContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF0-Rl-J63" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="16" width="268" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nh6-Rk-z6O" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="32" width="276" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="tF0-Rl-J63" firstAttribute="top" secondItem="UbN-QQ-IgV" secondAttribute="topMargin" constant="8" id="21R-hq-NTL"/>
-                                                <constraint firstItem="nh6-Rk-z6O" firstAttribute="bottom" secondItem="UbN-QQ-IgV" secondAttribute="bottomMargin" constant="8" id="97G-gY-O8P"/>
-                                                <constraint firstItem="tF0-Rl-J63" firstAttribute="trailing" secondItem="UbN-QQ-IgV" secondAttribute="trailingMargin" constant="-8" id="DZ2-8d-kU2"/>
-                                                <constraint firstItem="tF0-Rl-J63" firstAttribute="leading" secondItem="UbN-QQ-IgV" secondAttribute="leadingMargin" constant="8" id="Lya-Fd-cYi"/>
-                                                <constraint firstItem="tF0-Rl-J63" firstAttribute="height" secondItem="UbN-QQ-IgV" secondAttribute="height" multiplier="0.25" id="OkT-zb-pNE"/>
-                                                <constraint firstItem="nh6-Rk-z6O" firstAttribute="trailing" secondItem="UbN-QQ-IgV" secondAttribute="trailingMargin" id="WaZ-EK-CnN"/>
-                                                <constraint firstItem="nh6-Rk-z6O" firstAttribute="top" secondItem="tF0-Rl-J63" secondAttribute="bottom" id="sGk-67-lym"/>
-                                                <constraint firstItem="nh6-Rk-z6O" firstAttribute="leading" secondItem="UbN-QQ-IgV" secondAttribute="leadingMargin" constant="8" id="uWf-3o-mpd"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="artistNameLabel" destination="nh6-Rk-z6O" id="FWh-t3-g93"/>
-                                            <outlet property="trackNameLabel" destination="tF0-Rl-J63" id="aQx-0e-7w2"/>
+                                            <outlet property="contentView" destination="UbN-QQ-IgV" id="Vf9-K6-foe"/>
+                                            <outlet property="trackContentView" destination="UbN-QQ-IgV" id="rRP-2z-IEK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -613,7 +589,7 @@
                                         <rect key="frame" x="0.0" y="28" width="300" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yzf-tg-nGI" id="uYw-BJ-9Vo">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="61.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsM-TT-qEb" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
