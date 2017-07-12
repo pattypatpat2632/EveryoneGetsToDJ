@@ -27,6 +27,8 @@ class EveryoneGetsToDJTests: XCTestCase {
         let firManager = FirebaseManager.sharedInstance
         firManager.observe(jukebox: "-KnZjudS6PoKyQFaQU5M").then { jukebox -> String in
             XCTAssertTrue(jukebox.tracks.count == 1, "Should observe one track within test jukebox")
+            let trackInstantiated = (firManager.jukebox?.tracks[0].name == "Drunken Lullabies" && firManager.jukebox?.tracks[0].uri == "spotify:track:3nhJpxZXEQTsZwrDUihXQf")
+            XCTAssertTrue(trackInstantiated, "Firebase Manager Shared Instance Jukebox should have instantiated tracks")
             firExpectation.fulfill()
             return "Done"
         }.catch { error in
