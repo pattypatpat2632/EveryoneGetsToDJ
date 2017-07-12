@@ -73,8 +73,12 @@ final class ApiClient {
             request.addValue("application/json", forHTTPHeaderField: "Accept")
             request.httpMethod = "GET"
             let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, _, _) in
-                let response = resource.parse(data!)//TODO: refactor
-                fulfill(response)
+                if let data = data {
+                    let response = resource.parse(data)
+                    fulfill(response)
+                } else {
+                    reject(ApiError.unexpected("No data returned from fetch function")) //TODO: refactor error handling
+                }
             })
             task.resume()
         }

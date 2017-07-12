@@ -381,7 +381,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackCell" rowHeight="62" id="JW6-XM-mU8" customClass="TrackCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="300" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JW6-XM-mU8" id="UbN-QQ-IgV">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JW6-XM-mU8" id="UbN-QQ-IgV" customClass="DJContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -391,20 +391,31 @@
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPr-6i-yZh">
                                                     <rect key="frame" x="240" y="0.0" width="60" height="62"/>
+                                                    <subviews>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="✭" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B9Z-yy-FiC">
+                                                            <rect key="frame" x="13.5" y="16" width="33" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                    </subviews>
                                                     <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="AU6-2w-m4O" firstAttribute="width" secondItem="UbN-QQ-IgV" secondAttribute="width" multiplier="0.8" id="7v0-NE-tjG"/>
-                                                <constraint firstItem="FPr-6i-yZh" firstAttribute="top" secondItem="UbN-QQ-IgV" secondAttribute="top" id="Rn2-1P-RPX"/>
-                                                <constraint firstItem="FPr-6i-yZh" firstAttribute="leading" secondItem="AU6-2w-m4O" secondAttribute="trailing" id="Sve-0s-H8V"/>
                                                 <constraint firstItem="AU6-2w-m4O" firstAttribute="top" secondItem="UbN-QQ-IgV" secondAttribute="top" id="c60-AV-qab"/>
                                                 <constraint firstItem="AU6-2w-m4O" firstAttribute="height" secondItem="UbN-QQ-IgV" secondAttribute="height" id="dHY-xu-tZf"/>
-                                                <constraint firstItem="FPr-6i-yZh" firstAttribute="trailing" secondItem="UbN-QQ-IgV" secondAttribute="trailing" id="kcP-1L-pZ1"/>
+                                                <constraint firstItem="FPr-6i-yZh" firstAttribute="width" secondItem="UbN-QQ-IgV" secondAttribute="width" multiplier="0.2" id="dnr-dH-9tM"/>
                                                 <constraint firstItem="AU6-2w-m4O" firstAttribute="leading" secondItem="UbN-QQ-IgV" secondAttribute="leading" id="krQ-fa-dpj"/>
-                                                <constraint firstItem="FPr-6i-yZh" firstAttribute="bottom" secondItem="UbN-QQ-IgV" secondAttribute="bottom" id="lhW-46-dVv"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="FPr-6i-yZh" firstAttribute="bottom" secondItem="JW6-XM-mU8" secondAttribute="bottom" id="5MN-Yd-SlH"/>
+                                            <constraint firstItem="FPr-6i-yZh" firstAttribute="trailing" secondItem="JW6-XM-mU8" secondAttribute="trailing" id="Jy0-DM-Lkg"/>
+                                            <constraint firstItem="FPr-6i-yZh" firstAttribute="top" secondItem="JW6-XM-mU8" secondAttribute="top" id="WJQ-zI-8Vn"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="contentView" destination="UbN-QQ-IgV" id="Vf9-K6-foe"/>
                                             <outlet property="trackContentView" destination="AU6-2w-m4O" id="m4n-Da-pXr"/>
