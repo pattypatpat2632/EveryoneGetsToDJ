@@ -335,7 +335,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Song:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI9-cP-zGR" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="88" y="148" width="200.5" height="31"/>
+                                <rect key="frame" x="87.5" y="148" width="200.5" height="31"/>
                                 <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -585,7 +585,88 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbu-zM-gvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="260" y="-4428.0359820089961"/>
+            <point key="canvasLocation" x="210" y="-5327"/>
+        </scene>
+        <!--Favorites View Controller-->
+        <scene sceneID="SoT-9e-Go6">
+            <objects>
+                <viewController id="zaV-Bs-HeI" customClass="FavoritesViewController" customModule="EveryoneGetsToDJ" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jig-8F-BHw"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Lx-ji-6Tk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eN9-GE-XLe" customClass="DJContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgP-xb-VNL">
+                                <rect key="frame" x="119.5" y="72" width="136" height="31"/>
+                                <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0u7-Nx-oWj" customClass="DJTableView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="131" width="300" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" rowHeight="62" id="Yzf-tg-nGI" customClass="TrackCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="300" height="62"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yzf-tg-nGI" id="uYw-BJ-9Vo">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="61.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsM-TT-qEb" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="16" width="268" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2m-EH-jGn" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="32" width="276" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VsM-TT-qEb" firstAttribute="height" secondItem="uYw-BJ-9Vo" secondAttribute="height" multiplier="0.25" id="74P-B0-Jan"/>
+                                                <constraint firstItem="S2m-EH-jGn" firstAttribute="top" secondItem="VsM-TT-qEb" secondAttribute="bottom" id="7Nh-Sq-p2j"/>
+                                                <constraint firstItem="VsM-TT-qEb" firstAttribute="top" secondItem="uYw-BJ-9Vo" secondAttribute="topMargin" constant="8" id="KjM-iW-6S4"/>
+                                                <constraint firstItem="S2m-EH-jGn" firstAttribute="trailing" secondItem="uYw-BJ-9Vo" secondAttribute="trailingMargin" id="ZBF-r1-Xea"/>
+                                                <constraint firstItem="VsM-TT-qEb" firstAttribute="trailing" secondItem="uYw-BJ-9Vo" secondAttribute="trailingMargin" constant="-8" id="eBj-5n-c2h"/>
+                                                <constraint firstItem="S2m-EH-jGn" firstAttribute="bottom" secondItem="uYw-BJ-9Vo" secondAttribute="bottomMargin" constant="8" id="jgd-Jk-OH8"/>
+                                                <constraint firstItem="VsM-TT-qEb" firstAttribute="leading" secondItem="uYw-BJ-9Vo" secondAttribute="leadingMargin" constant="8" id="paA-hD-O9s"/>
+                                                <constraint firstItem="S2m-EH-jGn" firstAttribute="leading" secondItem="uYw-BJ-9Vo" secondAttribute="leadingMargin" constant="8" id="y3F-H3-CBF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistNameLabel" destination="S2m-EH-jGn" id="Tvh-WE-QgH"/>
+                                            <outlet property="trackNameLabel" destination="VsM-TT-qEb" id="1yA-iH-rWJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zaV-Bs-HeI" id="qWa-Bc-Wj2"/>
+                                    <outlet property="delegate" destination="zaV-Bs-HeI" id="iBT-0x-WGm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lgP-xb-VNL" firstAttribute="top" secondItem="jig-8F-BHw" secondAttribute="bottom" constant="8" id="5Mm-Pq-dUd"/>
+                            <constraint firstItem="0u7-Nx-oWj" firstAttribute="top" secondItem="lgP-xb-VNL" secondAttribute="bottom" constant="28" id="Lqy-yo-ztH"/>
+                            <constraint firstItem="0u7-Nx-oWj" firstAttribute="height" secondItem="eN9-GE-XLe" secondAttribute="height" multiplier="0.6" id="Vyo-Z9-rff"/>
+                            <constraint firstItem="0u7-Nx-oWj" firstAttribute="width" secondItem="eN9-GE-XLe" secondAttribute="width" multiplier="0.8" id="bsC-UN-wP2"/>
+                            <constraint firstItem="0u7-Nx-oWj" firstAttribute="centerX" secondItem="lgP-xb-VNL" secondAttribute="centerX" id="j0s-pl-Z0t"/>
+                            <constraint firstItem="lgP-xb-VNL" firstAttribute="centerX" secondItem="eN9-GE-XLe" secondAttribute="centerX" id="lBa-jh-Osw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="p2c-wn-jAm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9a7-2S-Ikr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208.80000000000001" y="-4645.7271364317849"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Wcc-mS-i8V">
@@ -600,6 +681,7 @@
                     <connections>
                         <segue destination="zDd-Am-9Tg" kind="relationship" relationship="viewControllers" id="1a0-op-SOj"/>
                         <segue destination="EoE-Qd-SxF" kind="relationship" relationship="viewControllers" id="xZW-bC-vP0"/>
+                        <segue destination="zaV-Bs-HeI" kind="relationship" relationship="viewControllers" id="tbm-RY-E6D"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iko-71-qbL" userLabel="First Responder" sceneMemberID="firstResponder"/>

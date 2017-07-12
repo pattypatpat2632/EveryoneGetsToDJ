@@ -68,6 +68,7 @@
 		ECDA79D21F0044D7004F1DAD /* instructionsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA79D11F0044D7004F1DAD /* instructionsTextView.swift */; };
 		ECF108841EF98175006365AB /* DJView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF108831EF98175006365AB /* DJView.swift */; };
 		ECFDFBF51EEB70EF00480F8F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFDFBF41EEB70EF00480F8F /* ApiError.swift */; };
+		ECFE68861F169BCB00A631A2 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFE68851F169BCB00A631A2 /* FavoritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,7 @@
 		ECDA79D11F0044D7004F1DAD /* instructionsTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = instructionsTextView.swift; sourceTree = "<group>"; };
 		ECF108831EF98175006365AB /* DJView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJView.swift; sourceTree = "<group>"; };
 		ECFDFBF41EEB70EF00480F8F /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		ECFE68851F169BCB00A631A2 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +334,7 @@
 				EC2BC4631EF8991D007A783C /* FindJukeboxViewController.swift */,
 				EC5F836B1EFC7E9E00EB4C4D /* DJNavigationController.swift */,
 				EC586C641EFDC4D0008321DA /* InstructionsViewController.swift */,
+				ECFE68851F169BCB00A631A2 /* FavoritesViewController.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -623,6 +626,7 @@
 				EC2BC45A1EF8634E007A783C /* Jukebox.swift in Sources */,
 				EC5F836C1EFC7E9E00EB4C4D /* DJNavigationController.swift in Sources */,
 				EC2BC4581EF83730007A783C /* DJTextField.swift in Sources */,
+				ECFE68861F169BCB00A631A2 /* FavoritesViewController.swift in Sources */,
 				EC586C691EFEEDF0008321DA /* DJActivityIndicatorView.swift in Sources */,
 				ECCC806A1EFAB73400D1A294 /* TrackCell.swift in Sources */,
 				EC2BC45D1EF87DA5007A783C /* MultipeerManager.swift in Sources */,
