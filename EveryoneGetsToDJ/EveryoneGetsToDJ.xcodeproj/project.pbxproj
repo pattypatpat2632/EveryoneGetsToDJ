@@ -68,6 +68,8 @@
 		ECDA79D21F0044D7004F1DAD /* instructionsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA79D11F0044D7004F1DAD /* instructionsTextView.swift */; };
 		ECF108841EF98175006365AB /* DJView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF108831EF98175006365AB /* DJView.swift */; };
 		ECFBF4761F17B73200102628 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBF4751F17B73200102628 /* FavoriteCell.swift */; };
+		ECFBF4781F17BF6900102628 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBF4771F17BF6900102628 /* FavoriteView.swift */; };
+		ECFBF47A1F17BF7B00102628 /* FavoriteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECFBF4791F17BF7B00102628 /* FavoriteView.xib */; };
 		ECFDFBF51EEB70EF00480F8F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFDFBF41EEB70EF00480F8F /* ApiError.swift */; };
 		ECFE68861F169BCB00A631A2 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFE68851F169BCB00A631A2 /* FavoritesViewController.swift */; };
 		ECFE68881F169E8400A631A2 /* TrackContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECFE68871F169E8400A631A2 /* TrackContentView.xib */; };
@@ -156,6 +158,8 @@
 		ECDA79D11F0044D7004F1DAD /* instructionsTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = instructionsTextView.swift; sourceTree = "<group>"; };
 		ECF108831EF98175006365AB /* DJView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJView.swift; sourceTree = "<group>"; };
 		ECFBF4751F17B73200102628 /* FavoriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		ECFBF4771F17BF6900102628 /* FavoriteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		ECFBF4791F17BF7B00102628 /* FavoriteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteView.xib; sourceTree = "<group>"; };
 		ECFDFBF41EEB70EF00480F8F /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		ECFE68851F169BCB00A631A2 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		ECFE68871F169E8400A631A2 /* TrackContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackContentView.xib; sourceTree = "<group>"; };
@@ -383,6 +387,8 @@
 				ECFE68871F169E8400A631A2 /* TrackContentView.xib */,
 				ECFE68891F169EF600A631A2 /* TrackContentView.swift */,
 				ECFBF4751F17B73200102628 /* FavoriteCell.swift */,
+				ECFBF4791F17BF7B00102628 /* FavoriteView.xib */,
+				ECFBF4771F17BF6900102628 /* FavoriteView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -503,6 +509,7 @@
 				EC9D6D571EE8ABC60021370D /* Assets.xcassets in Resources */,
 				ECC8D6341EFF413B00413911 /* Picadilly.ttf in Resources */,
 				ECCC806E1EFAB91000D1A294 /* Neons_demo.otf in Resources */,
+				ECFBF47A1F17BF7B00102628 /* FavoriteView.xib in Resources */,
 				EC9D6D551EE8ABC60021370D /* Main.storyboard in Resources */,
 				ECCC80681EFAB70000D1A294 /* Urban Jungle.ttf in Resources */,
 				EC3EABFF1F01802E00F9EF11 /* DiskScene.sks in Resources */,
@@ -660,6 +667,7 @@
 				ECCC80741EFB060300D1A294 /* PlaybackEngine.swift in Sources */,
 				EC5F83601EFC080500EB4C4D /* NotificationExt.swift in Sources */,
 				EC9D6D891EEB4BD30021370D /* Artist.swift in Sources */,
+				ECFBF4781F17BF6900102628 /* FavoriteView.swift in Sources */,
 				ECFE688A1F169EF600A631A2 /* TrackContentView.swift in Sources */,
 				ECFBF4761F17B73200102628 /* FavoriteCell.swift in Sources */,
 				ECCC80701EFAB9DC00D1A294 /* DJLabel.swift in Sources */,

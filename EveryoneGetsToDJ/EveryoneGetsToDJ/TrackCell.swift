@@ -11,7 +11,7 @@ import UIKit
 class TrackCell: UITableViewCell {
     
     let trackContentView = TrackContentView()
-    let favoriteView = UIView()
+    let favoriteView = FavoriteView()
     
     var track: Track? {
         didSet {
