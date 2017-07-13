@@ -12,6 +12,8 @@ class FavoriteView: UIView {
 
     @IBOutlet var contentView: DJContentView!
     @IBOutlet weak var starLabel: UILabel!
+    
+    weak var delegate: FavoriteViewDelegate?
    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -34,7 +36,21 @@ class FavoriteView: UIView {
         contentView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         
         starLabel.backgroundColor = colorScheme.model.backgroundColor
-
+        
+        addGestures()
+    }
+    
+    func addGestures() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
+        addGestureRecognizer(tapGesture)
+    }
+    
+    func viewTapped() {
+        delegate?.respondToTap()
     }
 
+}
+
+protocol FavoriteViewDelegate: class {
+    func respondToTap()
 }

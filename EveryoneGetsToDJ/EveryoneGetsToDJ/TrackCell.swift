@@ -58,5 +58,12 @@ extension TrackCell {
         favoriteView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         favoriteView.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
         favoriteView.backgroundColor = UIColor.green
+        favoriteView.delegate = self
+    }
+}
+
+extension TrackCell: FavoriteViewDelegate {
+    func respondToTap() {
+        print("FAVORITE TAPPED")
     }
 }
