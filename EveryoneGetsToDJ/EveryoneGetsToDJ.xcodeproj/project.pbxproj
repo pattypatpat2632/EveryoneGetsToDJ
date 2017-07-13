@@ -67,6 +67,7 @@
 		ECDA79D01F003967004F1DAD /* DiskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA79CF1F003967004F1DAD /* DiskView.swift */; };
 		ECDA79D21F0044D7004F1DAD /* instructionsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA79D11F0044D7004F1DAD /* instructionsTextView.swift */; };
 		ECF108841EF98175006365AB /* DJView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF108831EF98175006365AB /* DJView.swift */; };
+		ECFBF4761F17B73200102628 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBF4751F17B73200102628 /* FavoriteCell.swift */; };
 		ECFDFBF51EEB70EF00480F8F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFDFBF41EEB70EF00480F8F /* ApiError.swift */; };
 		ECFE68861F169BCB00A631A2 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFE68851F169BCB00A631A2 /* FavoritesViewController.swift */; };
 		ECFE68881F169E8400A631A2 /* TrackContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECFE68871F169E8400A631A2 /* TrackContentView.xib */; };
@@ -154,6 +155,7 @@
 		ECDA79CF1F003967004F1DAD /* DiskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskView.swift; sourceTree = "<group>"; };
 		ECDA79D11F0044D7004F1DAD /* instructionsTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = instructionsTextView.swift; sourceTree = "<group>"; };
 		ECF108831EF98175006365AB /* DJView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJView.swift; sourceTree = "<group>"; };
+		ECFBF4751F17B73200102628 /* FavoriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		ECFDFBF41EEB70EF00480F8F /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		ECFE68851F169BCB00A631A2 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		ECFE68871F169E8400A631A2 /* TrackContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackContentView.xib; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 				ECD349231F02C49600A27DA8 /* NoTracksPlayingView.swift */,
 				ECFE68871F169E8400A631A2 /* TrackContentView.xib */,
 				ECFE68891F169EF600A631A2 /* TrackContentView.swift */,
+				ECFBF4751F17B73200102628 /* FavoriteCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				EC5F83601EFC080500EB4C4D /* NotificationExt.swift in Sources */,
 				EC9D6D891EEB4BD30021370D /* Artist.swift in Sources */,
 				ECFE688A1F169EF600A631A2 /* TrackContentView.swift in Sources */,
+				ECFBF4761F17B73200102628 /* FavoriteCell.swift in Sources */,
 				ECCC80701EFAB9DC00D1A294 /* DJLabel.swift in Sources */,
 				EC5CC81E1EF1F70300F83E13 /* SelectionViewController.swift in Sources */,
 			);

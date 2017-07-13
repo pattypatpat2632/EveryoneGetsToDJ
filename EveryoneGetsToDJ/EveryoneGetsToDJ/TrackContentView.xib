@@ -20,7 +20,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DJContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="361" height="107"/>
+            <rect key="frame" x="0.0" y="0.0" width="250" height="98"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAn-Nd-Twp" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
@@ -36,7 +36,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XLD-Lv-egw">
-                    <rect key="frame" x="262" y="8" width="91" height="91"/>
+                    <rect key="frame" x="160" y="8" width="82" height="82"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="XLD-Lv-egw" secondAttribute="height" multiplier="1:1" id="UC3-xd-SAn"/>
                     </constraints>
@@ -54,7 +54,7 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="35.5" y="-226.5"/>
+            <point key="canvasLocation" x="-20" y="-231"/>
         </view>
     </objects>
 </document>
