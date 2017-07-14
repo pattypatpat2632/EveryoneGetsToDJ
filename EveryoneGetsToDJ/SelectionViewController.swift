@@ -38,6 +38,12 @@ class SelectionViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateSelectionCount), name: .tracksUpdated, object: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let visibleCells = trackTableView.visibleCells as! [TrackCell]
+        visibleCells.forEach{$0.updateFavoritedState()}
+    }
+    
     func updateSelectionCount() {
         if let tracks = firManager.jukebox?.tracks {
             selectionsLeft = 5 - tracks.filter{$0.selectorID == firManager.uid}.count
