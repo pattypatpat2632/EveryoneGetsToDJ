@@ -580,22 +580,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0u7-Nx-oWj" customClass="DJTableView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0u7-Nx-oWj" customClass="DJTableView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                 <rect key="frame" x="37.5" y="131" width="300" height="400"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" rowHeight="62" id="Yzf-tg-nGI" customClass="FavoriteCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="300" height="62"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" rowHeight="100" id="Yzf-tg-nGI" customClass="FavoriteCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="300" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yzf-tg-nGI" id="uYw-BJ-9Vo">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="61.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMR-NG-iVn" customClass="TrackContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="61.5"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="99.5"/>
+                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="FMR-NG-iVn" firstAttribute="top" secondItem="uYw-BJ-9Vo" secondAttribute="top" id="Mpf-tv-ySy"/>
                                                 <constraint firstAttribute="trailing" secondItem="FMR-NG-iVn" secondAttribute="trailing" id="RLV-fL-4Gw"/>
@@ -603,6 +605,7 @@
                                                 <constraint firstItem="FMR-NG-iVn" firstAttribute="leading" secondItem="uYw-BJ-9Vo" secondAttribute="leading" id="hXp-9I-nte"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="trackContentView" destination="FMR-NG-iVn" id="Pz6-XS-wEg"/>
                                         </connections>

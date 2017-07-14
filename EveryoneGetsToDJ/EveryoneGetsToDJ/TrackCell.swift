@@ -54,7 +54,7 @@ class TrackCell: UITableViewCell {
                 }
             }
             self.favorited = favorited
-            }.catch { _ in
+        }.catch { _ in
                 
         }
     }

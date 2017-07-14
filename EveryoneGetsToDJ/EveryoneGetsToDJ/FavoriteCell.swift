@@ -28,7 +28,7 @@ class FavoriteCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         if selected {
-            flash()
+            trackContentView.flash()
         }
     }
     
@@ -38,6 +38,7 @@ class FavoriteCell: UITableViewCell {
     
     func setProperties() {
         self.backgroundColor = colorScheme.model.backgroundColor
+        contentView.backgroundColor = colorScheme.model.backgroundColor
         self.contentView.layer.borderWidth = 5
         contentView.layer.borderColor = colorScheme.model.foregroundColor.cgColor
         contentView.layer.cornerRadius = 2
