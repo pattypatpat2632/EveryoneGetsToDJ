@@ -9,16 +9,26 @@
 import UIKit
 
 class FavoriteCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    @IBOutlet weak var trackContentView: TrackContentView!
+    
+    var track: Track? {
+        didSet{
+            if let track = track {
+                trackContentView.setLabels(to: track)
+                
+            }
+        }
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        if selected {
+            flash()
+        }
     }
-
+    
+    func set(track: Track) {
+        self.track = track
+    }
+    
 }

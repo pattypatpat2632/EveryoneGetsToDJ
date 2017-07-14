@@ -65,5 +65,9 @@ extension TrackCell {
 extension TrackCell: FavoriteViewDelegate {
     func respondToTap() {
         print("FAVORITE TAPPED")
+        if let track = track {
+            print("CORE DATA TOLD TO SAVE TRACK")
+            CoreDataManager.sharedInstance.save(track: track)
+        }
     }
 }

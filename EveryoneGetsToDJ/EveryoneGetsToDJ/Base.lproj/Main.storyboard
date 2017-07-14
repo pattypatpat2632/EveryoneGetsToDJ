@@ -587,10 +587,25 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" rowHeight="62" id="Yzf-tg-nGI" customClass="FavoriteCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="300" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yzf-tg-nGI" id="uYw-BJ-9Vo" customClass="TrackContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yzf-tg-nGI" id="uYw-BJ-9Vo">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="61.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMR-NG-iVn" customClass="TrackContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="61.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FMR-NG-iVn" firstAttribute="top" secondItem="uYw-BJ-9Vo" secondAttribute="top" id="Mpf-tv-ySy"/>
+                                                <constraint firstAttribute="trailing" secondItem="FMR-NG-iVn" secondAttribute="trailing" id="RLV-fL-4Gw"/>
+                                                <constraint firstAttribute="bottom" secondItem="FMR-NG-iVn" secondAttribute="bottom" id="SYn-G8-bx0"/>
+                                                <constraint firstItem="FMR-NG-iVn" firstAttribute="leading" secondItem="uYw-BJ-9Vo" secondAttribute="leading" id="hXp-9I-nte"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="trackContentView" destination="FMR-NG-iVn" id="Pz6-XS-wEg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -598,6 +613,14 @@
                                     <outlet property="delegate" destination="zaV-Bs-HeI" id="iBT-0x-WGm"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asC-LO-1qU">
+                                <rect key="frame" x="154" y="561" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Delete All"/>
+                                <connections>
+                                    <action selector="deleteAllTapped:" destination="zaV-Bs-HeI" eventType="touchUpInside" id="vqO-Av-dDx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -610,6 +633,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="p2c-wn-jAm"/>
+                    <connections>
+                        <outlet property="tableView" destination="0u7-Nx-oWj" id="hN1-QR-KIe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9a7-2S-Ikr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

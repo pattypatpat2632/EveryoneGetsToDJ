@@ -13,7 +13,8 @@ import PromiseKit
 final class CoreDataManager {
     
     static let sharedInstance = CoreDataManager()
-    var savedTracks = [FavoriteTrack]()
+    private var savedTracks = [FavoriteTrack]()
+    weak var delegate: CoreDataManagerDelegate?
     
     lazy var persistentContainer: NSPersistentContainer = {
         
@@ -52,6 +53,7 @@ final class CoreDataManager {
         favoriteTrack.imageURL = track.imageURL
         favoriteTrack.uri = track.uri
         saveContext()
+        delegate?.coreDataUpdated()
     }
     
     func delete(track: Track) {//TODO: refactor property exchange
@@ -62,19 +64,33 @@ final class CoreDataManager {
             }
         }
         saveContext()
+        delegate?.coreDataUpdated()
+    }
+    
+    func deleteAllTracks() {
+        let context = persistentContainer.viewContext
+        for track in savedTracks {
+            context.delete(track)
+        }
+        saveContext()
+        delegate?.coreDataUpdated()
     }
     
     func fetchFavoriteTracks() -> Promise<[Track]> {
+        print("FETCH FAVORITE TRACKS CALLED")
         return Promise { fulfill, reject in
+            print("PROMISE CLOSURE EXECUTED")
             let context = persistentContainer.viewContext
             var fetchedTracks = [Track]()
             let fetchRequest : NSFetchRequest<FavoriteTrack> = FavoriteTrack.fetchRequest()
             do {
                 let favoriteTracks = try context.fetch(fetchRequest)
                 savedTracks = favoriteTracks
+                print("THERE ARE \(favoriteTracks.count) tracks saved in core data")
                 for favoriteTrack in favoriteTracks {
                     if let track = Track(coreDataTrack: favoriteTrack) {
                         fetchedTracks.append(track)
+                        print("TRACK ADDED TO FETCHED TRACKS: \(fetchedTracks.count)")
                     }
                 }
                 fulfill(fetchedTracks)
@@ -84,4 +100,8 @@ final class CoreDataManager {
         }
     }
     
+}
+
+protocol CoreDataManagerDelegate: class {
+    func coreDataUpdated()
 }
