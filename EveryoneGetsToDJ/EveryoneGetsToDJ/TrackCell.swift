@@ -54,7 +54,7 @@ class TrackCell: UITableViewCell {
                 }
             }
             self.favorited = favorited
-        }.catch { _ in
+            }.catch { _ in
                 
         }
     }
@@ -90,11 +90,18 @@ extension TrackCell {
 extension TrackCell: FavoriteViewDelegate {
     func respondToTap() {
         if let track = track {
-            let savedUris = cdManager.savedTracks.map{$0.uri ?? "NO URI"}
-            if !savedUris.contains(track.uri) {
-                cdManager.save(track: track)
+            if !favorited {
+                let savedUris = cdManager.savedTracks.map{$0.uri ?? "NO URI"}
+                if !savedUris.contains(track.uri) {
+                    cdManager.save(track: track)
+                }
+                self.favorited = true
+            } else {
+                if let track = self.track {
+                    cdManager.delete(track: track)
+                }
+                self.favorited = false
             }
         }
-        self.favorited = true
     }
 }
