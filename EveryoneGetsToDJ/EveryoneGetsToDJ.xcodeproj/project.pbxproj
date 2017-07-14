@@ -70,6 +70,8 @@
 		ECFBF4761F17B73200102628 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBF4751F17B73200102628 /* FavoriteCell.swift */; };
 		ECFBF4781F17BF6900102628 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBF4771F17BF6900102628 /* FavoriteView.swift */; };
 		ECFBF47A1F17BF7B00102628 /* FavoriteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECFBF4791F17BF7B00102628 /* FavoriteView.xib */; };
+		ECFBF47D1F18319C00102628 /* EveroneGetsToDJ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECFBF47B1F18319C00102628 /* EveroneGetsToDJ.xcdatamodeld */; };
+		ECFBF47F1F1831D700102628 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBF47E1F1831D700102628 /* CoreDataManager.swift */; };
 		ECFDFBF51EEB70EF00480F8F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFDFBF41EEB70EF00480F8F /* ApiError.swift */; };
 		ECFE68861F169BCB00A631A2 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFE68851F169BCB00A631A2 /* FavoritesViewController.swift */; };
 		ECFE68881F169E8400A631A2 /* TrackContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECFE68871F169E8400A631A2 /* TrackContentView.xib */; };
@@ -160,6 +162,8 @@
 		ECFBF4751F17B73200102628 /* FavoriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		ECFBF4771F17BF6900102628 /* FavoriteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		ECFBF4791F17BF7B00102628 /* FavoriteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteView.xib; sourceTree = "<group>"; };
+		ECFBF47C1F18319C00102628 /* EveroneGetsToDJ.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EveroneGetsToDJ.xcdatamodel; sourceTree = "<group>"; };
+		ECFBF47E1F1831D700102628 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		ECFDFBF41EEB70EF00480F8F /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		ECFE68851F169BCB00A631A2 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		ECFE68871F169E8400A631A2 /* TrackContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackContentView.xib; sourceTree = "<group>"; };
@@ -298,12 +302,14 @@
 			isa = PBXGroup;
 			children = (
 				EC9D6D701EE8B2120021370D /* Secret.swift */,
+				ECFBF47E1F1831D700102628 /* CoreDataManager.swift */,
 				EC9D6D821EE9BE9A0021370D /* ApiClient.swift */,
 				EC9D6D861EEB46C20021370D /* ApiResponse.swift */,
 				ECFDFBF41EEB70EF00480F8F /* ApiError.swift */,
 				EC5CC8191EF1F45000F83E13 /* LoginManager.swift */,
 				EC56CE521EF7119C0023DDCE /* FirebaseManager.swift */,
 				EC2BC45C1EF87DA5007A783C /* MultipeerManager.swift */,
+				ECFBF47B1F18319C00102628 /* EveroneGetsToDJ.xcdatamodeld */,
 			);
 			name = Utility;
 			path = ..;
@@ -644,11 +650,13 @@
 				EC5F836C1EFC7E9E00EB4C4D /* DJNavigationController.swift in Sources */,
 				EC2BC4581EF83730007A783C /* DJTextField.swift in Sources */,
 				ECFE68861F169BCB00A631A2 /* FavoritesViewController.swift in Sources */,
+				ECFBF47F1F1831D700102628 /* CoreDataManager.swift in Sources */,
 				EC586C691EFEEDF0008321DA /* DJActivityIndicatorView.swift in Sources */,
 				ECCC806A1EFAB73400D1A294 /* TrackCell.swift in Sources */,
 				EC2BC45D1EF87DA5007A783C /* MultipeerManager.swift in Sources */,
 				EC5CC81C1EF1F6CC00F83E13 /* PlaybackViewController.swift in Sources */,
 				ECD349241F02C49600A27DA8 /* NoTracksPlayingView.swift in Sources */,
+				ECFBF47D1F18319C00102628 /* EveroneGetsToDJ.xcdatamodeld in Sources */,
 				EC5AB8F01EF2E2F200483E13 /* DJTabBarController.swift in Sources */,
 				ECF108841EF98175006365AB /* DJView.swift in Sources */,
 				ECD349271F04237D00A27DA8 /* UIViewExt.swift in Sources */,
@@ -972,6 +980,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ECFBF47B1F18319C00102628 /* EveroneGetsToDJ.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ECFBF47C1F18319C00102628 /* EveroneGetsToDJ.xcdatamodel */,
+			);
+			currentVersion = ECFBF47C1F18319C00102628 /* EveroneGetsToDJ.xcdatamodel */;
+			path = EveroneGetsToDJ.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EC9D6D401EE8ABC60021370D /* Project object */;
 }

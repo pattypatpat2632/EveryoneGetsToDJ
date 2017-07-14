@@ -41,4 +41,40 @@ class EveryoneGetsToDJTests: XCTestCase {
         }
     }
     
+    func testCoreData() {
+        let cdManager = CoreDataManager.sharedInstance
+        let firstExpectation = expectation(description: "Expect to fetch favorite track from core data manager")
+        let secondExpecation = expectation(description: "Expect to fetch 0 favorite tracks from core data manager")
+        
+        let track = Track(name: "Name", albumID: "Album ID", albumName: "Album Name", artistID: "Arrist ID", artistName: "Artist Name", imageURL: "Image URL", image: nil, uri: "URI", selectorName: "Selector Name", selectorID: "Selector ID", selectedDate: nil)
+        cdManager.save(track: track)
+        cdManager.fetchFavoriteTracks().then{ tracks -> String in
+            XCTAssertTrue(tracks.count == 1, "There should be one saved track")
+            XCTAssert(tracks[0].name == "Name", "Track should have a name property")
+            firstExpectation.fulfill()
+            return "Done"
+        }.catch {_ in 
+                
+        }
+        
+        
+        cdManager.delete(track: track)
+        
+        
+        cdManager.fetchFavoriteTracks().then{ tracks -> String in
+           
+            XCTAssertTrue(tracks.isEmpty, "There should be 0 saved tracks")
+            secondExpecation.fulfill()
+            return "Done"
+        }.catch {_ in 
+            
+        }
+        
+        waitForExpectations(timeout: 20) { error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
 }

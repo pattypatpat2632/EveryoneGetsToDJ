@@ -50,6 +50,20 @@ extension Track {
             self.selectedDate = Date(timeIntervalSince1970: selectedDate)
         }
     }
+    
+    init?(coreDataTrack: FavoriteTrack) {
+        if let name = coreDataTrack.name, let albumID = coreDataTrack.albumID, let albumName = coreDataTrack.albumName, let artistID = coreDataTrack.artistID, let artistName = coreDataTrack.artistName, let imageURL = coreDataTrack.imageURL, let uri = coreDataTrack.uri {
+            self.name = name
+            self.albumID = albumID
+            self.albumName = albumName
+            self.artistID = artistID
+            self.artistName = artistName
+            self.imageURL = imageURL
+            self.uri = uri
+        } else {
+            return nil
+        }
+    }
 }
 //MARK: database storage functions
 extension Track {
