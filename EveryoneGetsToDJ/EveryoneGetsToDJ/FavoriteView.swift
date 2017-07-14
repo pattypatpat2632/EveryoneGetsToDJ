@@ -48,7 +48,14 @@ class FavoriteView: UIView {
     func viewTapped() {
         delegate?.respondToTap()
     }
-
+    
+    func set(favorited: Bool) {
+        if favorited {
+            starLabel.backgroundColor = colorScheme.model.highlightColor
+        } else {
+            starLabel.backgroundColor = colorScheme.model.backgroundColor
+        }
+    }
 }
 
 protocol FavoriteViewDelegate: class {

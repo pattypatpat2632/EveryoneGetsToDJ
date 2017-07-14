@@ -18,7 +18,14 @@ class TrackCell: UITableViewCell {
         didSet {
             if let track = self.track{
                 trackContentView.setLabels(to: track)
+                updateFavoritedState()
             }
+        }
+    }
+    
+    var favorited = false {
+        didSet {
+            favoriteView.set(favorited: self.favorited)
         }
     }
     
@@ -34,6 +41,23 @@ class TrackCell: UITableViewCell {
         }
     }
     
+    func updateFavoritedState() {
+        cdManager.fetchFavoriteTracks().then { savedTracks -> Void in
+            print("UPDATING FAVORITED STATE FOR TRACK CELL********")
+            var favorited = false
+            let savedUris = savedTracks.map{$0.uri}
+            if let cellTrack = self.track {
+                print("CELL HAS A VALID TRACK")
+                if savedUris.contains(cellTrack.uri) {
+                    print("SAVED URIS DOES CONTAIN CELL TRACK URI*********")
+                    favorited = true
+                }
+            }
+            self.favorited = favorited
+        }.catch { _ in
+                
+        }
+    }
 }
 
 extension TrackCell {
@@ -71,5 +95,6 @@ extension TrackCell: FavoriteViewDelegate {
                 cdManager.save(track: track)
             }
         }
+        self.favorited = true
     }
 }
