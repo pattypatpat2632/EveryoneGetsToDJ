@@ -66,8 +66,8 @@ extension TrackCell {
 extension TrackCell: FavoriteViewDelegate {
     func respondToTap() {
         if let track = track {
-            let savedUris = cdManager.savedTracks.map{$0.uri}
-            if !savedUris.contains(where: track.uri) {
+            let savedUris = cdManager.savedTracks.map{$0.uri ?? "NO URI"}
+            if !savedUris.contains(track.uri) {
                 cdManager.save(track: track)
             }
         }
