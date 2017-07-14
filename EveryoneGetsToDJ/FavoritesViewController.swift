@@ -11,6 +11,7 @@ import UIKit
 class FavoritesViewController: UIViewController {
     
     var cdManager = CoreDataManager.sharedInstance
+    var firManager = FirebaseManager.sharedInstance
     var tracks = [Track]() {
         didSet {
             print("FAVOITE TRACKS SET: \(tracks.count)***********")
@@ -47,6 +48,11 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell", for: indexPath) as! FavoriteCell
         cell.set(track: tracks[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let jukeboxID = firManager.jukebox?.id else {return}
+        firManager.add(track: tracks[indexPath.row], toJukebox: jukeboxID)
     }
 }
 

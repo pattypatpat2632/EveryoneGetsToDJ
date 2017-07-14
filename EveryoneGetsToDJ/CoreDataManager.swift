@@ -13,7 +13,7 @@ import PromiseKit
 final class CoreDataManager {
     
     static let sharedInstance = CoreDataManager()
-    private var savedTracks = [FavoriteTrack]()
+    var savedTracks = [FavoriteTrack]()
     weak var delegate: CoreDataManagerDelegate?
     
     lazy var persistentContainer: NSPersistentContainer = {

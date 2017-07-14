@@ -12,6 +12,7 @@ class TrackCell: UITableViewCell {
     
     let trackContentView = TrackContentView()
     let favoriteView = FavoriteView()
+    let cdManager = CoreDataManager.sharedInstance
     
     var track: Track? {
         didSet {
@@ -64,10 +65,11 @@ extension TrackCell {
 
 extension TrackCell: FavoriteViewDelegate {
     func respondToTap() {
-        print("FAVORITE TAPPED")
         if let track = track {
-            print("CORE DATA TOLD TO SAVE TRACK")
-            CoreDataManager.sharedInstance.save(track: track)
+            let savedUris = cdManager.savedTracks.map{$0.uri}
+            if !savedUris.contains(where: track.uri) {
+                cdManager.save(track: track)
+            }
         }
     }
 }

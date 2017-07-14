@@ -18,4 +18,5 @@ extension DJView {
             return .shadowy
         }
     }
+    
 }

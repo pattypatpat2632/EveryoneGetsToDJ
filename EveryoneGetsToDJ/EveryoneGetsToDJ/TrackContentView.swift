@@ -36,7 +36,7 @@ class TrackContentView: UIView {
         contentView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         contentView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         
-        contentView.backgroundColor = UIColor.clear
+        contentView.backgroundColor = colorScheme.model.backgroundColor
     }
     
     func setLabels(to track: Track) {

@@ -34,8 +34,6 @@ extension UIView: DJView {
                 self.transform = CGAffineTransform(scaleX: 1, y: 1)
             })
         }, completion: nil)
-        
-        
     }
     
     func hide() {
