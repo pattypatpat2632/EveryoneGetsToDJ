@@ -616,9 +616,8 @@
                                     <outlet property="delegate" destination="zaV-Bs-HeI" id="iBT-0x-WGm"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asC-LO-1qU">
-                                <rect key="frame" x="154" y="561" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asC-LO-1qU" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="154.5" y="546" width="66" height="30"/>
                                 <state key="normal" title="Delete All"/>
                                 <connections>
                                     <action selector="deleteAllTapped:" destination="zaV-Bs-HeI" eventType="touchUpInside" id="vqO-Av-dDx"/>
@@ -627,12 +626,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="asC-LO-1qU" firstAttribute="top" secondItem="0u7-Nx-oWj" secondAttribute="bottom" constant="15" id="0na-zb-gah"/>
                             <constraint firstItem="lgP-xb-VNL" firstAttribute="top" secondItem="jig-8F-BHw" secondAttribute="bottom" constant="8" id="5Mm-Pq-dUd"/>
                             <constraint firstItem="0u7-Nx-oWj" firstAttribute="top" secondItem="lgP-xb-VNL" secondAttribute="bottom" constant="28" id="Lqy-yo-ztH"/>
                             <constraint firstItem="0u7-Nx-oWj" firstAttribute="height" secondItem="eN9-GE-XLe" secondAttribute="height" multiplier="0.6" id="Vyo-Z9-rff"/>
                             <constraint firstItem="0u7-Nx-oWj" firstAttribute="width" secondItem="eN9-GE-XLe" secondAttribute="width" multiplier="0.8" id="bsC-UN-wP2"/>
                             <constraint firstItem="0u7-Nx-oWj" firstAttribute="centerX" secondItem="lgP-xb-VNL" secondAttribute="centerX" id="j0s-pl-Z0t"/>
                             <constraint firstItem="lgP-xb-VNL" firstAttribute="centerX" secondItem="eN9-GE-XLe" secondAttribute="centerX" id="lBa-jh-Osw"/>
+                            <constraint firstItem="asC-LO-1qU" firstAttribute="centerX" secondItem="eN9-GE-XLe" secondAttribute="centerX" id="niK-Ej-Oe5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="p2c-wn-jAm"/>
