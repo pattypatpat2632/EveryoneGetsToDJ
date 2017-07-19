@@ -92,7 +92,7 @@ final class ApiClient {
                 return String(character)
             }
             }.joined().lowercased()
-        return sanitized
+        return (sanitized + "*")
     }
     
     
