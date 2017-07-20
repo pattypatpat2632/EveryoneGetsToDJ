@@ -41,6 +41,25 @@ class EveryoneGetsToDJTests: XCTestCase {
         }
     }
     
+    func testTrackInitializer() {
+        let apiExpectation = expectation(description: "expect return from API call")
+        
+        ApiClient.sharedInstance.getToken().then { token in
+            ApiClient.sharedInstance.query(input: "when i come around", with: token)
+        }.then { tracks -> () in
+            let url = tracks[0].imageURL
+            XCTAssertTrue(url == "https://i.scdn.co/image/882ded5bfb1472be3ddd5862a224f62972c1a49c", "Should get valid URL from track album image")
+            apiExpectation.fulfill()
+        }.catch {error in
+        
+        }
+        waitForExpectations(timeout: 10) { (error) in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     func testCoreData() {
         let cdManager = CoreDataManager.sharedInstance
         let firstExpectation = expectation(description: "Expect to fetch favorite track from core data manager")

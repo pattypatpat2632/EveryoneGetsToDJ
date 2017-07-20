@@ -42,6 +42,14 @@ extension Track {
         self.albumName = albumDict["name"] ?? "No name"
         self.albumID = albumDict["id"] ?? "No ID"
         
+        if let images = albumDict["images"] as? [[String: String]] {
+            for image in images {
+                if image["height"] == "64" {
+                    self.imageURL = image["url"]
+                }
+            }
+        }
+        
         self.selectorID = dictionary["selectorID"] as? String ?? "none"
         if let selectorName = dictionary["selectorName"] as? String{
             self.selectorName = selectorName
@@ -49,6 +57,7 @@ extension Track {
         if let selectedDate = dictionary["selectedDate"] as? Double {
             self.selectedDate = Date(timeIntervalSince1970: selectedDate)
         }
+        
     }
     
     init?(coreDataTrack: FavoriteTrack) {
