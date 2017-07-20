@@ -101,7 +101,7 @@ extension SelectionViewController: UISearchBarDelegate {
                 return "Done"
             }.catch{ error in
                 
-            }
+        }
     }
 }
 // MARK: tableview delegate and data source
@@ -134,6 +134,27 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
         if tableView == trackTableView {
             guard let jukeboxID = firManager.jukebox?.id else {return}
             firManager.add(track: tracks[indexPath.row], toJukebox: jukeboxID)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let trackCell = cell as! TrackCell
+        guard let imageUrl = trackCell.track?.imageURL else {return}
+        if let url = URL(string: imageUrl) {
+            let imageResource = Resource<UIImage>(url: url) { data -> UIImage in
+                if let image = UIImage(data: data) {
+                    return image
+                } else {
+                    return #imageLiteral(resourceName: "playingDisk")
+                }
+            }
+            apiClient.getToken().then { token in
+                self.apiClient.fetch(resource: imageResource, with: token)
+            }.then { image in
+                 trackCell.trackContentView.set(image: image)
+            }.catch { error in
+                print(error.localizedDescription)
+            }
         }
     }
 }
