@@ -48,6 +48,7 @@ class EveryoneGetsToDJTests: XCTestCase {
             ApiClient.sharedInstance.query(input: "when i come around", with: token)
         }.then { tracks -> () in
             let url = tracks[0].imageURL
+            
             XCTAssertTrue(url == "https://i.scdn.co/image/882ded5bfb1472be3ddd5862a224f62972c1a49c", "Should get valid URL from track album image")
             apiExpectation.fulfill()
         }.catch {error in

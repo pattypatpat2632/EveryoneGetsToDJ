@@ -38,14 +38,15 @@ extension Track {
             self.artistName = self.artistName + "\(name) "
             self.artistID = artist["id"] as? String ?? "No ID"
         }
-        let albumDict = dictionary["album"] as? [String: String] ?? [:]
-        self.albumName = albumDict["name"] ?? "No name"
-        self.albumID = albumDict["id"] ?? "No ID"
+        let albumDict = dictionary["album"] as? [String: Any] ?? [:]
+        self.albumName = albumDict["name"] as? String ?? "No name"
+        self.albumID = albumDict["id"] as? String ?? "No ID"
         
-        if let images = albumDict["images"] as? [[String: String]] {
+        if let images = albumDict["images"] as? [[String: Any]] {
             for image in images {
-                if image["height"] == "64" {
-                    self.imageURL = image["url"]
+                let imageHeight = image["height"] as! Int
+                if imageHeight == 64 {
+                    self.imageURL = image["url"] as! String
                 }
             }
         }
