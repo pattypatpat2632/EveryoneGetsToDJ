@@ -24,14 +24,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAn-Nd-Twp" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                    <rect key="frame" x="8" y="8" width="39" height="24"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <rect key="frame" x="8" y="8" width="144" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN4-7Q-rvx" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                    <rect key="frame" x="8" y="40" width="39.5" height="19.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <rect key="frame" x="8" y="35.5" width="144" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -48,7 +48,9 @@
                 <constraint firstItem="KN4-7Q-rvx" firstAttribute="top" secondItem="YAn-Nd-Twp" secondAttribute="bottom" constant="8" id="JGY-fN-YVt"/>
                 <constraint firstItem="XLD-Lv-egw" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-8" id="MeE-Td-KKh"/>
                 <constraint firstItem="XLD-Lv-egw" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="-8" id="Qdb-s8-3Va"/>
+                <constraint firstItem="XLD-Lv-egw" firstAttribute="leading" secondItem="YAn-Nd-Twp" secondAttribute="trailing" constant="8" id="bgL-0D-BH0"/>
                 <constraint firstItem="XLD-Lv-egw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="dKV-ui-rjp"/>
+                <constraint firstItem="XLD-Lv-egw" firstAttribute="leading" secondItem="KN4-7Q-rvx" secondAttribute="trailing" constant="8" id="dqD-k9-xeN"/>
                 <constraint firstItem="KN4-7Q-rvx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="j4Y-RF-lkv"/>
                 <constraint firstItem="YAn-Nd-Twp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="mmU-ca-FsQ"/>
             </constraints>
