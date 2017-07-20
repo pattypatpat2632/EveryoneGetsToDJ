@@ -154,7 +154,10 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
                  trackCell.trackContentView.set(image: image)
             }.catch { error in
                 print(error.localizedDescription)
+                trackCell.trackContentView.set(image: #imageLiteral(resourceName: "playingDisk"))
             }
+        } else {
+            trackCell.trackContentView.set(image: #imageLiteral(resourceName: "playingDisk"))
         }
     }
 }

@@ -62,13 +62,13 @@ extension Track {
     }
     
     init?(coreDataTrack: FavoriteTrack) {
-        if let name = coreDataTrack.name, let albumID = coreDataTrack.albumID, let albumName = coreDataTrack.albumName, let artistID = coreDataTrack.artistID, let artistName = coreDataTrack.artistName, let uri = coreDataTrack.uri {
+        if let name = coreDataTrack.name, let albumID = coreDataTrack.albumID, let albumName = coreDataTrack.albumName, let artistID = coreDataTrack.artistID, let artistName = coreDataTrack.artistName, let uri = coreDataTrack.uri, let imageURL = coreDataTrack.imageURL {
             self.name = name
             self.albumID = albumID
             self.albumName = albumName
             self.artistID = artistID
             self.artistName = artistName
-            self.imageURL = "PLACEHOLDER"
+            self.imageURL = imageURL
             self.uri = uri
         } else {
             return nil

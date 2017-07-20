@@ -71,6 +71,7 @@ class EveryoneGetsToDJTests: XCTestCase {
         cdManager.fetchFavoriteTracks().then{ tracks -> String in
             XCTAssertTrue(tracks.count == 1, "There should be one saved track")
             XCTAssert(tracks[0].name == "Name", "Track should have a name property")
+            XCTAssertTrue(tracks[0].imageURL == "Image URL", "Track should have an image url")
             firstExpectation.fulfill()
             return "Done"
         }.catch {_ in 
