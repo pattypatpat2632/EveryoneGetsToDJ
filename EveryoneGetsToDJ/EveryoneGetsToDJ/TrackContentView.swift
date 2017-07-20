@@ -15,6 +15,7 @@ class TrackContentView: UIView {
     @IBOutlet weak var artistLabel: DJLabel!
     @IBOutlet weak var userLabel: DJLabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -38,6 +39,8 @@ class TrackContentView: UIView {
         
         contentView.backgroundColor = UIColor.clear
         self.backgroundColor = UIColor.clear
+        
+        activityIndicator.hidesWhenStopped = true
     }
     
     func setLabels(to track: Track) {

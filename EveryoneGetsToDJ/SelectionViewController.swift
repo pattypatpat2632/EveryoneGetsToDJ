@@ -139,6 +139,8 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let trackCell = cell as! TrackCell
+        let imageActvityIndicator = trackCell.trackContentView.activityIndicator
+        imageActvityIndicator?.startAnimating()
         guard let imageUrl = trackCell.track?.imageURL else {return}
         if let url = URL(string: imageUrl) {
             let imageResource = Resource<UIImage>(url: url) { data -> UIImage in
@@ -150,13 +152,16 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
             }
             apiClient.getToken().then { token in
                 self.apiClient.fetch(resource: imageResource, with: token)
-            }.then { image in
+            }.then { image -> Void in
+                imageActvityIndicator?.stopAnimating()
                  trackCell.trackContentView.set(image: image)
             }.catch { error in
                 print(error.localizedDescription)
+                imageActvityIndicator?.stopAnimating()
                 trackCell.trackContentView.set(image: #imageLiteral(resourceName: "playingDisk"))
             }
         } else {
+            imageActvityIndicator?.stopAnimating()
             trackCell.trackContentView.set(image: #imageLiteral(resourceName: "playingDisk"))
         }
     }

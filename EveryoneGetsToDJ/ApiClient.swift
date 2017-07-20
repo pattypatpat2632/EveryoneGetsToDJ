@@ -39,6 +39,8 @@ final class ApiClient {
                     } catch {
                         reject(ApiError.unexpected("Could not serialize json from data response"))
                     }
+                } else {
+                    reject(ApiError.unexpected("Could not get token"))
                 }
             }
             task.resume()
