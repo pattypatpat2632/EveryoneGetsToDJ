@@ -45,4 +45,17 @@ extension UIView: DJView {
     }
 }
 
+extension UIView {
+    public func addInnerShadow(topColor: UIColor = UIColor.black.withAlphaComponent(0.3), bottomColor: UIColor = UIColor.white.withAlphaComponent(0)) {
+        let shadowLayer = CAGradientLayer()
+        shadowLayer.cornerRadius = layer.cornerRadius
+        shadowLayer.frame = bounds
+        shadowLayer.frame.size.height = 10.0
+        shadowLayer.colors = [
+            topColor.cgColor,
+            bottomColor.cgColor
+        ]
+        layer.addSublayer(shadowLayer)
+    }
+}
 

@@ -14,6 +14,8 @@ class DJTableView: UITableView {
         super.init(coder: aDecoder)
         
         backgroundColor = colorScheme.model.baseColor
+        
+        
     }
 
 }

@@ -16,9 +16,12 @@ class GlowingLabel: DJLabel {
         
         layer.shadowColor = colorScheme.model.foregroundColor.cgColor
         layer.shadowRadius = 5
-        layer.shadowOpacity = 0.9
+        layer.shadowOpacity = 1
         layer.shadowOffset = CGSize.zero
         layer.masksToBounds = false
+        
+        shadowColor = UIColor.black
+        shadowOffset = CGSize(width: 1, height: 1)
     }
 
 }

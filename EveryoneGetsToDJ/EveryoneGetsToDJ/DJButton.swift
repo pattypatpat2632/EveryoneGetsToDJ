@@ -22,5 +22,8 @@ class DJButton: UIButton{
         layer.borderColor = colorScheme.model.foregroundColor.cgColor
         layer.borderWidth = 5
         layer.cornerRadius = 2
+        
+        
+        
     }
 }

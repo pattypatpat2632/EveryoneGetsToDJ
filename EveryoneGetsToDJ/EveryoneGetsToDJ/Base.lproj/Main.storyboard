@@ -33,12 +33,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggm-Lm-Tbd" customClass="ShadowView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="141" y="278.5" width="94" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNp-iW-dwZ" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="141" y="278.5" width="94" height="50"/>
+                                <rect key="frame" x="141" y="296" width="94" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Host"/>
                                 <connections>
@@ -46,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMc-V1-lwb" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="140" y="415.5" width="94" height="50"/>
+                                <rect key="frame" x="140" y="433" width="94" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Join"/>
                                 <connections>
@@ -54,14 +50,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Requires a Spotify Premium account)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cn4-ef-Vxc" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="43" y="336.5" width="289" height="21"/>
+                                <rect key="frame" x="43" y="354" width="289" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Everyone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGg-yq-u5F" customClass="GlowingLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="74.5" y="139" width="227" height="52.5"/>
-                                <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="48"/>
+                                <rect key="frame" x="37" y="139" width="302.5" height="70"/>
+                                <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="64"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -73,8 +69,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gets to DJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUS-rN-xPU" customClass="GlowingLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="202.5" y="187.5" width="99" height="21.5"/>
-                                <fontDescription key="fontDescription" name="Neons" family="Neons" pointSize="16"/>
+                                <rect key="frame" x="191.5" y="205" width="148" height="32"/>
+                                <fontDescription key="fontDescription" name="Neons" family="Neons" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -87,17 +83,13 @@
                             <constraint firstItem="GNp-iW-dwZ" firstAttribute="height" secondItem="gCb-dA-4bz" secondAttribute="height" multiplier="0.075" id="5I3-Bi-YKF"/>
                             <constraint firstItem="cn4-ef-Vxc" firstAttribute="centerX" secondItem="gCb-dA-4bz" secondAttribute="centerX" id="CNh-fH-5Sy"/>
                             <constraint firstItem="cn4-ef-Vxc" firstAttribute="top" secondItem="GNp-iW-dwZ" secondAttribute="bottom" constant="8" id="I1m-v3-1JC"/>
-                            <constraint firstItem="ggm-Lm-Tbd" firstAttribute="centerY" secondItem="GNp-iW-dwZ" secondAttribute="centerY" id="J8D-f5-3hJ"/>
                             <constraint firstItem="GNp-iW-dwZ" firstAttribute="top" secondItem="iGg-yq-u5F" secondAttribute="bottom" constant="87.5" id="K6f-Gn-iSY"/>
                             <constraint firstItem="sZx-Jo-gvT" firstAttribute="top" secondItem="8Xf-l4-Cph" secondAttribute="bottomMargin" constant="20" id="Npd-xX-KGl"/>
                             <constraint firstItem="JMc-V1-lwb" firstAttribute="width" secondItem="gCb-dA-4bz" secondAttribute="width" multiplier="0.25" id="T3Q-dc-a8C"/>
-                            <constraint firstItem="ggm-Lm-Tbd" firstAttribute="centerX" secondItem="GNp-iW-dwZ" secondAttribute="centerX" id="VdX-oy-tGR"/>
                             <constraint firstItem="8Xf-l4-Cph" firstAttribute="centerX" secondItem="gCb-dA-4bz" secondAttribute="centerX" id="Xfo-mx-WVW"/>
                             <constraint firstItem="iGg-yq-u5F" firstAttribute="centerX" secondItem="gCb-dA-4bz" secondAttribute="centerX" id="cRg-xK-jFh"/>
-                            <constraint firstItem="ggm-Lm-Tbd" firstAttribute="height" secondItem="GNp-iW-dwZ" secondAttribute="height" id="iMi-Lj-g1f"/>
                             <constraint firstItem="GNp-iW-dwZ" firstAttribute="centerX" secondItem="gCb-dA-4bz" secondAttribute="centerX" id="iY8-CI-I8a"/>
                             <constraint firstItem="GNp-iW-dwZ" firstAttribute="width" secondItem="gCb-dA-4bz" secondAttribute="width" multiplier="0.25" id="pQx-U2-pig"/>
-                            <constraint firstItem="ggm-Lm-Tbd" firstAttribute="width" secondItem="GNp-iW-dwZ" secondAttribute="width" id="rMD-Gq-L97"/>
                             <constraint firstItem="fUS-rN-xPU" firstAttribute="top" secondItem="iGg-yq-u5F" secondAttribute="bottom" constant="-4.5" id="sCR-N8-Oct"/>
                             <constraint firstItem="iGg-yq-u5F" firstAttribute="top" secondItem="uRO-gr-H4z" secondAttribute="bottom" constant="75" id="seT-Q8-Xyh"/>
                             <constraint firstItem="JMc-V1-lwb" firstAttribute="top" secondItem="cn4-ef-Vxc" secondAttribute="bottom" constant="58" id="yp4-zC-mqD"/>
@@ -382,10 +374,6 @@
                                     <outlet property="label" destination="raE-nJ-auF" id="r6Y-fL-XOC"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xhc-iL-Ssq" customClass="ShadowView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="37" y="187" width="300" height="334"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="78" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ToB-MR-Qak" customClass="DJTableView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
                                 <rect key="frame" x="37" y="187" width="300" height="334"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -407,28 +395,32 @@
                                     <outlet property="delegate" destination="EoE-Qd-SxF" id="GIz-S6-WCB"/>
                                 </connections>
                             </tableView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCd-ye-asv" customClass="ShadowView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
+                                <rect key="frame" x="37" y="187" width="300" height="334"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Xhc-iL-Ssq" firstAttribute="height" secondItem="ToB-MR-Qak" secondAttribute="height" id="0g2-IV-adv"/>
                             <constraint firstItem="H8q-oh-nsn" firstAttribute="top" secondItem="Vk4-Fc-hcK" secondAttribute="bottom" constant="21" id="1jg-mc-7ZB"/>
                             <constraint firstItem="ToB-MR-Qak" firstAttribute="height" secondItem="VRa-PC-XXJ" secondAttribute="height" multiplier="0.5" id="2bK-ef-Ekk"/>
                             <constraint firstItem="ToB-MR-Qak" firstAttribute="top" secondItem="hI9-cP-zGR" secondAttribute="bottom" constant="8" id="2qo-eR-IlZ"/>
                             <constraint firstItem="hYH-Eo-sjf" firstAttribute="width" secondItem="VRa-PC-XXJ" secondAttribute="width" multiplier="0.25" id="FmI-Ei-IED"/>
-                            <constraint firstItem="Xhc-iL-Ssq" firstAttribute="centerY" secondItem="ToB-MR-Qak" secondAttribute="centerY" id="JNu-Sg-5HY"/>
+                            <constraint firstItem="WCd-ye-asv" firstAttribute="height" secondItem="ToB-MR-Qak" secondAttribute="height" id="Mfp-mW-2Ui"/>
                             <constraint firstItem="H8q-oh-nsn" firstAttribute="top" secondItem="hYH-Eo-sjf" secondAttribute="bottom" constant="8" id="MnR-3D-hs9"/>
-                            <constraint firstItem="Xhc-iL-Ssq" firstAttribute="centerX" secondItem="ToB-MR-Qak" secondAttribute="centerX" id="NVD-15-JMU"/>
                             <constraint firstItem="Vk4-Fc-hcK" firstAttribute="leading" secondItem="ToB-MR-Qak" secondAttribute="trailing" constant="-181" id="P8z-iL-YzU"/>
+                            <constraint firstItem="WCd-ye-asv" firstAttribute="centerY" secondItem="ToB-MR-Qak" secondAttribute="centerY" id="Pac-mT-JdP"/>
                             <constraint firstItem="hYH-Eo-sjf" firstAttribute="leading" secondItem="VRa-PC-XXJ" secondAttribute="leadingMargin" id="VQ8-9H-aCg"/>
                             <constraint firstItem="Vk4-Fc-hcK" firstAttribute="top" secondItem="ToB-MR-Qak" secondAttribute="bottom" constant="50" id="Y9d-JP-skv"/>
                             <constraint firstItem="hYH-Eo-sjf" firstAttribute="top" secondItem="ToB-MR-Qak" secondAttribute="bottom" constant="42.5" id="YFE-Gl-D7m"/>
-                            <constraint firstItem="Xhc-iL-Ssq" firstAttribute="width" secondItem="ToB-MR-Qak" secondAttribute="width" id="a2a-tZ-tzZ"/>
                             <constraint firstItem="ToB-MR-Qak" firstAttribute="width" secondItem="VRa-PC-XXJ" secondAttribute="width" multiplier="0.8" id="fNv-Al-CWK"/>
                             <constraint firstItem="ToB-MR-Qak" firstAttribute="centerX" secondItem="VRa-PC-XXJ" secondAttribute="centerX" id="gs7-35-Evv"/>
                             <constraint firstItem="Vk4-Fc-hcK" firstAttribute="width" secondItem="ToB-MR-Qak" secondAttribute="width" multiplier="0.7" id="jCn-5p-kE1"/>
                             <constraint firstItem="hI9-cP-zGR" firstAttribute="top" secondItem="Tak-Ge-9eh" secondAttribute="bottom" constant="38" id="knn-ux-Hn9"/>
                             <constraint firstItem="Tak-Ge-9eh" firstAttribute="top" secondItem="E4F-Fi-Yg4" secondAttribute="bottom" constant="2" id="qbZ-4H-yYK"/>
+                            <constraint firstItem="WCd-ye-asv" firstAttribute="width" secondItem="ToB-MR-Qak" secondAttribute="width" id="quP-Ek-Pju"/>
                             <constraint firstItem="StK-ru-czr" firstAttribute="centerX" secondItem="ToB-MR-Qak" secondAttribute="centerX" id="s5C-DS-pls"/>
+                            <constraint firstItem="WCd-ye-asv" firstAttribute="centerX" secondItem="ToB-MR-Qak" secondAttribute="centerX" id="uU7-9q-3Fn"/>
                             <constraint firstItem="Tak-Ge-9eh" firstAttribute="width" secondItem="VRa-PC-XXJ" secondAttribute="width" id="vB5-oJ-NV4"/>
                             <constraint firstItem="Tak-Ge-9eh" firstAttribute="centerX" secondItem="VRa-PC-XXJ" secondAttribute="centerX" id="vaa-3I-9re"/>
                             <constraint firstItem="hI9-cP-zGR" firstAttribute="centerX" secondItem="VRa-PC-XXJ" secondAttribute="centerX" id="xD9-ds-uU3"/>
