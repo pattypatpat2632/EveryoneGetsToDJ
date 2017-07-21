@@ -36,6 +36,11 @@ class FavoriteCell: UITableViewCell {
         self.track = track
     }
     
+    func set(image: UIImage) {
+        track?.image = image
+        trackContentView.set(image: image)
+    }
+    
     func setProperties() {
         self.backgroundColor = colorScheme.model.backgroundColor
         contentView.backgroundColor = colorScheme.model.backgroundColor

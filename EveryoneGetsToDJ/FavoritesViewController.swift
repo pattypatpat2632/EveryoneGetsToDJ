@@ -7,6 +7,7 @@
 
 
 import UIKit
+import PromiseKit
 
 class FavoritesViewController: UIViewController {
     
@@ -59,30 +60,29 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let favoriteCell = cell as! FavoriteCell
-        let imageActivityIndicator = favoriteCell.trackContentView.activityIndicator
-        guard let imageUrl = favoriteCell.track?.imageURL else {return}
-        if let url = URL(string: imageUrl) {
-            let imageResource = Resource<UIImage>(url: url) { data -> UIImage in
-                if let image = UIImage(data: data) {
-                    return image
-                } else {
-                    return #imageLiteral(resourceName: "playingDisk")
-                }
-            }
-            apiClient.getToken().then { token in
+        favoriteCell.set(image: #imageLiteral(resourceName: "playingDisk"))
+        if let imageResource = imageResource(from: favoriteCell.track?.imageURL) {
+            apiClient.getToken().then{ (token) -> Promise<UIImage> in
                 self.apiClient.fetch(resource: imageResource, with: token)
-                }.then { image -> Void in
-                    imageActivityIndicator?.stopAnimating()
-                    favoriteCell.trackContentView.set(image: image)
-                }.catch { error in
-                    print(error.localizedDescription)
-                    imageActivityIndicator?.stopAnimating()
-                    favoriteCell.trackContentView.set(image: #imageLiteral(resourceName: "playingDisk"))
+                }.then(on: DispatchQueue.main, execute: { (image) -> Void in
+                    favoriteCell.set(image: image)
+                }).catch { _ in
+                    favoriteCell.set(image: #imageLiteral(resourceName: "playingDisk"))
             }
-        } else {
-            imageActivityIndicator?.stopAnimating()
-            favoriteCell.trackContentView.set(image: #imageLiteral(resourceName: "playingDisk"))
         }
+    }
+    
+    private func imageResource(from str: String?) -> Resource<UIImage>? {
+        guard let urlString = str else {return nil}
+        guard let url = URL(string: urlString) else {return nil}
+        let imageResource = Resource(url: url) {data -> UIImage in
+            if let image = UIImage(data: data) {
+                return image
+            } else {
+                return #imageLiteral(resourceName: "playingDisk")
+            }
+        }
+        return imageResource
     }
 }
 
