@@ -12,7 +12,10 @@ class DJTableView: UITableView {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
         backgroundColor = colorScheme.model.baseColor
     }
 
 }
+
+
