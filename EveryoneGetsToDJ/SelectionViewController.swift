@@ -142,6 +142,7 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let trackCell = cell as! TrackCell
+        trackCell.set(image: #imageLiteral(resourceName: "playingDisk"))
         if let imageResource = imageResource(from: trackCell.track?.imageURL) {
             apiClient.getToken().then{ (token) -> Promise<UIImage> in
                 self.apiClient.fetch(resource: imageResource, with: token)
