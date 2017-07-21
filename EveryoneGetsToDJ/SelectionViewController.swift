@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PromiseKit
 
 class SelectionViewController: UIViewController {
     
@@ -15,6 +16,8 @@ class SelectionViewController: UIViewController {
     let firManager = FirebaseManager.sharedInstance
     var searchActive = false
     var selectionsLeft: Int = 5
+    let imageQueue = OperationQueue()
+    
     @IBOutlet weak var activityIndicator: DJActivityIndicatorView!
     @IBOutlet weak var selectionsLeftView: SelectionsLeftView!
     
@@ -28,7 +31,6 @@ class SelectionViewController: UIViewController {
     
     
     @IBOutlet weak var searchBar: UISearchBar!
-    
     @IBOutlet weak var trackTableView: DJTableView!
     
     override func viewDidLoad() {
@@ -36,6 +38,8 @@ class SelectionViewController: UIViewController {
         searchBar.delegate = self
         hideKeyboardWhenTappedAround()
         NotificationCenter.default.addObserver(self, selector: #selector(updateSelectionCount), name: .tracksUpdated, object: nil)
+        
+        imageQueue.qualityOfService = .userInitiated
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -95,10 +99,9 @@ extension SelectionViewController: UISearchBarDelegate {
         indicateActivity()
         apiClient.getToken().then { token in
             return self.apiClient.query(input: text, with: token)
-            }.then { (tracks) -> String in
+            }.then { (tracks) -> Void in
                 self.tracks = tracks
                 self.stopActivity()
-                return "Done"
             }.catch{ error in
                 
         }
@@ -139,31 +142,28 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let trackCell = cell as! TrackCell
-        let imageActvityIndicator = trackCell.trackContentView.activityIndicator
-        imageActvityIndicator?.startAnimating()
-        guard let imageUrl = trackCell.track?.imageURL else {return}
-        if let url = URL(string: imageUrl) {
-            let imageResource = Resource<UIImage>(url: url) { data -> UIImage in
-                if let image = UIImage(data: data) {
-                    return image
-                } else {
-                    return #imageLiteral(resourceName: "playingDisk")
-                }
-            }
-            apiClient.getToken().then { token in
+        if let imageResource = imageResource(from: trackCell.track?.imageURL) {
+            apiClient.getToken().then{ (token) -> Promise<UIImage> in
                 self.apiClient.fetch(resource: imageResource, with: token)
-            }.then { image -> Void in
-                imageActvityIndicator?.stopAnimating()
-                 trackCell.trackContentView.set(image: image)
-            }.catch { error in
-                print(error.localizedDescription)
-                imageActvityIndicator?.stopAnimating()
-                trackCell.trackContentView.set(image: #imageLiteral(resourceName: "playingDisk"))
+            }.then(on: DispatchQueue.main, execute: { (image) -> Void in
+                trackCell.set(image: image)
+            }).catch { _ in
+                trackCell.set(image: #imageLiteral(resourceName: "playingDisk"))
             }
-        } else {
-            imageActvityIndicator?.stopAnimating()
-            trackCell.trackContentView.set(image: #imageLiteral(resourceName: "playingDisk"))
         }
+    }
+    
+    private func imageResource(from str: String?) -> Resource<UIImage>? {
+        guard let urlString = str else {return nil}
+        guard let url = URL(string: urlString) else {return nil}
+        let imageResource = Resource(url: url) {data -> UIImage in
+            if let image = UIImage(data: data) {
+                return image
+            } else {
+                return #imageLiteral(resourceName: "playingDisk")
+            }
+        }
+        return imageResource
     }
 }
 

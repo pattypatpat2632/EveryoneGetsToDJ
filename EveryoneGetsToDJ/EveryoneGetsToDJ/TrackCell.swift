@@ -58,6 +58,11 @@ class TrackCell: UITableViewCell {
                 
         }
     }
+    
+    func set(image: UIImage) {
+        track?.image = image
+        trackContentView.set(image: image)
+    }
 }
 
 extension TrackCell {
