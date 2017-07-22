@@ -349,7 +349,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Song:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI9-cP-zGR" customClass="GlowingLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="87.5" y="148" width="200.5" height="31"/>
+                                <rect key="frame" x="88" y="148" width="200.5" height="31"/>
                                 <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -466,11 +466,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5q-Me-sK4" customClass="NoTracksPlayingView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="19.5" y="144" width="337.5" height="400"/>
+                                <rect key="frame" x="19.5" y="143" width="337.5" height="400"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ztq-L5-9cb" customClass="DJTableView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="19.5" y="144" width="337.5" height="400"/>
+                                <rect key="frame" x="19.5" y="143" width="337.5" height="400"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="playbackCell" rowHeight="130" id="bmc-C2-ITn" customClass="PlaybackCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
@@ -537,7 +537,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cY-4J-IAc" customClass="DJButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="16" y="563" width="60" height="30"/>
+                                <rect key="frame" x="16" y="578" width="30" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0cY-4J-IAc" secondAttribute="height" multiplier="2:1" id="Rvx-sx-O35"/>
                                 </constraints>
@@ -547,17 +547,17 @@
                                 </connections>
                             </button>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mTP-bH-cgm" customClass="ShadowView" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="19.5" y="144" width="337.5" height="400"/>
+                                <rect key="frame" x="19.5" y="143" width="337.5" height="400"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksT-uS-ICw" customClass="GlowingLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="70" y="72" width="235" height="39.5"/>
+                                <rect key="frame" x="70.5" y="72" width="235" height="38.5"/>
                                 <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEf-FZ-SCs" customClass="PauseButton" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="165" y="552" width="46" height="46"/>
+                                <rect key="frame" x="164.5" y="551" width="47" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rEf-FZ-SCs" secondAttribute="height" multiplier="1:1" id="yKB-LS-NEm"/>
                                 </constraints>
@@ -574,7 +574,7 @@
                             <constraint firstItem="K5q-Me-sK4" firstAttribute="height" secondItem="ztq-L5-9cb" secondAttribute="height" id="9nE-mj-oFu"/>
                             <constraint firstAttribute="leadingMargin" secondItem="0cY-4J-IAc" secondAttribute="leading" id="I2F-ja-63m"/>
                             <constraint firstItem="K5q-Me-sK4" firstAttribute="width" secondItem="ztq-L5-9cb" secondAttribute="width" id="IHZ-lq-f01"/>
-                            <constraint firstItem="0cY-4J-IAc" firstAttribute="top" secondItem="mTP-bH-cgm" secondAttribute="bottom" constant="19" id="Igu-lG-1Qt"/>
+                            <constraint firstItem="0cY-4J-IAc" firstAttribute="top" secondItem="mTP-bH-cgm" secondAttribute="bottom" constant="35" id="Igu-lG-1Qt"/>
                             <constraint firstItem="ztq-L5-9cb" firstAttribute="centerX" secondItem="mXB-k2-lU9" secondAttribute="centerX" id="JJu-GO-u24"/>
                             <constraint firstItem="K5q-Me-sK4" firstAttribute="centerX" secondItem="ztq-L5-9cb" secondAttribute="centerX" id="JMT-ZM-O9B"/>
                             <constraint firstItem="mTP-bH-cgm" firstAttribute="height" secondItem="ztq-L5-9cb" secondAttribute="height" id="LmD-BG-C3A"/>
@@ -719,7 +719,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xJZ-6k-fFO" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ZPX-rc-q1I">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZPX-rc-q1I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
