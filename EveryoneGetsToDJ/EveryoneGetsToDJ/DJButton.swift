@@ -10,7 +10,7 @@ import UIKit
 
 class DJButton: UIButton{
     
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
@@ -22,8 +22,16 @@ class DJButton: UIButton{
         layer.borderColor = colorScheme.model.foregroundColor.cgColor
         layer.borderWidth = 5
         layer.cornerRadius = 2
-        
-        
-        
+    }
+    
+    func setTitle(as title: String, size: CGFloat) {
+        print("SETTING TITLE")
+        let attrs = [
+            NSForegroundColorAttributeName: colorScheme.model.foregroundColor,
+            NSFontAttributeName: UIFont(name: "Linowrite", size: size)!,
+            NSTextEffectAttributeName: NSTextEffectLetterpressStyle as NSString
+        ]
+        let attTitle = NSAttributedString(string: title, attributes: attrs)
+        self.setAttributedTitle(attTitle, for: .normal)
     }
 }

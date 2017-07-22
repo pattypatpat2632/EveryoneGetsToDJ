@@ -47,15 +47,50 @@ extension UIView: DJView {
 
 extension UIView {
     public func addInnerShadow(topColor: UIColor = UIColor.black.withAlphaComponent(0.3), bottomColor: UIColor = UIColor.white.withAlphaComponent(0)) {
-        let shadowLayer = CAGradientLayer()
-        shadowLayer.cornerRadius = layer.cornerRadius
-        shadowLayer.frame = bounds
-        shadowLayer.frame.size.height = 10.0
-        shadowLayer.colors = [
+        let topLayer = CAGradientLayer()
+        topLayer.cornerRadius = layer.cornerRadius
+        topLayer.frame = bounds
+        topLayer.colors = [
             topColor.cgColor,
             bottomColor.cgColor
         ]
-        layer.addSublayer(shadowLayer)
+        topLayer.endPoint = CGPoint(x: 0.5, y: 0.1)
+        
+        let bottomLayer = CAGradientLayer()
+        bottomLayer.cornerRadius = layer.cornerRadius
+        bottomLayer.frame = bounds
+        bottomLayer.colors = [
+            topColor.cgColor,
+            bottomColor.cgColor
+        ]
+        bottomLayer.startPoint = CGPoint(x: 0.5, y: 1)
+        bottomLayer.endPoint = CGPoint(x: 0.5, y: 0.9)
+        
+        let leftLayer = CAGradientLayer()
+        leftLayer.cornerRadius = layer.cornerRadius
+        leftLayer.frame = bounds
+        leftLayer.colors = [
+            topColor.cgColor,
+            bottomColor.cgColor
+        ]
+        leftLayer.startPoint = CGPoint(x: 0, y: 0.5)
+        leftLayer.endPoint = CGPoint(x: 0.025, y: 0.5)
+        
+        let rightLeyer = CAGradientLayer()
+        rightLeyer.cornerRadius = layer.cornerRadius
+        rightLeyer.frame = bounds
+        rightLeyer.colors = [
+            topColor.cgColor,
+            bottomColor.cgColor
+        ]
+        rightLeyer.startPoint = CGPoint(x: 1, y: 0.5)
+        rightLeyer.endPoint = CGPoint(x: 0.975, y: 0.5)
+        
+        
+        layer.addSublayer(topLayer)
+        layer.addSublayer(bottomLayer)
+        layer.addSublayer(rightLeyer)
+        layer.addSublayer(leftLayer)
     }
 }
 

@@ -15,7 +15,7 @@ protocol DJView {
 extension DJView {
     var colorScheme: ColorScheme {
         get {
-            return .shadowy
+            return .bold
         }
     }
     

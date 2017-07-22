@@ -14,13 +14,26 @@ class LoginViewController: UIViewController {
     
     let apiClient = ApiClient.sharedInstance
     let loginManager = LoginManager.sharedInstance
+    @IBOutlet weak var hostButton: DJButton!
+    @IBOutlet weak var joinButton: DJButton!
+    @IBOutlet weak var instrButton: DJButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        for fontFamilyName in UIFont.familyNames{
+            for fontName in UIFont.fontNames(forFamilyName: fontFamilyName){
+                print("Family: \(fontFamilyName)     Font: \(fontName)")
+            }
+        }
+        
         hideKeyboardWhenTappedAround()
         NotificationCenter.default.addObserver(self, selector: #selector(updateAfterFirstLogin), name: Notification.Name.loginSuccessful, object: nil)
         loginManager.setup()
+        
+        hostButton.setTitle(as: "HOST", size: 20)
+        joinButton.setTitle(as: "JOIN", size: 20)
+        instrButton.setTitle(as: "INSTRUCTIONS", size: 12)
     }
     
     override func viewWillAppear(_ animated: Bool) {
