@@ -18,14 +18,15 @@ class PauseButton: DJButton {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setTitle(as: "||", size: 24)
     }
     
     func updateLabel(to pauseState: PauseState){
         switch pauseState {
         case .paused:
-            self.setTitle(">", for: .normal)
+            self.setTitle(as: ">", size: 24)
         case .playing:
-            self.setTitle("||", for: .normal)
+            self.setTitle(as: "||", size: 24)
         }
     }
     

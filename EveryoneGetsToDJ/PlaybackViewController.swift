@@ -15,7 +15,7 @@ class PlaybackViewController: UIViewController {
     let multipeerManager = MultipeerManager.sharedInstance
     let firManager = FirebaseManager.sharedInstance
     let playbackEngine = PlaybackEngine()
-    
+    @IBOutlet weak var exitButton: DJButton!
     @IBOutlet weak var tracksTableView: DJTableView!
     @IBOutlet weak var pauseButton: PauseButton!
     @IBOutlet weak var noTracksPlayingView: NoTracksPlayingView!
@@ -33,7 +33,7 @@ class PlaybackViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         playbackEngine.delegate = self
-        
+        exitButton.setTitle(as: "EXIT", size: 14)
     }
     
     override func viewWillAppear(_ animated: Bool) {

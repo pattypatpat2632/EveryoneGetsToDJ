@@ -17,6 +17,7 @@ class CreateJukeboxViewController: UIViewController {
     
     @IBOutlet weak var textField: DJTextField!
     @IBOutlet weak var userTextField: DJTextField!
+    @IBOutlet weak var createButton: DJButton!
     
     
     override func viewDidLoad() {
@@ -29,6 +30,7 @@ class CreateJukeboxViewController: UIViewController {
         
         navigationController?.setNavigationBarHidden(false, animated: true)
         hideKeyboardWhenTappedAround()
+        createButton.setTitle(as: "CREATE JUKEBOX", size: 16)
         FirebaseManager.sharedInstance.login().catch{error in
             print(error.localizedDescription)
         }

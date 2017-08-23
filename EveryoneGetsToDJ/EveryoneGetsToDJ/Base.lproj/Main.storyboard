@@ -161,6 +161,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="createButton" destination="ibm-BU-Hbb" id="tYD-cj-Mvx"/>
                         <outlet property="textField" destination="T9n-tf-OSU" id="GWR-k6-mal"/>
                         <outlet property="userTextField" destination="c4P-Uz-cAS" id="GYP-eR-5HN"/>
                         <segue destination="Zf9-w9-9k0" kind="show" identifier="hostJukeboxSegue" id="aaQ-Cj-ofU"/>
@@ -477,7 +478,7 @@
                                         <rect key="frame" x="0.0" y="28" width="338" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bmc-C2-ITn" id="unY-pP-2CP">
-                                            <rect key="frame" x="0.0" y="0.0" width="338" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="337.5" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj2-O1-IcL" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
@@ -493,7 +494,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contributer Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dd-ft-aj1" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                                    <rect key="frame" x="183" y="65" width="138.5" height="49"/>
+                                                    <rect key="frame" x="193.5" y="65" width="128" height="49"/>
                                                     <fontDescription key="fontDescription" name="LW" family="Linowrite" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -594,6 +595,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Playlist" image="Image" id="k8b-oJ-RvC"/>
                     <connections>
+                        <outlet property="exitButton" destination="0cY-4J-IAc" id="rd2-d0-zvo"/>
                         <outlet property="noTracksPlayingView" destination="K5q-Me-sK4" id="hGk-b4-fuk"/>
                         <outlet property="pauseButton" destination="rEf-FZ-SCs" id="cBZ-hG-c0k"/>
                         <outlet property="tracksTableView" destination="ztq-L5-9cb" id="013-7k-BR6"/>
@@ -719,7 +721,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xJZ-6k-fFO" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZPX-rc-q1I">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ZPX-rc-q1I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -737,6 +739,6 @@
         <image name="Image" width="40" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yFO-Ig-jrK"/>
+        <segue reference="aaQ-Cj-ofU"/>
     </inferredMetricsTieBreakers>
 </document>
