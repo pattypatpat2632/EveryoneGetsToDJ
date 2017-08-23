@@ -45,7 +45,7 @@ class EveryoneGetsToDJTests: XCTestCase {
         let apiExpectation = expectation(description: "expect return from API call")
         
         ApiClient.sharedInstance.getToken().then { token in
-            ApiClient.sharedInstance.query(input: "when i come around", with: token)
+            ApiClient.sharedInstance.query(input: "when i come around", withToken: token)
         }.then { tracks -> () in
             let url = tracks[0].imageURL
             
