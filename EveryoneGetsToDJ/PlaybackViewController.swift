@@ -54,6 +54,7 @@ class PlaybackViewController: UIViewController {
     
 }
 
+//MARK: tableview delegate and data source
 extension PlaybackViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -75,6 +76,7 @@ extension PlaybackViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+//MARK: playback engine delegate
 extension PlaybackViewController: PlaybackEngineDelegate {
     func updatedTracks() {
         tracksTableView.reloadData()

@@ -49,12 +49,14 @@ class FindJukeboxViewController: UIViewController{
     }
 }
 
+//MARK: multipeer delegate
 extension FindJukeboxViewController: MultipeerManagerDelegate {
     func updateAvailablePeers() {
         self.jukeboxes = multipeerManager.availableJukeboxes
     }
 }
 
+//MARK: tableview delegate and data source
 extension FindJukeboxViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
