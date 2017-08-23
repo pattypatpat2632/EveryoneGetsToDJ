@@ -98,7 +98,7 @@ extension SelectionViewController: UISearchBarDelegate {
     private func search(text: String) {
         indicateActivity()
         apiClient.getToken().then { token in
-            return self.apiClient.query(input: text, with: token)
+            return self.apiClient.query(input: text, withToken: token)
             }.then { (tracks) -> Void in
                 self.tracks = tracks
                 self.stopActivity()

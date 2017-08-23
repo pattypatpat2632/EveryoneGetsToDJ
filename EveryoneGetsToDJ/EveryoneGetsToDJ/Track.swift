@@ -44,9 +44,9 @@ extension Track {
         
         if let images = albumDict["images"] as? [[String: Any]] {
             for image in images {
-                let imageHeight = image["height"] as! Int
+                let imageHeight = image["height"] as? Int
                 if imageHeight == 64 {
-                    self.imageURL = image["url"] as! String
+                    self.imageURL = image["url"] as? String
                 }
             }
         }

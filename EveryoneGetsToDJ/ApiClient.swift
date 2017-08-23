@@ -47,11 +47,10 @@ final class ApiClient {
         }
     }
     
-    func query(input: String, with token: String) -> Promise<[Track]> {
+    func query(input: String, withToken token: String) -> Promise<[Track]> {
         searchQueue.cancelAllOperations()
         return Promise { fulfill, reject in
             let promiseOp = BlockOperation {
-                
                 if let tracksResource = self.trackSearchResource(from: input) {
                     self.fetch(resource: tracksResource, with: token).then(execute: { (tracks) in
                         fulfill(tracks)
@@ -66,8 +65,7 @@ final class ApiClient {
         }
     }
     
-    
-    func fetch<T>(resource: Resource<T>, with token: String) -> Promise<T> {
+    func fetch<T>(resource: Resource<T>, with token: String) -> Promise<T> { //Fetches instance of a resource
         return Promise { fulfill, reject in
             var request = URLRequest(url: resource.url)
             request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
@@ -101,7 +99,6 @@ final class ApiClient {
 }
 //MARK: resources
 extension ApiClient {
-    
     //Currently not in use - keep for later version which will include artist and album search
     func artistSearchResource(from artist: String) -> Resource<[Artist]>? {
         let formattedArtist = sanitize(artist)

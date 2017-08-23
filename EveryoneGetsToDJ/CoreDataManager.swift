@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 import PromiseKit
 
+//singleton for CoreData
 final class CoreDataManager {
     
     static let sharedInstance = CoreDataManager()
@@ -79,7 +80,6 @@ final class CoreDataManager {
     func fetchFavoriteTracks() -> Promise<[Track]> {
         print("FETCH FAVORITE TRACKS CALLED")
         return Promise { fulfill, reject in
-            print("PROMISE CLOSURE EXECUTED")
             let context = persistentContainer.viewContext
             var fetchedTracks = [Track]()
             let fetchRequest : NSFetchRequest<FavoriteTrack> = FavoriteTrack.fetchRequest()
@@ -99,7 +99,6 @@ final class CoreDataManager {
             }
         }
     }
-    
 }
 
 protocol CoreDataManagerDelegate: class {
