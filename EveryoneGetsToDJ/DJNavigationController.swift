@@ -11,7 +11,6 @@ import UIKit
 class DJNavigationController: UINavigationController, DJView {
     var viewCopy: UIView?
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.backgroundColor = colorScheme.model.baseColor

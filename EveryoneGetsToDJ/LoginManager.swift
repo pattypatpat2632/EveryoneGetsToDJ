@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Singleton for handling Spotify login
 final class LoginManager {
     
     static let sharedInstance = LoginManager()

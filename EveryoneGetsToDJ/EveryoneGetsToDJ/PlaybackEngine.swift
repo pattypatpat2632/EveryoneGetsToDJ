@@ -49,9 +49,7 @@ extension PlaybackEngine: SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDe
     }
     
     func play(track: Track) {
-        player?.playSpotifyURI(track.uri, startingWith: 0, startingWithPosition: 0, callback: { (error) in
-            
-        })
+        player?.playSpotifyURI(track.uri, startingWith: 0, startingWithPosition: 0, callback: {(_) in })
     }
     
     func set(playback: PauseState) {

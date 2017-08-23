@@ -61,7 +61,8 @@ final class MultipeerManager: NSObject {
 }
 //MARK: session functions
 extension MultipeerManager {
-    func send(method: MultipeerResource.Method) {
+    
+    fileprivate func send(method: MultipeerResource.Method) {
         if let jukebox = FirebaseManager.sharedInstance.jukebox {
             let json = MultipeerResource(method: method, jukebox: jukebox).asDictionary()
             if let data = try? JSONSerialization.data(withJSONObject: json, options: []) {
@@ -98,8 +99,6 @@ extension MultipeerManager {
     
     fileprivate func add(jukebox: Jukebox) {
         self.availableJukeboxes.append(jukebox)
-        print(availableJukeboxes.count)
-        
     }
 }
 
@@ -152,7 +151,7 @@ extension MultipeerManager: MCSessionDelegate {
         }
     }
     
-    // Unused required delegate functions
+// Unused required delegate functions
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
     }
     

@@ -18,7 +18,6 @@ final class CoreDataManager {
     weak var delegate: CoreDataManagerDelegate?
     
     lazy var persistentContainer: NSPersistentContainer = {
-        
         let container = NSPersistentContainer(name: "EveroneGetsToDJ")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -36,14 +35,12 @@ final class CoreDataManager {
             do {
                 try context.save()
             } catch {
-                //TODO: refactor fatal error
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                //TODO: handle error
             }
         }
     }
     
-    func save(track: Track) {//TODO: refactor property exchange
+    func save(track: Track) {
         let context = persistentContainer.viewContext
         let favoriteTrack = FavoriteTrack(context: context)
         favoriteTrack.name = track.name
@@ -70,9 +67,7 @@ final class CoreDataManager {
     
     func deleteAllTracks() {
         let context = persistentContainer.viewContext
-        for track in savedTracks {
-            context.delete(track)
-        }
+        savedTracks.forEach{context.delete($0)}
         saveContext()
         delegate?.coreDataUpdated()
     }
@@ -86,11 +81,9 @@ final class CoreDataManager {
             do {
                 let favoriteTracks = try context.fetch(fetchRequest)
                 savedTracks = favoriteTracks
-                print("THERE ARE \(favoriteTracks.count) tracks saved in core data")
                 for favoriteTrack in favoriteTracks {
                     if let track = Track(coreDataTrack: favoriteTrack) {
                         fetchedTracks.append(track)
-                        print("TRACK ADDED TO FETCHED TRACKS: \(fetchedTracks.count)")
                     }
                 }
                 fulfill(fetchedTracks)

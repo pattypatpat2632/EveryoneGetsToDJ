@@ -15,11 +15,7 @@ class FavoritesViewController: UIViewController {
     let firManager = FirebaseManager.sharedInstance
     let apiClient = ApiClient.sharedInstance
     
-    var tracks = [Track]() {
-        didSet {
-            print("FAVOITE TRACKS SET: \(tracks.count)***********")
-        }
-    }
+    var tracks = [Track]()
     @IBOutlet weak var tableView: DJTableView!
     
     override func viewDidLoad() {
@@ -87,12 +83,12 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension FavoritesViewController: CoreDataManagerDelegate {
-    func coreDataUpdated() {
+    func coreDataUpdated() { //When new tracks are saved as favorites, update the view with all saved tracks
         cdManager.fetchFavoriteTracks().then { savedTracks -> Void in
             self.tracks = savedTracks
             self.tableView.reloadData()
         }.catch { error in
-            print("FETCH FaVORITE TRACKS FAILED")
+            print("FETCH FAVORITE TRACKS FAILED")
         }
     }
 }

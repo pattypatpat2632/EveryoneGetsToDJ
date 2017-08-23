@@ -50,7 +50,6 @@
 		EC9D6D7D1EE8B4BF0021370D /* BridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D7C1EE8B4BF0021370D /* BridgeViewController.m */; };
 		EC9D6D7F1EE8B67A0021370D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D7E1EE8B67A0021370D /* LoginViewController.swift */; };
 		EC9D6D831EE9BE9A0021370D /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D821EE9BE9A0021370D /* ApiClient.swift */; };
-		EC9D6D871EEB46C20021370D /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D861EEB46C20021370D /* ApiResponse.swift */; };
 		EC9D6D8B1EEB4BE50021370D /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D8A1EEB4BE50021370D /* Track.swift */; };
 		ECC8D6341EFF413B00413911 /* Picadilly.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECC8D6331EFF413B00413911 /* Picadilly.ttf */; };
 		ECCC80681EFAB70000D1A294 /* Urban Jungle.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECCC80671EFAB70000D1A294 /* Urban Jungle.ttf */; };
@@ -143,7 +142,6 @@
 		EC9D6D7C1EE8B4BF0021370D /* BridgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgeViewController.m; sourceTree = "<group>"; };
 		EC9D6D7E1EE8B67A0021370D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = EveryoneGetsToDJ/LoginViewController.swift; sourceTree = "<group>"; };
 		EC9D6D821EE9BE9A0021370D /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
-		EC9D6D861EEB46C20021370D /* ApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		EC9D6D8A1EEB4BE50021370D /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		ECC8D6331EFF413B00413911 /* Picadilly.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Picadilly.ttf; sourceTree = "<group>"; };
 		ECCC80671EFAB70000D1A294 /* Urban Jungle.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urban Jungle.ttf"; sourceTree = "<group>"; };
@@ -239,6 +237,7 @@
 				EC3EABFE1F01802E00F9EF11 /* DiskScene.sks */,
 			);
 			name = Scenes;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		EC5F835E1EFC07F100EB4C4D /* Extensions */ = {
@@ -254,7 +253,6 @@
 		EC9D6D3F1EE8ABC60021370D = {
 			isa = PBXGroup;
 			children = (
-				EC3EABFD1F017FF600F9EF11 /* Scenes */,
 				EC9D6D4A1EE8ABC60021370D /* EveryoneGetsToDJ */,
 				EC9D6D631EE8ABC60021370D /* EveryoneGetsToDJTests */,
 				EC9D6D491EE8ABC60021370D /* Products */,
@@ -275,8 +273,9 @@
 		EC9D6D4A1EE8ABC60021370D /* EveryoneGetsToDJ */ = {
 			isa = PBXGroup;
 			children = (
-				EC5F835E1EFC07F100EB4C4D /* Extensions */,
+				EC3EABFD1F017FF600F9EF11 /* Scenes */,
 				ECCC80661EFAB6E200D1A294 /* Resources */,
+				EC5F835E1EFC07F100EB4C4D /* Extensions */,
 				EC2BC4601EF89265007A783C /* Protocols */,
 				EC2BC45B1EF87D2D007A783C /* Storyboards */,
 				EC9D6D6F1EE8B19F0021370D /* Utility */,
@@ -306,7 +305,6 @@
 				EC9D6D701EE8B2120021370D /* Secret.swift */,
 				ECFBF47E1F1831D700102628 /* CoreDataManager.swift */,
 				EC9D6D821EE9BE9A0021370D /* ApiClient.swift */,
-				EC9D6D861EEB46C20021370D /* ApiResponse.swift */,
 				ECFDFBF41EEB70EF00480F8F /* ApiError.swift */,
 				EC5CC8191EF1F45000F83E13 /* LoginManager.swift */,
 				EC56CE521EF7119C0023DDCE /* FirebaseManager.swift */,
@@ -668,7 +666,6 @@
 				EC56CE551EF71C920023DDCE /* CreateJukeboxViewController.swift in Sources */,
 				EC5CC81A1EF1F45000F83E13 /* LoginManager.swift in Sources */,
 				EC9D6D8B1EEB4BE50021370D /* Track.swift in Sources */,
-				EC9D6D871EEB46C20021370D /* ApiResponse.swift in Sources */,
 				EC2B29551F22AB8900E42CD9 /* ShadowView.swift in Sources */,
 				ECDA79D21F0044D7004F1DAD /* instructionsTextView.swift in Sources */,
 				EC586C6B1EFEF3D4008321DA /* JukeboxSearchIndicator.swift in Sources */,
