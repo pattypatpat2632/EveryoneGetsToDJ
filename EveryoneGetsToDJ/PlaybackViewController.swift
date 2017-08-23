@@ -24,8 +24,10 @@ class PlaybackViewController: UIViewController {
         didSet {
             if self.playbackEnabled {
                 print("PLAYBACK ENABLED")
-                playbackEngine.initializePlayer(authSession: loginManager.session)
-                multipeerManager.startBrowsing()
+                if let session = loginManager.session {
+                    playbackEngine.initializePlayer(authSession: session)
+                    multipeerManager.startBrowsing()
+                }
             }
         }
     }
@@ -49,7 +51,7 @@ class PlaybackViewController: UIViewController {
     @IBAction func exitTapped(_ sender: DJButton) {
         navigationController?.popToRootViewController(animated: true)
     }
-
+    
 }
 
 extension PlaybackViewController: UITableViewDelegate, UITableViewDataSource {

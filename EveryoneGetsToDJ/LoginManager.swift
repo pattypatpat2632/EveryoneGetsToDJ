@@ -14,8 +14,8 @@ final class LoginManager {
     static let sharedInstance = LoginManager()
     
     var loginUrl: URL?
-    var auth = SPTAuth.defaultInstance()!
-    var session:SPTSession!
+    var auth: SPTAuth = SPTAuth.defaultInstance()
+    var session: SPTSession?
     
     private init() {}
     
