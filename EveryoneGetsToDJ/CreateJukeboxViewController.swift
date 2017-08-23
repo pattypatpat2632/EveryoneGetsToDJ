@@ -35,8 +35,6 @@ class CreateJukeboxViewController: UIViewController {
     }
     
     // MARK: - Navigation
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! DJTabBarController
         let playbackViewCotnroller = dest.viewControllers?[0] as! PlaybackViewController
