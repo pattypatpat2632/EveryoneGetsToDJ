@@ -11,14 +11,11 @@ import SpriteKit
 
 class PlaybackViewController: UIViewController {
     
-    
-    
     let loginManager = LoginManager.sharedInstance
     let multipeerManager = MultipeerManager.sharedInstance
     let firManager = FirebaseManager.sharedInstance
     let playbackEngine = PlaybackEngine()
     
-
     @IBOutlet weak var tracksTableView: DJTableView!
     @IBOutlet weak var pauseButton: PauseButton!
     @IBOutlet weak var noTracksPlayingView: NoTracksPlayingView!
@@ -50,13 +47,10 @@ class PlaybackViewController: UIViewController {
     }
     
     @IBAction func exitTapped(_ sender: DJButton) {
-        print("exit tapped")
         navigationController?.popToRootViewController(animated: true)
     }
 
 }
-
-
 
 extension PlaybackViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -71,10 +65,8 @@ extension PlaybackViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playbackCell", for: indexPath) as! PlaybackCell
         cell.track = playbackEngine.tracks[indexPath.row]
         if indexPath.row == 0 {
-            
             cell.diskView.display()
         } else {
-            
             cell.diskView.hide()
         }
         return cell

@@ -51,9 +51,7 @@
 		EC9D6D7F1EE8B67A0021370D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D7E1EE8B67A0021370D /* LoginViewController.swift */; };
 		EC9D6D831EE9BE9A0021370D /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D821EE9BE9A0021370D /* ApiClient.swift */; };
 		EC9D6D871EEB46C20021370D /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D861EEB46C20021370D /* ApiResponse.swift */; };
-		EC9D6D891EEB4BD30021370D /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D881EEB4BD30021370D /* Artist.swift */; };
 		EC9D6D8B1EEB4BE50021370D /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D8A1EEB4BE50021370D /* Track.swift */; };
-		EC9D6D8D1EEB4BF70021370D /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6D8C1EEB4BF70021370D /* Album.swift */; };
 		ECC8D6341EFF413B00413911 /* Picadilly.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECC8D6331EFF413B00413911 /* Picadilly.ttf */; };
 		ECCC80681EFAB70000D1A294 /* Urban Jungle.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECCC80671EFAB70000D1A294 /* Urban Jungle.ttf */; };
 		ECCC806A1EFAB73400D1A294 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC80691EFAB73400D1A294 /* TrackCell.swift */; };
@@ -146,9 +144,7 @@
 		EC9D6D7E1EE8B67A0021370D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = EveryoneGetsToDJ/LoginViewController.swift; sourceTree = "<group>"; };
 		EC9D6D821EE9BE9A0021370D /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		EC9D6D861EEB46C20021370D /* ApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
-		EC9D6D881EEB4BD30021370D /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		EC9D6D8A1EEB4BE50021370D /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
-		EC9D6D8C1EEB4BF70021370D /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		ECC8D6331EFF413B00413911 /* Picadilly.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Picadilly.ttf; sourceTree = "<group>"; };
 		ECCC80671EFAB70000D1A294 /* Urban Jungle.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urban Jungle.ttf"; sourceTree = "<group>"; };
 		ECCC80691EFAB73400D1A294 /* TrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
@@ -283,11 +279,11 @@
 				ECCC80661EFAB6E200D1A294 /* Resources */,
 				EC2BC4601EF89265007A783C /* Protocols */,
 				EC2BC45B1EF87D2D007A783C /* Storyboards */,
-				EC9D6D851EEB468F0021370D /* Views */,
+				EC9D6D6F1EE8B19F0021370D /* Utility */,
 				EC9D6D841EEB46880021370D /* Models */,
+				EC9D6D851EEB468F0021370D /* Views */,
 				EC9D6D801EE8B6860021370D /* Controllers */,
 				EC9D6D791EE8B4150021370D /* Bridging */,
-				EC9D6D6F1EE8B19F0021370D /* Utility */,
 				EC9D6D561EE8ABC60021370D /* Assets.xcassets */,
 				EC9D6D5B1EE8ABC60021370D /* Info.plist */,
 				EC9D6D721EE8B3DE0021370D /* Frameworks */,
@@ -347,8 +343,8 @@
 		EC9D6D801EE8B6860021370D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EC9D6D7E1EE8B67A0021370D /* LoginViewController.swift */,
 				EC9D6D4B1EE8ABC60021370D /* AppDelegate.swift */,
+				EC9D6D7E1EE8B67A0021370D /* LoginViewController.swift */,
 				EC5CC81B1EF1F6CC00F83E13 /* PlaybackViewController.swift */,
 				EC5CC81D1EF1F70300F83E13 /* SelectionViewController.swift */,
 				EC5AB8EF1EF2E2F200483E13 /* DJTabBarController.swift */,
@@ -365,9 +361,7 @@
 		EC9D6D841EEB46880021370D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EC9D6D881EEB4BD30021370D /* Artist.swift */,
 				EC9D6D8A1EEB4BE50021370D /* Track.swift */,
-				EC9D6D8C1EEB4BF70021370D /* Album.swift */,
 				EC2BC4591EF8634E007A783C /* Jukebox.swift */,
 				EC2BC45E1EF8887A007A783C /* MultipeerResource.swift */,
 				EC291B2F1EF047D800953483 /* Resource.swift */,
@@ -675,7 +669,6 @@
 				EC5CC81A1EF1F45000F83E13 /* LoginManager.swift in Sources */,
 				EC9D6D8B1EEB4BE50021370D /* Track.swift in Sources */,
 				EC9D6D871EEB46C20021370D /* ApiResponse.swift in Sources */,
-				EC9D6D8D1EEB4BF70021370D /* Album.swift in Sources */,
 				EC2B29551F22AB8900E42CD9 /* ShadowView.swift in Sources */,
 				ECDA79D21F0044D7004F1DAD /* instructionsTextView.swift in Sources */,
 				EC586C6B1EFEF3D4008321DA /* JukeboxSearchIndicator.swift in Sources */,
@@ -686,7 +679,6 @@
 				EC5F836E1EFC86AB00EB4C4D /* DJContentView.swift in Sources */,
 				ECCC80741EFB060300D1A294 /* PlaybackEngine.swift in Sources */,
 				EC5F83601EFC080500EB4C4D /* NotificationExt.swift in Sources */,
-				EC9D6D891EEB4BD30021370D /* Artist.swift in Sources */,
 				ECFBF4781F17BF6900102628 /* FavoriteView.swift in Sources */,
 				ECFE688A1F169EF600A631A2 /* TrackContentView.swift in Sources */,
 				ECFBF4761F17B73200102628 /* FavoriteCell.swift in Sources */,

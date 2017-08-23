@@ -31,7 +31,7 @@ class PlaybackEngine: NSObject {
         NotificationCenter.default.addObserver(self, selector: #selector(tracksUpdated), name: .tracksUpdated, object: nil)
     }
 }
-
+//MARK: spotify playback and streaming delegate functions
 extension PlaybackEngine: SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDelegate {
     
     func initializePlayer(authSession: SPTSession){
@@ -62,21 +62,15 @@ extension PlaybackEngine: SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDe
         case .paused:
             isPlaying = false
         }
-        player?.setIsPlaying(isPlaying, callback: { (error) in
-            
-        })
+        player?.setIsPlaying(isPlaying, callback: { (_) in})
     }
     
     func queue(track: Track) {
-        player?.queueSpotifyURI(track.uri, callback: { (error) in
-            
-        })
+        player?.queueSpotifyURI(track.uri, callback: { (_) in})
     }
     
     func change(volume: Double) {
-        player?.setVolume(volume, callback: { (error) in
-            
-        })
+        player?.setVolume(volume, callback: { (_) in})
     }
     
     func audioStreaming(_ audioStreaming: SPTAudioStreamingController!, didChangePlaybackStatus isPlaying: Bool) {

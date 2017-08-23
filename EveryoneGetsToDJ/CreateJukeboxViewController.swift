@@ -27,7 +27,6 @@ class CreateJukeboxViewController: UIViewController {
             //TODO: error handle
         }
         
-        
         navigationController?.setNavigationBarHidden(false, animated: true)
         hideKeyboardWhenTappedAround()
         FirebaseManager.sharedInstance.login().catch{error in

@@ -99,54 +99,6 @@ final class ApiClient {
 }
 //MARK: resources
 extension ApiClient {
-    //Currently not in use - keep for later version which will include artist and album search
-    func artistSearchResource(from artist: String) -> Resource<[Artist]>? {
-        let formattedArtist = sanitize(artist)
-        let endpoint = "https://api.spotify.com/v1/search?q=\(formattedArtist)&type=artist"
-        guard let url = URL(string: endpoint) else {return nil}
-        let artistsResource = Resource<[Artist]>(url: url, parse: { data in
-            var artists = [Artist]()
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] ?? [:]
-                let artistsArray = json["artists"] as? [String: Any] ?? [:]
-                let items = artistsArray["items"] as? [[String: Any]] ?? []
-                for artistDict in items{
-                    let name = artistDict["name"] as? String ?? ""
-                    let artist = Artist(name: name, albumIDs: [], trackIDs: [])
-                    artists.append(artist)
-                }
-            } catch {
-                
-            }
-            return artists
-        })
-        return artistsResource
-    }
-    
-    //Currently not in use - keep for later version which will include artist and album search
-    func albumSearchResource(from album: String) -> Resource<[Album]>? {
-        let formattedAlbum = sanitize(album)
-        let endpoint = "https://api.spotify.com/v1/search?q=\(formattedAlbum)&type=album"
-        guard let url = URL(string: endpoint) else {return nil}
-        let albumsResource = Resource<[Album]>(url: url) { data in
-            var albums = [Album]()
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] ?? [:]
-                let albumsArray = json["albums"] as? [String: Any] ?? [:]
-                let items = albumsArray["items"] as? [[String: Any]] ?? []
-                for albumDict in items {
-                    let name = albumDict["name"] as? String ?? ""
-                    
-                    let album = Album(name: name, trackIDs: [], image: nil)
-                    albums.append(album)
-                }
-            } catch {
-                
-            }
-            return albums
-        }
-        return albumsResource
-    }
     
     func trackSearchResource(from track: String) -> Resource<[Track]>? {
         let formattedTrack = sanitize(track)

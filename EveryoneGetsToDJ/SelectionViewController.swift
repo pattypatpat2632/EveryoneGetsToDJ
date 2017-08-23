@@ -103,7 +103,6 @@ extension SelectionViewController: UISearchBarDelegate {
                 self.tracks = tracks
                 self.stopActivity()
             }.catch{ error in
-                
         }
     }
 }

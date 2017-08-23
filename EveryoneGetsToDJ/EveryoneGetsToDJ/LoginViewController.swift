@@ -21,19 +21,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for fontFamilyName in UIFont.familyNames{
-            for fontName in UIFont.fontNames(forFamilyName: fontFamilyName){
-                print("Family: \(fontFamilyName)     Font: \(fontName)")
-            }
-        }
-        
         hideKeyboardWhenTappedAround()
-        NotificationCenter.default.addObserver(self, selector: #selector(updateAfterFirstLogin), name: Notification.Name.loginSuccessful, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateAfterFirstLogin), name: .loginSuccessful, object: nil)
         loginManager.setup()
-        
-        hostButton.setTitle(as: "HOST", size: 20)
-        joinButton.setTitle(as: "JOIN", size: 20)
-        instrButton.setTitle(as: "INSTRUCTIONS", size: 12)
+        setTitles()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +49,12 @@ class LoginViewController: UIViewController {
     func updateAfterFirstLogin() {
         loginManager.updateAfterFirstLogin()
         self.performSegue(withIdentifier: "hostSegue", sender: nil)
+    }
+    
+    private func setTitles() {
+        hostButton.setTitle(as: "HOST", size: 20)
+        joinButton.setTitle(as: "JOIN", size: 20)
+        instrButton.setTitle(as: "INSTRUCTIONS", size: 12)
     }
     
 }

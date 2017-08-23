@@ -349,7 +349,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Song:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI9-cP-zGR" customClass="GlowingLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="87.5" y="148" width="200.5" height="31"/>
+                                <rect key="frame" x="88" y="148" width="200.5" height="31"/>
                                 <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -474,10 +474,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="playbackCell" rowHeight="130" id="bmc-C2-ITn" customClass="PlaybackCell" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="337.5" height="130"/>
+                                        <rect key="frame" x="0.0" y="28" width="338" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bmc-C2-ITn" id="unY-pP-2CP">
-                                            <rect key="frame" x="0.0" y="0.0" width="337.5" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="338" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj2-O1-IcL" customClass="DJLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
@@ -551,7 +551,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksT-uS-ICw" customClass="GlowingLabel" customModule="EveryoneGetsToDJ" customModuleProvider="target">
-                                <rect key="frame" x="71" y="72" width="235" height="38.5"/>
+                                <rect key="frame" x="70.5" y="72" width="235" height="38.5"/>
                                 <fontDescription key="fontDescription" name="Picadilly" family="Picadilly" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -630,7 +630,7 @@
                                         <rect key="frame" x="0.0" y="28" width="300" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yzf-tg-nGI" id="uYw-BJ-9Vo">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMR-NG-iVn" customClass="TrackContentView" customModule="EveryoneGetsToDJ" customModuleProvider="target">

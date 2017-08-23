@@ -10,6 +10,7 @@ import Foundation
 import Firebase
 
 struct Track {
+    //TODO: refactor album and artist into their own structs
     let name: String
     let albumID: String
     let albumName: String

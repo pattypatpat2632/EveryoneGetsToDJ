@@ -49,23 +49,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // 1
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        print("asked to handle callback URL")
-        // 2- check if app can handle redirect URL
         if auth.canHandle(auth.redirectURL) {
-            print("can handle callback URL")
-            // 3 - handle callback in closure
             auth.handleAuthCallback(withTriggeredAuthURL: url, callback: { (error, session) in
-                // 4- handle error
                 if error != nil {
                     print("error!")
                 }
-                // 5- Add session to User Defaults
                 let userDefaults = UserDefaults.standard
                 if let session = session {
                     let sessionData = NSKeyedArchiver.archivedData(withRootObject: session)
                     userDefaults.set(sessionData, forKey: "SpotifySession")
                     userDefaults.synchronize()
-                    // 6 - Tell notification center login is successful
                     NotificationCenter.default.post(name: Notification.Name.loginSuccessful, object: nil)
                 } 
             })
@@ -73,7 +66,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return false
     }
-
-
 }
 

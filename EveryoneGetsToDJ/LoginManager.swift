@@ -36,11 +36,9 @@ final class LoginManager {
     }
     
     func updateAfterFirstLogin() {
-        
         let sessionObj: AnyObject = UserDefaults.standard.object(forKey: "SpotifySession") as AnyObject
         let sessionDataObj = sessionObj as! Data
         let firstTimeSession = NSKeyedUnarchiver.unarchiveObject(with: sessionDataObj) as! SPTSession
         self.session = firstTimeSession
-        
     }
 }
